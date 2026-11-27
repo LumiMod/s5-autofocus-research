@@ -1,0 +1,8 @@
+.handoff-local/
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.venv-paddle/
+af-research/artifacts/
+af-research/private-data/

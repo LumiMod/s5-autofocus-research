@@ -1,0 +1,558 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-27",
+  "status": "Ranking supervision checked; original face/head contract unresolved; detection acceptance not passed; training remains paused.",
+  "optimizer_steps_this_work": 0,
+  "validation_model_inference": false,
+  "test_access": false,
+  "network_graph_or_existing_weights_changed": false,
+  "new_loss_installed_in_training_runner": false,
+  "dataset_manifest_sha256": "af5459ddebd98947b154580cd176e7846abcceffe5539ac6f0001f6a485a3fc8",
+  "paired_annotation_metrics": {
+    "validation/original": {
+      "frames": 64,
+      "metrics": {
+        "face": {
+          "ground_truth_boxes": 92,
+          "ap_at_iou": 0.371761753021705,
+          "tp_at_score": 41,
+          "fp_at_score": 38,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 20,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 39,
+              "matched_at_score": 23,
+              "matched_all_saved_scores": 29,
+              "recall_at_score": 0.5897435897435898,
+              "recall_all_saved_scores": 0.7435897435897436
+            },
+            "96_or_larger": {
+              "ground_truth": 24,
+              "matched_at_score": 18,
+              "matched_all_saved_scores": 23,
+              "recall_at_score": 0.75,
+              "recall_all_saved_scores": 0.9583333333333334
+            }
+          }
+        },
+        "head": {
+          "ground_truth_boxes": 93,
+          "ap_at_iou": 0.5596453416991879,
+          "tp_at_score": 53,
+          "fp_at_score": 26,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 10,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 7,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 44,
+              "matched_at_score": 31,
+              "matched_all_saved_scores": 35,
+              "recall_at_score": 0.7045454545454546,
+              "recall_all_saved_scores": 0.7954545454545454
+            },
+            "96_or_larger": {
+              "ground_truth": 32,
+              "matched_at_score": 22,
+              "matched_all_saved_scores": 27,
+              "recall_at_score": 0.6875,
+              "recall_all_saved_scores": 0.84375
+            }
+          }
+        }
+      }
+    },
+    "validation/transferred0": {
+      "frames": 64,
+      "metrics": {
+        "face": {
+          "ground_truth_boxes": 92,
+          "ap_at_iou": 0.38929525919351055,
+          "tp_at_score": 42,
+          "fp_at_score": 34,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 20,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 39,
+              "matched_at_score": 25,
+              "matched_all_saved_scores": 31,
+              "recall_at_score": 0.6410256410256411,
+              "recall_all_saved_scores": 0.7948717948717948
+            },
+            "96_or_larger": {
+              "ground_truth": 24,
+              "matched_at_score": 17,
+              "matched_all_saved_scores": 22,
+              "recall_at_score": 0.7083333333333334,
+              "recall_all_saved_scores": 0.9166666666666666
+            }
+          }
+        },
+        "head": {
+          "ground_truth_boxes": 93,
+          "ap_at_iou": 0.5132431531094926,
+          "tp_at_score": 48,
+          "fp_at_score": 28,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 10,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 7,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 44,
+              "matched_at_score": 29,
+              "matched_all_saved_scores": 34,
+              "recall_at_score": 0.6590909090909091,
+              "recall_all_saved_scores": 0.7727272727272727
+            },
+            "96_or_larger": {
+              "ground_truth": 32,
+              "matched_at_score": 19,
+              "matched_all_saved_scores": 29,
+              "recall_at_score": 0.59375,
+              "recall_all_saved_scores": 0.90625
+            }
+          }
+        }
+      }
+    },
+    "validation/trained6": {
+      "frames": 64,
+      "metrics": {
+        "face": {
+          "ground_truth_boxes": 92,
+          "ap_at_iou": 0.42973526847458,
+          "tp_at_score": 50,
+          "fp_at_score": 185,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 20,
+              "matched_at_score": 3,
+              "matched_all_saved_scores": 9,
+              "recall_at_score": 0.15,
+              "recall_all_saved_scores": 0.45
+            },
+            "32_to_below96": {
+              "ground_truth": 39,
+              "matched_at_score": 28,
+              "matched_all_saved_scores": 31,
+              "recall_at_score": 0.717948717948718,
+              "recall_all_saved_scores": 0.7948717948717948
+            },
+            "96_or_larger": {
+              "ground_truth": 24,
+              "matched_at_score": 19,
+              "matched_all_saved_scores": 24,
+              "recall_at_score": 0.7916666666666666,
+              "recall_all_saved_scores": 1.0
+            }
+          }
+        },
+        "head": {
+          "ground_truth_boxes": 93,
+          "ap_at_iou": 0.4286967311975275,
+          "tp_at_score": 53,
+          "fp_at_score": 182,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 10,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 7,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 3,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.42857142857142855
+            },
+            "32_to_below96": {
+              "ground_truth": 44,
+              "matched_at_score": 32,
+              "matched_all_saved_scores": 36,
+              "recall_at_score": 0.7272727272727273,
+              "recall_all_saved_scores": 0.8181818181818182
+            },
+            "96_or_larger": {
+              "ground_truth": 32,
+              "matched_at_score": 21,
+              "matched_all_saved_scores": 27,
+              "recall_at_score": 0.65625,
+              "recall_all_saved_scores": 0.84375
+            }
+          }
+        }
+      }
+    },
+    "train32/transferred0": {
+      "frames": 27,
+      "metrics": {
+        "face": {
+          "ground_truth_boxes": 36,
+          "ap_at_iou": 0.3376760780181469,
+          "tp_at_score": 14,
+          "fp_at_score": 15,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 1,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 8,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 16,
+              "matched_at_score": 7,
+              "matched_all_saved_scores": 12,
+              "recall_at_score": 0.4375,
+              "recall_all_saved_scores": 0.75
+            },
+            "96_or_larger": {
+              "ground_truth": 11,
+              "matched_at_score": 7,
+              "matched_all_saved_scores": 10,
+              "recall_at_score": 0.6363636363636364,
+              "recall_all_saved_scores": 0.9090909090909091
+            }
+          }
+        },
+        "head": {
+          "ground_truth_boxes": 36,
+          "ap_at_iou": 0.38878963369913505,
+          "tp_at_score": 15,
+          "fp_at_score": 14,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": null,
+              "recall_all_saved_scores": null
+            },
+            "16_to_below32": {
+              "ground_truth": 5,
+              "matched_at_score": 1,
+              "matched_all_saved_scores": 1,
+              "recall_at_score": 0.2,
+              "recall_all_saved_scores": 0.2
+            },
+            "32_to_below96": {
+              "ground_truth": 14,
+              "matched_at_score": 7,
+              "matched_all_saved_scores": 11,
+              "recall_at_score": 0.5,
+              "recall_all_saved_scores": 0.7857142857142857
+            },
+            "96_or_larger": {
+              "ground_truth": 17,
+              "matched_at_score": 7,
+              "matched_all_saved_scores": 12,
+              "recall_at_score": 0.4117647058823529,
+              "recall_all_saved_scores": 0.7058823529411765
+            }
+          }
+        }
+      }
+    },
+    "train32/trained6": {
+      "frames": 27,
+      "metrics": {
+        "face": {
+          "ground_truth_boxes": 36,
+          "ap_at_iou": 0.3377217084082021,
+          "tp_at_score": 19,
+          "fp_at_score": 69,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 1,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 8,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 2,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.25
+            },
+            "32_to_below96": {
+              "ground_truth": 16,
+              "matched_at_score": 11,
+              "matched_all_saved_scores": 12,
+              "recall_at_score": 0.6875,
+              "recall_all_saved_scores": 0.75
+            },
+            "96_or_larger": {
+              "ground_truth": 11,
+              "matched_at_score": 8,
+              "matched_all_saved_scores": 10,
+              "recall_at_score": 0.7272727272727273,
+              "recall_all_saved_scores": 0.9090909090909091
+            }
+          }
+        },
+        "head": {
+          "ground_truth_boxes": 36,
+          "ap_at_iou": 0.4200621906306733,
+          "tp_at_score": 22,
+          "fp_at_score": 66,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 0,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": null,
+              "recall_all_saved_scores": null
+            },
+            "16_to_below32": {
+              "ground_truth": 5,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 1,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.2
+            },
+            "32_to_below96": {
+              "ground_truth": 14,
+              "matched_at_score": 9,
+              "matched_all_saved_scores": 13,
+              "recall_at_score": 0.6428571428571429,
+              "recall_all_saved_scores": 0.9285714285714286
+            },
+            "96_or_larger": {
+              "ground_truth": 17,
+              "matched_at_score": 13,
+              "matched_all_saved_scores": 16,
+              "recall_at_score": 0.7647058823529411,
+              "recall_all_saved_scores": 0.9411764705882353
+            }
+          }
+        }
+      }
+    }
+  },
+  "ranking": {
+    "toy_tests": 16,
+    "frozen_train_images": 32,
+    "candidate_pairs": 50,
+    "passed_supervision_checks": true,
+    "independent_gradient_max_error": 7.020195660900619e-09,
+    "face_head_geometry_counts": {
+      "person_face_pairs": 28,
+      "face_pairs_with_eligible_head_reference": 24,
+      "bad_max_head_iou_greater_than_good_max": 7,
+      "good_max_head_iou_greater_than_bad_max": 17,
+      "some_same_head_bad_ge_05_good_lt_05": 3,
+      "person_pairs": 22,
+      "face_pairs_head_reference_unavailable_or_flagged": 4
+    },
+    "normalization": "Each pair uses its GT positive CE weight mass divided by actual class sample count; then detached IoU gap.",
+    "direct_bbox_gradient_unchanged": true,
+    "future_bbox_update_unchanged_is_not_proven": "Shared gradient clipping may change bbox update scaling if this loss is later integrated."
+  },
+  "original_arm_boundary": {
+    "executed": true,
+    "entry_thumb": "0x063bd2c3",
+    "environment": "QEMU9.2.4 virt/Cortex-A15, synthetic records only",
+    "records": 60,
+    "checked_output_bytes": 960,
+    "checked_canary_bytes": 16,
+    "negative_control_detected": true,
+    "independent_harness_review_passed": true,
+    "original_DSP_or_network_executed": false,
+    "camera_executed": false,
+    "verified": "u16 xywh to xyxy; numeric class0..6 retained; low16 score /65535; gap untouched",
+    "not_verified": "Original producer, proposal-to-class mapping, face/head training semantics, full camera pipeline"
+  },
+  "semantic_contract": {
+    "open_images_face_and_head_are_distinct": true,
+    "open_images_general_box": "Minimum visible extent; not amodal completion",
+    "original_S5_factory_output_semantics_confirmed": false,
+    "label_name_alone_is_not_a_training_contract": true,
+    "historical_GT_or_metrics_relabelled": false
+  },
+  "ready_to_train": false,
+  "passed_detection_acceptance": false,
+  "unresolved": [
+    "Seven audited face pairs favor the bad box under head geometry; three cross the head TP threshold in the opposite direction.",
+    "No repaired-weight detector was trained or independently evaluated; the last small-face/FP failures remain.",
+    "The DSP output producer and class/box semantics are not established by the ARM converter.",
+    "No original-camera same-frame tensor/result comparison or SDK execution is available."
+  ],
+  "artifacts": {
+    "annotation_contract": {
+      "path": "artifacts/recognition-ranking-repair/box-contract/report.json",
+      "sha256": "92cae500cb24a6c88ae619c72e4054ab5e010babc71cf6f54321b9cc9ff4cc39",
+      "bytes": 25377
+    },
+    "head_reference": {
+      "path": "artifacts/recognition-ranking-repair/box-contract/head-reference.json",
+      "sha256": "8dcef02e36dd6cf8ae1a0189896eb383cd2eed900228673a6e6f57c8e8f4223d",
+      "bytes": 463515
+    },
+    "paired_face_head": {
+      "path": "artifacts/recognition-ranking-repair/paired-face-head-metrics/report.json",
+      "sha256": "3b2f5d5f6a363debe6fba6d05ff6817800e8fa6a320dd662c659097441d4191a",
+      "bytes": 3825850
+    },
+    "paired_independent": {
+      "path": "artifacts/recognition-ranking-repair/paired-face-head-metrics/independent-verification.json",
+      "sha256": "cbc31cf4ef0e12b114eb4997ee17afc7003c58c8e07c049473dcccd4439cbae4",
+      "bytes": 2902
+    },
+    "ranking": {
+      "path": "artifacts/recognition-ranking-repair/quality-ranking-normalized/report.json",
+      "sha256": "15bf449b2c65cbd2b76d428ea44b7a0a2cb097c62fa97a261347cb183185cc0c",
+      "bytes": 198958
+    },
+    "ranking_independent": {
+      "path": "artifacts/recognition-ranking-repair/quality-ranking-normalized/independent-verification.json",
+      "sha256": "8d1b511227da30ae024a2157fd1e0d181ae10b8f2021d33a15703bec490f2823",
+      "bytes": 54593
+    },
+    "firmware_contract": {
+      "path": "artifacts/recognition-ranking-repair/firmware-contract/report.json",
+      "sha256": "eb8a27decd2912e347d7c841e523ab7b1b03baab20f94d5d4647567be92e5cbc",
+      "bytes": 99882
+    },
+    "firmware_followup": {
+      "path": "artifacts/recognition-ranking-repair/firmware-contract/followup-consumers.json",
+      "sha256": "754eff6bfbe4d3f09c28cf350897ab15461ae6c3253b28e3c4d59c670375d81c",
+      "bytes": 84225
+    },
+    "firmware_callback": {
+      "path": "artifacts/recognition-ranking-repair/firmware-contract/callback-route.json",
+      "sha256": "4808f3d6315a23c410029d45623a1e9ef9ebea433bcc315d8cc8403218b28cba",
+      "bytes": 37419
+    },
+    "record_parser_fixtures": {
+      "path": "artifacts/recognition-ranking-repair/firmware-contract/parser-fixtures.json",
+      "sha256": "c3ceb38508a4e854126f18267db56950ecf169099bfa9f180b8c11ed6c335dae",
+      "bytes": 3586
+    },
+    "native_arm_replay": {
+      "path": "artifacts/recognition-ranking-repair/native-converter-qemu-v2/report.json",
+      "sha256": "f8dbc2baa9e768638fd9b7c872aa7d3f4acb792b702375be0b83d4ef965df323",
+      "bytes": 1454
+    },
+    "native_arm_negative_control": {
+      "path": "artifacts/recognition-ranking-repair/native-converter-qemu-negative-control/report.json",
+      "sha256": "e96e712be2706dfa7da5f7675c70d80bde102fcd97b54b6698f230fa8e8d2d79",
+      "bytes": 1954
+    },
+    "native_arm_independent": {
+      "path": "artifacts/recognition-ranking-repair/firmware-contract/qemu-harness-independent-review.json",
+      "sha256": "40eaccb6bfca6d8424a228b7d0865d0b21451cfd98f976ef10cbe362c20f3d49",
+      "bytes": 3527
+    },
+    "preserved_launch_failure": {
+      "path": "artifacts/recognition-ranking-repair/native-converter-qemu/report.json",
+      "sha256": "ed54168a82eb6ff5da7591584a09696fec5590ac481690e2e1ed472f7736a5c2",
+      "bytes": 2306
+    },
+    "preserved_unicorn_failure": {
+      "path": "artifacts/recognition-ranking-repair/firmware-contract/arm-replay-unavailable.json",
+      "sha256": "ac7f8e4c684bb0621135119cd2ff7f8631ab89c85bf7308c33e0ef34e293590d",
+      "bytes": 1472
+    },
+    "recognition_quality_ranking.py": {
+      "path": "recognition_quality_ranking.py",
+      "sha256": "ced13a9d848e338ed0b7a5b891adadb3c89a3d80a2ba9786dc66f819789343b3",
+      "bytes": 8039
+    },
+    "verify_quality_ranking.py": {
+      "path": "verify_quality_ranking.py",
+      "sha256": "72a22a7573da7de1a9cca8c136ab78a2384c507a59708fc165dd27ded1002e1e",
+      "bytes": 21930
+    },
+    "compare_face_head_references.py": {
+      "path": "compare_face_head_references.py",
+      "sha256": "08d55b9f1c46336795c71d8fd641c35373890b0d0afce4d556cf7013ed76b7ce",
+      "bytes": 9115
+    },
+    "verify_face_head_comparison.py": {
+      "path": "verify_face_head_comparison.py",
+      "sha256": "4e050623b325fea13907258c3bd14e7b6c6c5e32da722480ade0d821102a6bd3",
+      "bytes": 8849
+    },
+    "s5_result_records.py": {
+      "path": "s5_result_records.py",
+      "sha256": "74b39b16a74098aa71b7c2b6c4902db0d4d0e0b6cb8760bcd1a8a459e35fd850",
+      "bytes": 2537
+    },
+    "verify_s5_arm_result_converter.py": {
+      "path": "verify_s5_arm_result_converter.py",
+      "sha256": "854b29849e8bb66ff254f39b2e382c8daf05be86a45d30855e5137293e5561e6",
+      "bytes": 6894
+    },
+    "summarize_ranking_repair.py": {
+      "path": "summarize_ranking_repair.py",
+      "sha256": "eecdcb8a07841a35d9eac9605c60f4f183dd19bfb9baf9c522b05ab90d68634d",
+      "bytes": 6802
+    }
+  }
+}

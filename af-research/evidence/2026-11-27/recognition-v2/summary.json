@@ -1,0 +1,219 @@
+{
+  "scope": "Predeclared validation screen for the target-matching repair experiment; no original-camera fidelity claim.",
+  "pre_run_plan_sha256": "fc4fa8fbcc1f71d04be2f089ff2dc385b0f1d9446d02ecc8e830e72e5ae60eb7",
+  "integrity_audit_sha256": "31b5774c12e3aec07cd5bb57c44c860d64b115f8b70ababfb443a601352cc2fc",
+  "report_sha256": "fb02f110303dbd8b27c9d93e4b95a24935aeaa4ffe26f4dc7794e14e0f9a061b",
+  "best_control_report_sha256": "d0e34b2e96ccdcf4511bbc128be6944f4d77d95b80fa5fa17178f5863816a46e",
+  "last_control_report_sha256": "4e90da7ad982b598e4724b48b4f8a6431fdb0d3d8df6d8414402cdf3ecf77025",
+  "manifest_sha256": "af5459ddebd98947b154580cd176e7846abcceffe5539ac6f0001f6a485a3fc8",
+  "optimizer_updates": 480,
+  "selected_epoch": 0,
+  "test_release_gates": {
+    "selected_best_is_trained": false,
+    "best_real_mean_ap_exceeds_original": false,
+    "best_real_mean_ap_exceeds_constant": false,
+    "both_classes_exceed_constant": false
+  },
+  "test_release_passed": false,
+  "test_inference_performed": false,
+  "fresh_test_images_reserved": 100,
+  "decision": "Do not expand training or consume the new test. Preserve baseline best.pt and diagnostic last.pt; investigate image feature/preprocessing/layout and small-face anchor coverage.",
+  "validation": {
+    "selected_epoch_0": {
+      "real_nominal": {
+        "mean_ap50": 0.1705367951827871,
+        "class_ap50": {
+          "person": 0.33974717947941235,
+          "person_face": 0.0013264108861618627
+        }
+      },
+      "constant_nominal": {
+        "mean_ap50": 0.17679222675824574,
+        "class_ap50": {
+          "person": 0.3529022310169989,
+          "person_face": 0.000682222499492586
+        }
+      }
+    },
+    "fixed_epoch_6": {
+      "real_nominal": {
+        "mean_ap50": 0.13023662231310598,
+        "class_ap50": {
+          "person": 0.2569269934622919,
+          "person_face": 0.003546251163920052
+        }
+      },
+      "constant_nominal": {
+        "mean_ap50": 0.09535047674422102,
+        "class_ap50": {
+          "person": 0.18785207128794024,
+          "person_face": 0.0028488822005018136
+        }
+      }
+    }
+  },
+  "training_source_hashes": {
+    "train_recognition.py": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+    "candidate_network.py": "0005f869aee9c69191fc74259a92e6f0bbf9e9aa1d43cceae7ee1694f682b559",
+    "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+    "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+    "ops_investigation.py": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+    "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d",
+    "proposal_hypothesis.py": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+    "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+    "pretraining_readiness.py": "da1b255b982262e83ca6347f73fad632c6fad960f17c40f3e5cbdb5de122d34d"
+  },
+  "tool_tests_passed": 22,
+  "preflight_diagnostic_checks_passed": 12,
+  "integrity_audit_passed": true,
+  "frozen_backbone_unchanged": true,
+  "train_validation_matching": {
+    "train": {
+      "images": 320,
+      "gt_count": 883,
+      "unmatched_gt_count": 0,
+      "current_class_bbox_owner_conflicts": 0,
+      "forced_anchor_reuse_count": 0,
+      "sampling_coverage_failures": 0,
+      "budget_violation_images": 0,
+      "failures": [],
+      "classes": {
+        "person": {
+          "gt_count": 463,
+          "current_positive_anchors": 59959,
+          "current_class_bbox_owner_conflicts": 0,
+          "forced_matched_gt_count": 463,
+          "max_gt_per_image": 11,
+          "legacy_positive_anchors": 61501,
+          "legacy_cross_class_bbox_owner_anchors": 1542,
+          "legacy_cross_class_bbox_owner_images": 34,
+          "legacy_cross_class_owner_and_own_iou_below_0_5_anchors": 0,
+          "legacy_cross_class_owner_and_own_iou_below_0_5_images": 0,
+          "legacy_bbox_target_iou_with_own_class_below_0_5_anchors": 92,
+          "legacy_bbox_target_iou_with_own_class_below_0_5_images": 12,
+          "forced_match_iou": {
+            "count": 463,
+            "below_0_5": 28,
+            "below_0_3": 15,
+            "below_0_1": 4,
+            "min": 0.0370243601500988,
+            "p10": 0.5793358683586121,
+            "median": 0.7543438076972961
+          }
+        },
+        "person_face": {
+          "gt_count": 420,
+          "current_positive_anchors": 10721,
+          "current_class_bbox_owner_conflicts": 0,
+          "forced_matched_gt_count": 420,
+          "max_gt_per_image": 8,
+          "legacy_positive_anchors": 13194,
+          "legacy_cross_class_bbox_owner_anchors": 2515,
+          "legacy_cross_class_bbox_owner_images": 60,
+          "legacy_cross_class_owner_and_own_iou_below_0_5_anchors": 41,
+          "legacy_cross_class_owner_and_own_iou_below_0_5_images": 24,
+          "legacy_bbox_target_iou_with_own_class_below_0_5_anchors": 564,
+          "legacy_bbox_target_iou_with_own_class_below_0_5_images": 36,
+          "forced_match_iou": {
+            "count": 420,
+            "below_0_5": 112,
+            "below_0_3": 73,
+            "below_0_1": 21,
+            "min": 0.014138942584395409,
+            "p10": 0.1430416703224182,
+            "median": 0.6264647245407104
+          }
+        }
+      },
+      "passed": true
+    },
+    "validation": {
+      "images": 80,
+      "gt_count": 230,
+      "unmatched_gt_count": 0,
+      "current_class_bbox_owner_conflicts": 0,
+      "forced_anchor_reuse_count": 0,
+      "sampling_coverage_failures": 0,
+      "budget_violation_images": 0,
+      "failures": [],
+      "classes": {
+        "person": {
+          "gt_count": 120,
+          "current_positive_anchors": 14743,
+          "current_class_bbox_owner_conflicts": 0,
+          "forced_matched_gt_count": 120,
+          "max_gt_per_image": 6,
+          "legacy_positive_anchors": 15427,
+          "legacy_cross_class_bbox_owner_anchors": 682,
+          "legacy_cross_class_bbox_owner_images": 7,
+          "legacy_cross_class_owner_and_own_iou_below_0_5_anchors": 0,
+          "legacy_cross_class_owner_and_own_iou_below_0_5_images": 0,
+          "legacy_bbox_target_iou_with_own_class_below_0_5_anchors": 31,
+          "legacy_bbox_target_iou_with_own_class_below_0_5_images": 2,
+          "forced_match_iou": {
+            "count": 120,
+            "below_0_5": 17,
+            "below_0_3": 6,
+            "below_0_1": 2,
+            "min": 0.01841377466917038,
+            "p10": 0.4363839030265808,
+            "median": 0.7287338972091675
+          }
+        },
+        "person_face": {
+          "gt_count": 110,
+          "current_positive_anchors": 2710,
+          "current_class_bbox_owner_conflicts": 0,
+          "forced_matched_gt_count": 110,
+          "max_gt_per_image": 5,
+          "legacy_positive_anchors": 3402,
+          "legacy_cross_class_bbox_owner_anchors": 708,
+          "legacy_cross_class_bbox_owner_images": 16,
+          "legacy_cross_class_owner_and_own_iou_below_0_5_anchors": 14,
+          "legacy_cross_class_owner_and_own_iou_below_0_5_images": 8,
+          "legacy_bbox_target_iou_with_own_class_below_0_5_anchors": 59,
+          "legacy_bbox_target_iou_with_own_class_below_0_5_images": 9,
+          "forced_match_iou": {
+            "count": 110,
+            "below_0_5": 37,
+            "below_0_3": 26,
+            "below_0_1": 9,
+            "min": 0.0022096431348472834,
+            "p10": 0.17788875102996826,
+            "median": 0.5996835231781006
+          }
+        }
+      },
+      "passed": true
+    }
+  },
+  "source_model_sha256": "b510989f1e12fd1e6a2efbc5306b125289cb796c48e5ffefe7e4d4ce26390a50",
+  "checkpoints": {
+    "best.pt": {
+      "sha256": "808dd82ffd830d12bc4e37014113a009d8d586b23a280f65dc3c30fb538b829e",
+      "bytes": 5867388
+    },
+    "last.pt": {
+      "sha256": "30a44af97bd58e741e50f1712cb71a5690c36cdc14f5cf4d1c16d8ab2a7bd807",
+      "bytes": 6590178
+    }
+  },
+  "baseline_and_epoch_validation_mean_ap50": [
+    0.1705367951827871,
+    0.15911594024505252,
+    0.10000834949270332,
+    0.09445297307110276,
+    0.12150227326295437,
+    0.1164967297803402,
+    0.13023662231310598
+  ],
+  "runtime_seconds": 47.043880917015485,
+  "limits": [
+    "Candidate architecture/layout/preprocessing and class mapping are unverified against S5.",
+    "Only detection heads were fine-tuned. No hardware or quantized export validation.",
+    "Positive-only person+face subset; no claim about absent-person false alarms or all Open Images.",
+    "No true low-light labels, tracking sequences, or physical autofocus evaluation.",
+    "AP50 is this subset continuous-box metric, not the official Open Images challenge metric."
+  ],
+  "local_artifacts": "artifacts/recognition-v2/; private-data/recognition-v2/; original firmware and data are not included in this summary."
+}

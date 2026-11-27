@@ -1,0 +1,982 @@
+{
+  "schema_version": 1,
+  "purpose": "Computer-side external reference baselines, not a replacement for or repair of the original S5 network.",
+  "evidence_kind": "Derived from saved reports/predictions and independent metric recomputation; no new image inference during this summary.",
+  "optimizer_steps": 0,
+  "training_performed": false,
+  "test_inference_performed": false,
+  "original_s5_network_fix_verified": false,
+  "s5_on_device_compatibility_verified": false,
+  "ready_to_resume_s5_training": false,
+  "dataset_manifest_sha256": "af5459ddebd98947b154580cd176e7846abcceffe5539ac6f0001f6a485a3fc8",
+  "dataset_protocol": {
+    "train": {
+      "images": 320,
+      "author_groups": 306,
+      "classes": {
+        "person": {
+          "boxes": 463,
+          "positive_frames": 320,
+          "size_counts_384x256_reference": {
+            "32_to_below96": 66,
+            "96_or_larger": 376,
+            "16_to_below32": 16,
+            "below16": 5
+          },
+          "occluded_boxes": 168,
+          "truncated_boxes": 288
+        },
+        "person_face": {
+          "boxes": 420,
+          "positive_frames": 320,
+          "size_counts_384x256_reference": {
+            "32_to_below96": 206,
+            "16_to_below32": 74,
+            "96_or_larger": 111,
+            "below16": 29
+          },
+          "occluded_boxes": 170,
+          "truncated_boxes": 37
+        }
+      }
+    },
+    "validation": {
+      "images": 80,
+      "author_groups": 79,
+      "classes": {
+        "person": {
+          "boxes": 120,
+          "positive_frames": 80,
+          "size_counts_384x256_reference": {
+            "96_or_larger": 92,
+            "32_to_below96": 16,
+            "16_to_below32": 9,
+            "below16": 3
+          },
+          "occluded_boxes": 42,
+          "truncated_boxes": 75
+        },
+        "person_face": {
+          "boxes": 110,
+          "positive_frames": 80,
+          "size_counts_384x256_reference": {
+            "32_to_below96": 48,
+            "96_or_larger": 28,
+            "below16": 9,
+            "16_to_below32": 25
+          },
+          "occluded_boxes": 39,
+          "truncated_boxes": 9
+        }
+      }
+    }
+  },
+  "metric_definition": {
+    "AP": "One supported class per model, all-points interpolated AP at IoU0.5 over all saved detections; not official COCO, Open Images or WIDER FACE AP.",
+    "recall_confidence_threshold": 0.5,
+    "size_reference": "sqrt(area after hypothetical384x256 stretch): small<32, medium32..96, large>=96. Actual model input is declared separately.",
+    "controls": "Rounded per-image RGB-channel mean, fixedRGB117, and next sorted validation image predictions mapped by normalized coordinates.",
+    "matching": "Score-ordered one-to-one match against full target-class GT first; stratify matched GT afterward. No size-specific AP was invented."
+  },
+  "runs": {
+    "picodet": {
+      "target_class": "person",
+      "images": 80,
+      "input_transform": {
+        "height": 320,
+        "width": 320,
+        "keep_ratio": false,
+        "resize_policy": "stretch",
+        "color_order": "RGB",
+        "interp": 2,
+        "mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "is_scale": true
+      },
+      "runtime": {
+        "paddle": "3.3.1",
+        "numpy": "1.26.4",
+        "opencv": "4.11.0",
+        "device": "CPU",
+        "threads": 1
+      },
+      "model_identity": "picodet",
+      "metrics": {
+        "real": {
+          "ap_at_iou": 0.8840785371264721,
+          "ground_truth_boxes": 120,
+          "predictions": 1408,
+          "tp_at_score": 91,
+          "fp_at_score": 6,
+          "fn_at_score": 29,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 120,
+              "matched_gt": 91,
+              "recall": 0.7583333333333333
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 92,
+              "matched_gt": 82,
+              "recall": 0.8913043478260869
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 16,
+              "matched_gt": 5,
+              "recall": 0.3125
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 12,
+              "matched_gt": 4,
+              "recall": 0.3333333333333333
+            }
+          }
+        },
+        "same_image_RGB_channel_mean": {
+          "ap_at_iou": 0.30562771425908536,
+          "ground_truth_boxes": 120,
+          "predictions": 293,
+          "tp_at_score": 0,
+          "fp_at_score": 0,
+          "fn_at_score": 120,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 120,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 92,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 16,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 12,
+              "matched_gt": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "fixed_gray117": {
+          "ap_at_iou": 0.30035792338494344,
+          "ground_truth_boxes": 120,
+          "predictions": 320,
+          "tp_at_score": 0,
+          "fp_at_score": 0,
+          "fn_at_score": 120,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 120,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 92,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 16,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 12,
+              "matched_gt": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "cyclic_wrong": {
+          "ap_at_iou": 0.1778763917016711,
+          "ground_truth_boxes": 120,
+          "predictions": 1408,
+          "tp_at_score": 34,
+          "fp_at_score": 63,
+          "fn_at_score": 86,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 120,
+              "matched_gt": 34,
+              "recall": 0.2833333333333333
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 92,
+              "matched_gt": 34,
+              "recall": 0.3695652173913043
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 16,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 12,
+              "matched_gt": 0,
+              "recall": 0.0
+            }
+          }
+        }
+      },
+      "predeclared_screen": {
+        "person_real_ap50_min": 0.5,
+        "face_real_ap50_min": 0.5,
+        "real_ap50_margin_over_every_control_min": 0.15,
+        "small_face_recall_min": 0.5,
+        "small_face_matched_gt_min": 10,
+        "scope": "Apply person/face checks in their respective independent runs; small-face checks apply only to face."
+      },
+      "passed_external_only_screen": true,
+      "independent_recalculation_max_absolute_error": 3.3306690738754696e-16,
+      "wrong_image_mapping_max_absolute_error": 1.1368683772161603e-13,
+      "saved_artifact_hashes_verified_count": 16,
+      "reported_predict_calls": 240,
+      "source_files": [
+        "evaluate_external_baselines.py",
+        "external_baseline_models.py",
+        "external_picodet.py",
+        "pretraining_data.py"
+      ],
+      "report": "artifacts/external-baselines/runs/picodet/report.json",
+      "independent_verification": "artifacts/external-baselines/runs/picodet/independent-verification.json"
+    },
+    "blazeface": {
+      "target_class": "person_face",
+      "images": 80,
+      "input_transform": {
+        "color_order": "RGB",
+        "dtype": "float32",
+        "layout": "NCHW",
+        "mean": [
+          123,
+          117,
+          104
+        ],
+        "std": [
+          127.502231,
+          127.502231,
+          127.502231
+        ],
+        "is_scale": false,
+        "resize_policy": "native",
+        "keep_ratio": true
+      },
+      "runtime": {
+        "framework": "Paddle Inference",
+        "paddle_version": "3.3.1",
+        "cpu_threads": 1
+      },
+      "model_identity": "blazeface",
+      "metrics": {
+        "real": {
+          "ap_at_iou": 0.6350631370643697,
+          "ground_truth_boxes": 110,
+          "predictions": 45935,
+          "tp_at_score": 66,
+          "fp_at_score": 24,
+          "fn_at_score": 44,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 110,
+              "matched_gt": 66,
+              "recall": 0.6
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 34,
+              "matched_gt": 25,
+              "recall": 0.7352941176470589
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 28,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 48,
+              "matched_gt": 41,
+              "recall": 0.8541666666666666
+            }
+          }
+        },
+        "same_image_RGB_channel_mean": {
+          "ap_at_iou": 0.0,
+          "ground_truth_boxes": 110,
+          "predictions": 12709,
+          "tp_at_score": 0,
+          "fp_at_score": 0,
+          "fn_at_score": 110,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 110,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 34,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 28,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 48,
+              "matched_gt": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "fixed_gray117": {
+          "ap_at_iou": 0.0,
+          "ground_truth_boxes": 110,
+          "predictions": 13722,
+          "tp_at_score": 0,
+          "fp_at_score": 0,
+          "fn_at_score": 110,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 110,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 34,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 28,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 48,
+              "matched_gt": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "cyclic_wrong": {
+          "ap_at_iou": 0.0004480435022487494,
+          "ground_truth_boxes": 110,
+          "predictions": 45935,
+          "tp_at_score": 1,
+          "fp_at_score": 89,
+          "fn_at_score": 109,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 110,
+              "matched_gt": 1,
+              "recall": 0.00909090909090909
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 34,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 28,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 48,
+              "matched_gt": 1,
+              "recall": 0.020833333333333332
+            }
+          }
+        }
+      },
+      "predeclared_screen": {
+        "person_real_ap50_min": 0.5,
+        "face_real_ap50_min": 0.5,
+        "real_ap50_margin_over_every_control_min": 0.15,
+        "small_face_recall_min": 0.5,
+        "small_face_matched_gt_min": 10,
+        "scope": "Apply person/face checks in their respective independent runs; small-face checks apply only to face."
+      },
+      "passed_external_only_screen": true,
+      "independent_recalculation_max_absolute_error": 1.1102230246251565e-16,
+      "wrong_image_mapping_max_absolute_error": 1.1368683772161603e-13,
+      "saved_artifact_hashes_verified_count": 16,
+      "reported_predict_calls": 240,
+      "source_files": [
+        "evaluate_external_baselines.py",
+        "external_baseline_models.py",
+        "external_blazeface.py",
+        "pretraining_data.py"
+      ],
+      "report": "artifacts/external-baselines/runs/blazeface/report.json",
+      "independent_verification": "artifacts/external-baselines/runs/blazeface/independent-verification.json"
+    },
+    "blazeface_s5_size": {
+      "target_class": "person_face",
+      "images": 80,
+      "input_transform": {
+        "color_order": "RGB",
+        "dtype": "float32",
+        "layout": "NCHW",
+        "mean": [
+          123,
+          117,
+          104
+        ],
+        "std": [
+          127.502231,
+          127.502231,
+          127.502231
+        ],
+        "is_scale": false,
+        "resize_policy": "stretch",
+        "keep_ratio": false,
+        "width": 384,
+        "height": 256,
+        "interpolation": "cv2.INTER_LINEAR",
+        "resize_before_normalization": true
+      },
+      "runtime": {
+        "framework": "Paddle Inference",
+        "paddle_version": "3.3.1",
+        "cpu_threads": 1
+      },
+      "model_identity": "blazeface",
+      "metrics": {
+        "real": {
+          "ap_at_iou": 0.735870208638388,
+          "ground_truth_boxes": 110,
+          "predictions": 36448,
+          "tp_at_score": 78,
+          "fp_at_score": 11,
+          "fn_at_score": 32,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 110,
+              "matched_gt": 78,
+              "recall": 0.7090909090909091
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 34,
+              "matched_gt": 19,
+              "recall": 0.5588235294117647
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 28,
+              "matched_gt": 20,
+              "recall": 0.7142857142857143
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 48,
+              "matched_gt": 39,
+              "recall": 0.8125
+            }
+          }
+        },
+        "same_image_RGB_channel_mean": {
+          "ap_at_iou": 0.0,
+          "ground_truth_boxes": 110,
+          "predictions": 1554,
+          "tp_at_score": 0,
+          "fp_at_score": 0,
+          "fn_at_score": 110,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 110,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 34,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 28,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 48,
+              "matched_gt": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "fixed_gray117": {
+          "ap_at_iou": 5.291565244999471e-06,
+          "ground_truth_boxes": 110,
+          "predictions": 2000,
+          "tp_at_score": 0,
+          "fp_at_score": 0,
+          "fn_at_score": 110,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 110,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 34,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 28,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 48,
+              "matched_gt": 0,
+              "recall": 0.0
+            }
+          }
+        },
+        "cyclic_wrong": {
+          "ap_at_iou": 0.0007718461845255519,
+          "ground_truth_boxes": 110,
+          "predictions": 36448,
+          "tp_at_score": 1,
+          "fp_at_score": 88,
+          "fn_at_score": 109,
+          "size_recall_s5_reference": {
+            "all": {
+              "ground_truth_boxes": 110,
+              "matched_gt": 1,
+              "recall": 0.00909090909090909
+            },
+            "small_lt32": {
+              "ground_truth_boxes": 34,
+              "matched_gt": 0,
+              "recall": 0.0
+            },
+            "large_ge96": {
+              "ground_truth_boxes": 28,
+              "matched_gt": 1,
+              "recall": 0.03571428571428571
+            },
+            "medium_32_to_lt96": {
+              "ground_truth_boxes": 48,
+              "matched_gt": 0,
+              "recall": 0.0
+            }
+          }
+        }
+      },
+      "predeclared_screen": {
+        "person_real_ap50_min": 0.5,
+        "face_real_ap50_min": 0.5,
+        "real_ap50_margin_over_every_control_min": 0.15,
+        "small_face_recall_min": 0.5,
+        "small_face_matched_gt_min": 10,
+        "scope": "Apply person/face checks in their respective independent runs; small-face checks apply only to face."
+      },
+      "passed_external_only_screen": true,
+      "independent_recalculation_max_absolute_error": 5.421010862427522e-19,
+      "wrong_image_mapping_max_absolute_error": 1.1368683772161603e-13,
+      "saved_artifact_hashes_verified_count": 16,
+      "reported_predict_calls": 240,
+      "source_files": [
+        "evaluate_external_baselines.py",
+        "external_baseline_models.py",
+        "external_blazeface.py",
+        "pretraining_data.py"
+      ],
+      "report": "artifacts/external-baselines/runs/blazeface_s5_size/report.json",
+      "independent_verification": "artifacts/external-baselines/runs/blazeface_s5_size/independent-verification.json"
+    }
+  },
+  "models": {
+    "picodet": {
+      "model_id": "official_picodet_s_320_coco_lcnet",
+      "files": {
+        "infer_cfg.yml": {
+          "sha256": "66bedb1e944bd914909bcc6798ce6150138a623e87810c5eb4b1a06bdcafe2a2",
+          "bytes": 1254
+        },
+        "model.pdiparams": {
+          "sha256": "15f8d07941187ac2b40643a41031887e47d5c6083fa13d1c90ba5af94b9c2cf5",
+          "bytes": 4861204
+        },
+        "model.pdiparams.info": {
+          "sha256": "ad830915bf1ac90da69318e845d574d77b178d9ae31482d5bd429d1378f8b288",
+          "bytes": 39307
+        },
+        "model.pdmodel": {
+          "sha256": "7ca4e3e835310227640559cedbc162c76ffb0cfb85d1914d66058892602df15c",
+          "bytes": 2966775
+        }
+      },
+      "artifact_root": "artifacts/external-baselines/models/picodet/picodet_s_320_coco_lcnet",
+      "graph_nms": {
+        "score_threshold": 0.02500000037252903,
+        "background_label": -1,
+        "nms_threshold": 0.6000000238418579,
+        "normalized": true,
+        "nms_top_k": 1000,
+        "keep_top_k": 100
+      },
+      "publisher_signature_verified": false,
+      "provenance_report": "artifacts/external-baselines/models/picodet/provenance.json",
+      "official_urls": {
+        "download_url": "https://paddledet.bj.bcebos.com/deploy/Inference/picodet_s_320_coco_lcnet.tar",
+        "official_reference": "https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/configs/picodet/README.md"
+      }
+    },
+    "blazeface": {
+      "model_id": "blazeface_fpn_ssh_1000e",
+      "files": {
+        "infer_cfg.yml": {
+          "sha256": "9cd9bfd226eebc3f424ba2a962dbbc5f23a719eb64c921a3a20838287ebe84a5",
+          "bytes": 279
+        },
+        "model.pdiparams": {
+          "sha256": "7633d3b19168b3862fd05f2db6013413b2e43619b7b995025fa1ce2e753c80c2",
+          "bytes": 661362
+        },
+        "model.pdiparams.info": {
+          "sha256": "6c7c12acdde8d88616a4382de7dad9aae1d7db05a1ae6dd953ce7fbc72c26e08",
+          "bytes": 29234
+        },
+        "model.pdmodel": {
+          "sha256": "b7aa2aa614e6b3fb31f22cbb738cb2317e1f23e1e948a03b0b0d218e93368ccc",
+          "bytes": 170466
+        }
+      },
+      "artifact_root": "artifacts/external-baselines/models/blazeface/export/blazeface_fpn_ssh_1000e",
+      "graph_nms": {
+        "operator": "multiclass_nms3",
+        "score_threshold": 0.009999999776482582,
+        "nms_threshold": 0.30000001192092896,
+        "nms_top_k": 5000,
+        "keep_top_k": 750,
+        "background_label": 1,
+        "normalized": true
+      },
+      "publisher_signature_verified": false,
+      "provenance_report": "artifacts/external-baselines/models/blazeface/provenance.json",
+      "official_urls": {
+        "official_reference": "https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/configs/face_detection/README.md",
+        "config_reference": "https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/configs/face_detection/blazeface_fpn_ssh_1000e.yml"
+      },
+      "original_checkpoint": {
+        "url": "https://paddledet.bj.bcebos.com/models/blazeface_fpn_ssh_1000e.pdparams",
+        "file": "blazeface_fpn_ssh_1000e.pdparams",
+        "sha256": "522d4ab2a2b5f06ffdba5b0871bffa4a5a7d87122af2e24b97111b39458c4f35",
+        "bytes": 1024265
+      },
+      "official_export_source": {
+        "repository": "https://github.com/PaddlePaddle/PaddleDetection",
+        "ref": "release/2.9",
+        "commit": "b25522a0f4bde8c80603f3ba5e3472059972e3b5"
+      },
+      "original_checkpoint_hash_independently_rechecked_in_this_summary": false
+    }
+  },
+  "source_sha256": {
+    "evaluate_external_baselines.py": "7b57ebfc27b30aded270ff96dd7b1c1be2e684d22ebd79c5348a06daa0a2cf70",
+    "external_baseline_models.py": "348b229f582bf301a12859225a442736287e9c7268f1560cc952504634b4e2e7",
+    "external_picodet.py": "30a092bf4369774bf91342ca2af67a7e4e0716911d5d99e87f10cc6db5749d77",
+    "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+    "external_blazeface.py": "18ac5c16590ce08781aa808ac86284563b9a63d0126b3d50319241eff5cee625"
+  },
+  "native_vs_resized_face_comparison": {
+    "evidence": "Saved matching/real.json only, unchanged score0.5 and IoU0.5.",
+    "paired_GT_outcomes_by_s5_reference_size": {
+      "small_lt32": {
+        "ground_truth": 34,
+        "both_matched": 18,
+        "native_only": 7,
+        "resized_only": 1,
+        "neither_matched": 8
+      },
+      "medium_32_to_lt96": {
+        "ground_truth": 48,
+        "both_matched": 37,
+        "native_only": 4,
+        "resized_only": 2,
+        "neither_matched": 5
+      },
+      "large_ge96": {
+        "ground_truth": 28,
+        "both_matched": 0,
+        "native_only": 0,
+        "resized_only": 20,
+        "neither_matched": 8
+      }
+    },
+    "resized_minus_native_true_positives": {
+      "small": -6,
+      "medium": -2,
+      "large": 20,
+      "all": 12
+    },
+    "native_false_positives": 24,
+    "resized_false_positives": 11,
+    "interpretation": "At fixed threshold, the384x256 profile gains20 large-face matches, loses6 small-face and2 medium-face matches, and has13 fewer false positives. This is consistent with higher aggregate AP despite lower small-face recall.",
+    "limit": "AP depends on the full confidence ranking; thresholded matching counts do not algebraically decompose AP or prove an internal causal mechanism. No threshold was changed or model rerun.",
+    "explicit_recall_at_score_0_5": {
+      "small_lt32": {
+        "blazeface": {
+          "ground_truth_boxes": 34,
+          "matched_gt": 25,
+          "recall": 0.7352941176470589
+        },
+        "blazeface_s5_size": {
+          "ground_truth_boxes": 34,
+          "matched_gt": 19,
+          "recall": 0.5588235294117647
+        }
+      },
+      "medium_32_to_lt96": {
+        "blazeface": {
+          "ground_truth_boxes": 48,
+          "matched_gt": 41,
+          "recall": 0.8541666666666666
+        },
+        "blazeface_s5_size": {
+          "ground_truth_boxes": 48,
+          "matched_gt": 39,
+          "recall": 0.8125
+        }
+      },
+      "large_ge96": {
+        "blazeface": {
+          "ground_truth_boxes": 28,
+          "matched_gt": 0,
+          "recall": 0.0
+        },
+        "blazeface_s5_size": {
+          "ground_truth_boxes": 28,
+          "matched_gt": 20,
+          "recall": 0.7142857142857143
+        }
+      }
+    },
+    "necessary_screen_limit": "Both external necessary screens pass, but native BlazeFace matches0/28 large faces at score>=0.5 versus20/28 for384x256. PASS does not mean every object-size stratum works."
+  },
+  "audit": {
+    "all_saved_report_artifact_hashes_match": true,
+    "all_recorded_project_source_hashes_match": true,
+    "all_exported_model_file_hashes_match": true,
+    "independent_metric_verifier_sha256": "46093e97afd28c40512d528d1e3600812616916bba77c8df88bc80953e6a1727",
+    "model_bytes_hashed_only_not_executed_by_summary": true,
+    "pictures_opened_by_summary": false,
+    "self_checks_reported_by_independent_verifier": 6
+  },
+  "limits": [
+    "Both train and validation contain person+face positive images only; empty-scene false alarms remain unmeasured.",
+    "All80 validation images were used previously for diagnostics; this is not an untouched final holdout.",
+    "COCO person and WIDER FACE face pretraining differ from local Open Images labels/box policies; cross-corpus duplicate overlap was not independently audited.",
+    "Open Images hierarchy was collapsed into person; group/depiction and ambiguous overlapping-subclass images were excluded, limiting coverage of crowds and overlap.",
+    "WIDER FACE has its own face-box and difficult/ignore policies; S5-reference small objects are not equivalent to WIDER Hard.",
+    "Native BlazeFace and384x256 use different input pixel counts. These are not equal-compute or measured S5-runtime comparisons.",
+    "Official export score floors, top-K and NMS still truncate available detections. Low confidence floors are not deployment thresholds.",
+    "Passing external screens demonstrates usable image-dependent computer baselines only; it neither resolves the original DSP graph nor authorizes new-model/S5 training."
+  ],
+  "official_protocol_references": [
+    "https://storage.googleapis.com/openimages/web/evaluation.html",
+    "https://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/support/paper.pdf",
+    "https://github.com/PaddlePaddle/PaddleDetection/blob/release/2.9/configs/face_detection/_base_/face_reader.yml"
+  ],
+  "file_identities": {
+    "artifacts/external-baselines/models/blazeface/export/blazeface_fpn_ssh_1000e/infer_cfg.yml": {
+      "sha256": "9cd9bfd226eebc3f424ba2a962dbbc5f23a719eb64c921a3a20838287ebe84a5",
+      "bytes": 279
+    },
+    "artifacts/external-baselines/models/blazeface/export/blazeface_fpn_ssh_1000e/model.pdiparams": {
+      "sha256": "7633d3b19168b3862fd05f2db6013413b2e43619b7b995025fa1ce2e753c80c2",
+      "bytes": 661362
+    },
+    "artifacts/external-baselines/models/blazeface/export/blazeface_fpn_ssh_1000e/model.pdiparams.info": {
+      "sha256": "6c7c12acdde8d88616a4382de7dad9aae1d7db05a1ae6dd953ce7fbc72c26e08",
+      "bytes": 29234
+    },
+    "artifacts/external-baselines/models/blazeface/export/blazeface_fpn_ssh_1000e/model.pdmodel": {
+      "sha256": "b7aa2aa614e6b3fb31f22cbb738cb2317e1f23e1e948a03b0b0d218e93368ccc",
+      "bytes": 170466
+    },
+    "artifacts/external-baselines/models/blazeface/provenance.json": {
+      "sha256": "a092de86c087fad59998e442faa2b0edad7bbaf96941560471ea61d38be01588",
+      "bytes": 5173
+    },
+    "artifacts/external-baselines/models/picodet/picodet_s_320_coco_lcnet/infer_cfg.yml": {
+      "sha256": "66bedb1e944bd914909bcc6798ce6150138a623e87810c5eb4b1a06bdcafe2a2",
+      "bytes": 1254
+    },
+    "artifacts/external-baselines/models/picodet/picodet_s_320_coco_lcnet/model.pdiparams": {
+      "sha256": "15f8d07941187ac2b40643a41031887e47d5c6083fa13d1c90ba5af94b9c2cf5",
+      "bytes": 4861204
+    },
+    "artifacts/external-baselines/models/picodet/picodet_s_320_coco_lcnet/model.pdiparams.info": {
+      "sha256": "ad830915bf1ac90da69318e845d574d77b178d9ae31482d5bd429d1378f8b288",
+      "bytes": 39307
+    },
+    "artifacts/external-baselines/models/picodet/picodet_s_320_coco_lcnet/model.pdmodel": {
+      "sha256": "7ca4e3e835310227640559cedbc162c76ffb0cfb85d1914d66058892602df15c",
+      "bytes": 2966775
+    },
+    "artifacts/external-baselines/models/picodet/provenance.json": {
+      "sha256": "734966fe1b00605afaf7976207c83e69aff394fde06035b51e69c9492e152181",
+      "bytes": 1121
+    },
+    "artifacts/external-baselines/runs/blazeface/frozen-plan.json": {
+      "sha256": "42e6c8142cfef89692b1d187cba824fe1c8a808ace0be4d496e4f58c346c5c1d",
+      "bytes": 28390
+    },
+    "artifacts/external-baselines/runs/blazeface/independent-verification.json": {
+      "sha256": "23fbd25fc8c9d9c1ec02da907659e9a57e2799f73272e6675f9371568b21b683",
+      "bytes": 9119
+    },
+    "artifacts/external-baselines/runs/blazeface/matching/real.json": {
+      "sha256": "d52c8b336b599c11ce75cda441324850e30757f77dad9687a6d9dbe841f1cf29",
+      "bytes": 58848
+    },
+    "artifacts/external-baselines/runs/blazeface/metrics.json": {
+      "sha256": "67627bf9059b9bad5f757d5b9400eb9601f89839832eba886d87b67e5f873b6b",
+      "bytes": 2631
+    },
+    "artifacts/external-baselines/runs/blazeface/predictions/cyclic_wrong.json": {
+      "sha256": "17596597cfd2a067ed423040362bcb3007ca2ae838627f94aec9b9f47a931602",
+      "bytes": 11726599
+    },
+    "artifacts/external-baselines/runs/blazeface/predictions/fixed_gray117.json": {
+      "sha256": "e9160ee9b46ab10e4a65948b76424447d3d7b04babccd44e4596a1fd5dd9b505",
+      "bytes": 3441187
+    },
+    "artifacts/external-baselines/runs/blazeface/predictions/real.json": {
+      "sha256": "3335b6077451194ea8ef92e5ed09d8d5ef1672581650d4f8dd66976f04b2c02c",
+      "bytes": 11691544
+    },
+    "artifacts/external-baselines/runs/blazeface/predictions/same_image_RGB_channel_mean.json": {
+      "sha256": "11dff068e0d9d1b9987354e1d2639347c89f5876d1f44510cc8effca55c73d75",
+      "bytes": 3216896
+    },
+    "artifacts/external-baselines/runs/blazeface/report.json": {
+      "sha256": "d79e67e7f16cc2e6667dea1731cf429cd168f350d5074e02a48e5969083dce1c",
+      "bytes": 18480
+    },
+    "artifacts/external-baselines/runs/blazeface/screening.json": {
+      "sha256": "aec571d27b4dd274f64eb27b0d2505f37b0fb0df569442d43c03e7ea342eb8e4",
+      "bytes": 1333
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/frozen-plan.json": {
+      "sha256": "a5ef48e5919731a44bd798ca538214734cd1b78122ea91c98e9b1b7fa8521f6b",
+      "bytes": 28538
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/independent-verification.json": {
+      "sha256": "eaf19f5188b9b49175813806632e36bed3348d5f696eaf816a24af31e61a6ef0",
+      "bytes": 9150
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/matching/real.json": {
+      "sha256": "151a7cd19fe835303a4ca1287669261cd90ae0c7f32224844794eac748ec39ad",
+      "bytes": 61178
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/metrics.json": {
+      "sha256": "2ec20f81adc23aad4798d279107357bb0c0fc7e5febb5e5fc38e242fcdc38e9b",
+      "bytes": 2661
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/predictions/cyclic_wrong.json": {
+      "sha256": "74d267c62a4c9e1089eb629c04f6663cd5093e054a862e1c4303d123763e731f",
+      "bytes": 9253332
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/predictions/fixed_gray117.json": {
+      "sha256": "78d38ab869b7bf951638906bb014804933d4e20e87d163df7065e4440c127df3",
+      "bytes": 509352
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/predictions/real.json": {
+      "sha256": "8488c20a4885b58180c08670f2305fd9e49266221d43ead74f69f57171dc5f9e",
+      "bytes": 9224663
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/predictions/same_image_RGB_channel_mean.json": {
+      "sha256": "a84e0f9d0dd9c380d4c3fef7d5c8920b209c4bfe3894664ecd8578fe5138203b",
+      "bytes": 392340
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/report.json": {
+      "sha256": "a96b54a1c545498c8e57302b317a8ed60cb1f068da1ef9384f6c017a9373c53b",
+      "bytes": 18740
+    },
+    "artifacts/external-baselines/runs/blazeface_s5_size/screening.json": {
+      "sha256": "44dbbaf60230a4399f1b43d86c18f8b018b793a71416bd62b41f3d8527d7a491",
+      "bytes": 1347
+    },
+    "artifacts/external-baselines/runs/picodet/frozen-plan.json": {
+      "sha256": "f737096621d6774761851ee5121c45381aa784f80c32e96e67e49b052e89bda8",
+      "bytes": 28475
+    },
+    "artifacts/external-baselines/runs/picodet/independent-verification.json": {
+      "sha256": "71e45f32081ae6be87a10632979987caadceec7f0093eca34c24d8417537e33a",
+      "bytes": 9154
+    },
+    "artifacts/external-baselines/runs/picodet/matching/real.json": {
+      "sha256": "9f7855be5240845c4bb10e905e00dc4dd4c2c2c3cc0640c0d986a3273db331e3",
+      "bytes": 65626
+    },
+    "artifacts/external-baselines/runs/picodet/metrics.json": {
+      "sha256": "a11df49121de99a6bb806cf1bb49a57ce96f52d6bc25bc4c7bb091137fb6215c",
+      "bytes": 2660
+    },
+    "artifacts/external-baselines/runs/picodet/predictions/cyclic_wrong.json": {
+      "sha256": "55dcbc6f4360d95b3e0a752b6cceeeb46e0d3cdc3a1ff649d1072aff624edbce",
+      "bytes": 361856
+    },
+    "artifacts/external-baselines/runs/picodet/predictions/fixed_gray117.json": {
+      "sha256": "cdca448ef3ded34de59efaaa0a1525a6557df46f659908aa40dc96d1512741d3",
+      "bytes": 86639
+    },
+    "artifacts/external-baselines/runs/picodet/predictions/real.json": {
+      "sha256": "14a210bbaf5d0fd83c6894d52d112b0c9f96cf77f2a2a34b85ef6c31bd7c8adb",
+      "bytes": 355905
+    },
+    "artifacts/external-baselines/runs/picodet/predictions/same_image_RGB_channel_mean.json": {
+      "sha256": "efe4c5bbede72d167e44a3aaeaaaf39f18b9624fa2490da3e788db1debd7f361",
+      "bytes": 79503
+    },
+    "artifacts/external-baselines/runs/picodet/report.json": {
+      "sha256": "665a556a52e873ba3d3736c8a7ac77d3431d2fbd70a8913f94a5c9f0ec8ab9d0",
+      "bytes": 18395
+    },
+    "artifacts/external-baselines/runs/picodet/screening.json": {
+      "sha256": "820c4ffb9863d8e0d1c70d0f7e2778749756582b6505cf2aac0492a9318d66d0",
+      "bytes": 1277
+    },
+    "evaluate_external_baselines.py": {
+      "sha256": "7b57ebfc27b30aded270ff96dd7b1c1be2e684d22ebd79c5348a06daa0a2cf70",
+      "bytes": 25765
+    },
+    "external_baseline_models.py": {
+      "sha256": "348b229f582bf301a12859225a442736287e9c7268f1560cc952504634b4e2e7",
+      "bytes": 520
+    },
+    "external_blazeface.py": {
+      "sha256": "18ac5c16590ce08781aa808ac86284563b9a63d0126b3d50319241eff5cee625",
+      "bytes": 8970
+    },
+    "external_picodet.py": {
+      "sha256": "30a092bf4369774bf91342ca2af67a7e4e0716911d5d99e87f10cc6db5749d77",
+      "bytes": 6576
+    },
+    "pretraining_data.py": {
+      "sha256": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+      "bytes": 15097
+    },
+    "verify_external_baselines.py": {
+      "sha256": "46093e97afd28c40512d528d1e3600812616916bba77c8df88bc80953e6a1727",
+      "bytes": 18085
+    }
+  }
+}

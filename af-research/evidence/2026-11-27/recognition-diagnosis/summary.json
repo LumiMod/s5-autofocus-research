@@ -1,0 +1,1831 @@
+{
+  "schema_version": 1,
+  "ready_to_resume_recognition_training": false,
+  "verified_recognition_fix": false,
+  "evidence_kind": "Derived index and file-identity audit of existing reports; not original numerical-run proof.",
+  "summary_execution": {
+    "optimizer_steps": 0,
+    "model_inference": false,
+    "test_inference": false,
+    "firmware_or_model_weights_loaded": false,
+    "photographs_opened": false,
+    "dataset_manifests_opened": false,
+    "independent_summary_self_checks": 4
+  },
+  "diagnostic_round_scope_reported": {
+    "optimizer_steps": 0,
+    "test_inference": false,
+    "validation_inference": "Preprocessing only: frozen candidates on 80 validation images.",
+    "training_subsets": "Preprocessing/packing/arithmetic use first32 sorted train IDs; anchor decoder uses first8. Outer-axis/ARM probes are static."
+  },
+  "metric_definition": "Two-class all-points AP at IoU0.5, averaged across person/face; not COCO mAP.",
+  "preprocessing": {
+    "outcome": "No validated preprocessing repair. Train improvements for 709 or HOW+mean0 did not beat strongest controls on validation.",
+    "development_images_per_run": 32,
+    "predeclared_preprocessing_variants_per_layout": 6,
+    "independent_self_checks_reported": 7,
+    "validation": [
+      {
+        "source": "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__direct/validation/report.json",
+        "layout": "o4_i4_hw__direct",
+        "variant": "baseline_gray117",
+        "images": 80,
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.1705367951827871,
+            "person_ap50": 0.33974717947941235,
+            "face_ap50": 0.0013264108861618627
+          },
+          "same_mean": {
+            "mean_ap50": 0.16959878559661007,
+            "person_ap50": 0.3381919019890822,
+            "face_ap50": 0.0010056692041379236
+          },
+          "fixed_gray117": {
+            "mean_ap50": 0.17679222675824574,
+            "person_ap50": 0.3529022310169989,
+            "face_ap50": 0.000682222499492586
+          },
+          "shuffled": {
+            "mean_ap50": 0.16132136407027695,
+            "person_ap50": 0.3212606804144767,
+            "face_ap50": 0.0013820477260771842
+          }
+        },
+        "real_minus_strongest_control_map50": -0.006255431575458631
+      },
+      {
+        "source": "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__direct/validation/report.json",
+        "layout": "o4_i4_hw__direct",
+        "variant": "float709_gray117",
+        "images": 80,
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.16970795625694904,
+            "person_ap50": 0.3380230601459262,
+            "face_ap50": 0.0013928523679718713
+          },
+          "same_mean": {
+            "mean_ap50": 0.16854572933435238,
+            "person_ap50": 0.3359514090203897,
+            "face_ap50": 0.001140049648315017
+          },
+          "fixed_gray117": {
+            "mean_ap50": 0.17679222675824574,
+            "person_ap50": 0.3529022310169989,
+            "face_ap50": 0.000682222499492586
+          },
+          "shuffled": {
+            "mean_ap50": 0.1611848295668491,
+            "person_ap50": 0.3208339685469127,
+            "face_ap50": 0.0015356905867854771
+          }
+        },
+        "real_minus_strongest_control_map50": -0.007084270501296702
+      },
+      {
+        "source": "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__o4_h_o4_w/validation/report.json",
+        "layout": "o4_i4_hw__o4_h_o4_w",
+        "variant": "baseline_gray117",
+        "images": 80,
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.16817338231103512,
+            "person_ap50": 0.335117440290694,
+            "face_ap50": 0.0012293243313762634
+          },
+          "same_mean": {
+            "mean_ap50": 0.16202051095363487,
+            "person_ap50": 0.3226091042867279,
+            "face_ap50": 0.0014319176205418308
+          },
+          "fixed_gray117": {
+            "mean_ap50": 0.17679222675824574,
+            "person_ap50": 0.3529022310169989,
+            "face_ap50": 0.000682222499492586
+          },
+          "shuffled": {
+            "mean_ap50": 0.1788362350434566,
+            "person_ap50": 0.3565362845201127,
+            "face_ap50": 0.0011361855668005072
+          }
+        },
+        "real_minus_strongest_control_map50": -0.010662852732421485
+      },
+      {
+        "source": "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__o4_h_o4_w/validation/report.json",
+        "layout": "o4_i4_hw__o4_h_o4_w",
+        "variant": "gray_mean0",
+        "images": 80,
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.1806441001461481,
+            "person_ap50": 0.36005776679168994,
+            "face_ap50": 0.0012304335006062556
+          },
+          "same_mean": {
+            "mean_ap50": 0.1654525859442929,
+            "person_ap50": 0.33003402429682493,
+            "face_ap50": 0.0008711475917608797
+          },
+          "fixed_gray117": {
+            "mean_ap50": 0.18113470125104314,
+            "person_ap50": 0.3615798317496789,
+            "face_ap50": 0.0006895707524073771
+          },
+          "shuffled": {
+            "mean_ap50": 0.18190704453670992,
+            "person_ap50": 0.3626691767411033,
+            "face_ap50": 0.0011449123323165225
+          }
+        },
+        "real_minus_strongest_control_map50": -0.001262944390561821
+      }
+    ],
+    "layer_response_train32": {
+      "baseline_gray117": [
+        {
+          "index": 1,
+          "name": "conv1",
+          "signal_over_real_rms": 0.6447482636797964,
+          "real_max_abs": 13.211257249116898,
+          "int16_range_hypothesis_limit": 13.528819145751186,
+          "real_fraction_beyond_int16_range_hypothesis": 1.9192695830838602e-05
+        },
+        {
+          "index": 74,
+          "name": "inc4e/conv5_3",
+          "signal_over_real_rms": 0.4200370855691431,
+          "real_max_abs": 136.16543292999268,
+          "int16_range_hypothesis_limit": 42.43190587766003,
+          "real_fraction_beyond_int16_range_hypothesis": 0.048634846752975136
+        },
+        {
+          "index": 90,
+          "name": "rpn_cls_score2",
+          "signal_over_real_rms": 0.14607043422668264,
+          "real_max_abs": 4.723863162100315,
+          "int16_range_hypothesis_limit": 15.99951171875,
+          "real_fraction_beyond_int16_range_hypothesis": 0.0
+        }
+      ],
+      "gray117_times_input_scale": [
+        {
+          "index": 1,
+          "name": "conv1",
+          "signal_over_real_rms": 0.007336710886215309,
+          "real_max_abs": 2.471622973680496,
+          "int16_range_hypothesis_limit": 13.528819145751186,
+          "real_fraction_beyond_int16_range_hypothesis": 0.0
+        },
+        {
+          "index": 74,
+          "name": "inc4e/conv5_3",
+          "signal_over_real_rms": 0.005591375011139694,
+          "real_max_abs": 126.58610510826111,
+          "int16_range_hypothesis_limit": 42.43190587766003,
+          "real_fraction_beyond_int16_range_hypothesis": 0.042114257463254035
+        },
+        {
+          "index": 90,
+          "name": "rpn_cls_score2",
+          "signal_over_real_rms": 0.0017988270455005558,
+          "real_max_abs": 4.320266470313072,
+          "int16_range_hypothesis_limit": 15.99951171875,
+          "real_fraction_beyond_int16_range_hypothesis": 0.0
+        }
+      ]
+    },
+    "input_evidence": {
+      "embedded_array": {
+        "offset": 30960,
+        "bytes": 197632,
+        "stored_shape": [
+          1,
+          1,
+          256,
+          386
+        ],
+        "valid_width": 384,
+        "valid_height": 256,
+        "scale_candidate": 0.0078125,
+        "valid_area_all_same": true,
+        "valid_area_raw_value": 14976,
+        "valid_area_scaled_value": 117.0,
+        "row_padding_interpretation": "Two stored i16 elements per row; meaning unverified."
+      },
+      "input_node_output_scale_candidate": 0.006317331455647945,
+      "embedded_value_sign": "positive 14976, scaled by 1/128 to positive117; subtraction sign not encoded by this value alone",
+      "unverified": [
+        "RGB-to-camera-Y conversion and range",
+        "mean subtraction direction and runtime use of embedded array",
+        "Whether an additional scale applies before first conv",
+        "crop/resize/letterbox policy",
+        "Runtime padding, zero point, rounding, activation bit width and saturation"
+      ]
+    },
+    "binding_limit": "Run source hashes and summary agreement checked; state hash and metrics are reported evidence, not independently recomputed inference."
+  },
+  "packing": {
+    "status": "No weight-layout correction is established by these bounded probes.",
+    "scope": {
+      "candidate_count": 16,
+      "images": 32,
+      "split": "train only",
+      "optimizer_steps": 0,
+      "validation_or_test_pixels_read": false
+    },
+    "findings": [
+      {
+        "topic": "1x1 classification output order",
+        "observed": "All 8 heads across pinned 43/44 uniquely pass Ob_Ib_O_I among24 axis orders, and identity output-lane order among24 lane permutations, using zero padding plus all25 bg/fg cosine<-0.98.",
+        "limit": "All24 input-lane permutations preserve these invariants; arbitrary column semantics remain unresolved."
+      },
+      {
+        "topic": "conv1",
+        "observed": "H_O_W has lower mean normalized spatial neighbor differences than direct O_H_W in both43/44; kernels become visually coherent edge/lowpass candidates.",
+        "limit": "Neither training32 image/control behavior nor byte invariants establish original ordering. H/W-transposed variants remain structurally tied."
+      },
+      {
+        "topic": "3x3",
+        "observed": "24 inner O/I/H/W orders were inspected structurally; bounded behavioral probes include missing row-interleaved orders, direct OIHW, inner I/O reversal, spatial transposes and two RPN-only group variations.",
+        "limit": "No universal or grouped permutation demonstrated restored small-face discrimination. Smoothness cannot identify pure channel permutations."
+      },
+      {
+        "topic": "upsample",
+        "observed": "The entire raw table including zeros exactly fits a 2x2 polyphase/paired-lane representation. Interleaving phases yields the same4x4 bilinear coefficients currently used.",
+        "limit": "This narrows coefficient order beyond a histogram, but does not establish actual channel routing or phase addressing."
+      },
+      {
+        "topic": "image signal",
+        "observed": "Legacy o4_i4_hw retains input-dependent responses: real-vs-gray relative RMS averages0.773 atconv1,0.125 atRPN5_2,0.180/person and0.128/face classifiers.",
+        "limit": "Deep signal reduction and weak face real-vs-wrong controls do not prove total feature collapse or identify packing as the unique cause."
+      },
+      {
+        "topic": "highest AP",
+        "observed": "Spatial-transposed legacy meanAP rises0.18370->0.19613, while its gray control rises0.16633->0.18419 and face AP remains below wrong-image control.",
+        "limit": "The increase cannot justify selecting it as corrected firmware semantics."
+      }
+    ],
+    "selected_diagnostic_examples": [
+      {
+        "source": "artifacts/recognition-diagnosis/packing/initial/runtime-summary.json",
+        "candidate": {
+          "name": "legacy_o4_i4_hw",
+          "conv1_order": "O_H_W",
+          "spatial_order": "Ob_Ib_O_I_H_W"
+        },
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.18369763835621838,
+            "person_ap50": 0.3634856131885072,
+            "face_ap50": 0.003909663523929583
+          },
+          "constant_gray117": {
+            "mean_ap50": 0.16633019711445846,
+            "person_ap50": 0.33108810023324314,
+            "face_ap50": 0.0015722939956737923
+          },
+          "wrong_image": {
+            "mean_ap50": 0.1481073292027811,
+            "person_ap50": 0.29193027419939166,
+            "face_ap50": 0.004284384206170534
+          }
+        }
+      },
+      {
+        "source": "artifacts/recognition-diagnosis/packing/initial/runtime-summary.json",
+        "candidate": {
+          "name": "conv1_HOW_o4_i4_hw",
+          "conv1_order": "H_O_W",
+          "spatial_order": "Ob_Ib_O_I_H_W"
+        },
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.18757095391466766,
+            "person_ap50": 0.37023369757055646,
+            "face_ap50": 0.0049082102587788435
+          },
+          "constant_gray117": {
+            "mean_ap50": 0.16633019711445846,
+            "person_ap50": 0.33108810023324314,
+            "face_ap50": 0.0015722939956737923
+          },
+          "wrong_image": {
+            "mean_ap50": 0.1735774267795013,
+            "person_ap50": 0.3427983495629889,
+            "face_ap50": 0.004356503996013729
+          }
+        }
+      },
+      {
+        "source": "artifacts/recognition-diagnosis/packing/followup/runtime-summary.json",
+        "candidate": {
+          "name": "transpose_all_legacy",
+          "conv1_order": "O_H_W",
+          "spatial_order": "Ob_Ib_O_I_H_W",
+          "transpose_spatial": true
+        },
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.1961260190368374,
+            "person_ap50": 0.3878185695825278,
+            "face_ap50": 0.004433468491147027
+          },
+          "constant_gray117": {
+            "mean_ap50": 0.18419335837164066,
+            "person_ap50": 0.36485890369267,
+            "face_ap50": 0.00352781305061134
+          },
+          "wrong_image": {
+            "mean_ap50": 0.16857107069686628,
+            "person_ap50": 0.33066569034418847,
+            "face_ap50": 0.006476451049544079
+          }
+        }
+      }
+    ],
+    "semantic_checks_reported_passed": true,
+    "semantic_check_count": 8,
+    "binding_limit": "Current scripts match recorded identities where indicated; semantic checks and numerical predictions were not rerun."
+  },
+  "anchors": {
+    "status": "Original-weight training-subset diagnosis only; no chosen repair",
+    "inference_training_images": 8,
+    "decoder_candidates_per_layout": 16,
+    "layouts": [
+      "o4_i4_hw",
+      "hw_o4_i4",
+      "o4_hw_i4"
+    ],
+    "verification_reported": {
+      "passed": true,
+      "decoder_index_checks": 5,
+      "recomputed_saved_prediction_conditions": 144,
+      "only_train_prediction_ids": true,
+      "model_state_identity_bound_to_predictions": true,
+      "proposal_table_word_matches_verified": true,
+      "bounded_anchor_signature_search_verified": true,
+      "core_source_hashes_unchanged": true,
+      "optimizer_steps": 0,
+      "test_inference_performed": false
+    },
+    "verification_file_identity_audit": {
+      "index_source": "artifacts/recognition-diagnosis/anchors/verification.json",
+      "listed_files": 152,
+      "files_hashed": 152,
+      "missing": [],
+      "mismatches": [],
+      "all_listed_file_identities_match": true,
+      "numerical_metrics_recomputed_by_summarizer": false
+    },
+    "geometry_only": [
+      {
+        "design": "stored_scales",
+        "split": "train",
+        "scales": [
+          3.0,
+          6.0,
+          9.0,
+          16.0,
+          32.0
+        ],
+        "anchor_shapes_per_location": 25,
+        "change_from_stored_scales": "none",
+        "summary": {
+          "person/all": {
+            "boxes": 463,
+            "covered_at_iou_05": 435,
+            "mean_best_iou": 0.7264686815181699
+          },
+          "person/sqrt_area_below_32": {
+            "boxes": 21,
+            "covered_at_iou_05": 0,
+            "mean_best_iou": 0.22420617356866177
+          },
+          "person_face/all": {
+            "boxes": 420,
+            "covered_at_iou_05": 308,
+            "mean_best_iou": 0.5727281232311398
+          },
+          "person_face/sqrt_area_below_32": {
+            "boxes": 103,
+            "covered_at_iou_05": 0,
+            "mean_best_iou": 0.21573304602935156
+          }
+        }
+      },
+      {
+        "design": "stored_scales",
+        "split": "validation",
+        "scales": [
+          3.0,
+          6.0,
+          9.0,
+          16.0,
+          32.0
+        ],
+        "anchor_shapes_per_location": 25,
+        "change_from_stored_scales": "none",
+        "summary": {
+          "person/all": {
+            "boxes": 120,
+            "covered_at_iou_05": 103,
+            "mean_best_iou": 0.6920513619226847
+          },
+          "person/sqrt_area_below_32": {
+            "boxes": 12,
+            "covered_at_iou_05": 0,
+            "mean_best_iou": 0.27217338610673153
+          },
+          "person_face/all": {
+            "boxes": 110,
+            "covered_at_iou_05": 73,
+            "mean_best_iou": 0.545230937260143
+          },
+          "person_face/sqrt_area_below_32": {
+            "boxes": 34,
+            "covered_at_iou_05": 0,
+            "mean_best_iou": 0.2159964700634301
+          }
+        }
+      },
+      {
+        "design": "new_small_scales_16px",
+        "split": "train",
+        "scales": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "anchor_shapes_per_location": 25,
+        "change_from_stored_scales": "Replace all five scales, retaining five ratios and 25 anchor shapes; not append one small anchor.",
+        "summary": {
+          "person/all": {
+            "boxes": 463,
+            "covered_at_iou_05": 442,
+            "mean_best_iou": 0.7115193278614865
+          },
+          "person/sqrt_area_below_32": {
+            "boxes": 21,
+            "covered_at_iou_05": 11,
+            "mean_best_iou": 0.5072689247209669
+          },
+          "person_face/all": {
+            "boxes": 420,
+            "covered_at_iou_05": 353,
+            "mean_best_iou": 0.6239788648385567
+          },
+          "person_face/sqrt_area_below_32": {
+            "boxes": 103,
+            "covered_at_iou_05": 48,
+            "mean_best_iou": 0.48373004205332915
+          }
+        }
+      },
+      {
+        "design": "new_small_scales_16px",
+        "split": "validation",
+        "scales": [
+          1,
+          2,
+          4,
+          8,
+          16
+        ],
+        "anchor_shapes_per_location": 25,
+        "change_from_stored_scales": "Replace all five scales, retaining five ratios and 25 anchor shapes; not append one small anchor.",
+        "summary": {
+          "person/all": {
+            "boxes": 120,
+            "covered_at_iou_05": 110,
+            "mean_best_iou": 0.6914041583147366
+          },
+          "person/sqrt_area_below_32": {
+            "boxes": 12,
+            "covered_at_iou_05": 5,
+            "mean_best_iou": 0.470390260838611
+          },
+          "person_face/all": {
+            "boxes": 110,
+            "covered_at_iou_05": 89,
+            "mean_best_iou": 0.6005853331267392
+          },
+          "person_face/sqrt_area_below_32": {
+            "boxes": 34,
+            "covered_at_iou_05": 15,
+            "mean_best_iou": 0.4397832922489767
+          }
+        }
+      },
+      {
+        "design": "new_small_scales_8px",
+        "split": "train",
+        "scales": [
+          0.5,
+          1,
+          2,
+          4,
+          8
+        ],
+        "anchor_shapes_per_location": 25,
+        "change_from_stored_scales": "Replace all five scales, retaining five ratios and 25 anchor shapes; not append one small anchor.",
+        "summary": {
+          "person/all": {
+            "boxes": 463,
+            "covered_at_iou_05": 179,
+            "mean_best_iou": 0.43486419404539817
+          },
+          "person/sqrt_area_below_32": {
+            "boxes": 21,
+            "covered_at_iou_05": 11,
+            "mean_best_iou": 0.5109836777523634
+          },
+          "person_face/all": {
+            "boxes": 420,
+            "covered_at_iou_05": 321,
+            "mean_best_iou": 0.5947819338667993
+          },
+          "person_face/sqrt_area_below_32": {
+            "boxes": 103,
+            "covered_at_iou_05": 49,
+            "mean_best_iou": 0.48637687578524796
+          }
+        }
+      },
+      {
+        "design": "new_small_scales_8px",
+        "split": "validation",
+        "scales": [
+          0.5,
+          1,
+          2,
+          4,
+          8
+        ],
+        "anchor_shapes_per_location": 25,
+        "change_from_stored_scales": "Replace all five scales, retaining five ratios and 25 anchor shapes; not append one small anchor.",
+        "summary": {
+          "person/all": {
+            "boxes": 120,
+            "covered_at_iou_05": 43,
+            "mean_best_iou": 0.42211834139129734
+          },
+          "person/sqrt_area_below_32": {
+            "boxes": 12,
+            "covered_at_iou_05": 5,
+            "mean_best_iou": 0.470390260838611
+          },
+          "person_face/all": {
+            "boxes": 110,
+            "covered_at_iou_05": 81,
+            "mean_best_iou": 0.5648245603157586
+          },
+          "person_face/sqrt_area_below_32": {
+            "boxes": 34,
+            "covered_at_iou_05": 15,
+            "mean_best_iou": 0.4397832922489767
+          }
+        }
+      }
+    ],
+    "geometry_warning": "Improved coverage with smaller scales is not proof of original model repair; old regression/classification channels may not represent these anchors.",
+    "static_proposal_evidence": {
+      "43_hm_d_nw": {
+        "sha256": "d74e1f38fa7ce7a40ed49e6ffc3fd65bae70ae77eb9d37add2f896abc52897d6",
+        "proposal_numeric_fields_identical": true,
+        "parameter_blocks_identical": true,
+        "both_proposals_share_bbox_layer": true,
+        "shared_bbox_layer": 110,
+        "smallest_square_anchor_side": 48.0,
+        "bbox_output_scale": 3.0517578125e-05,
+        "bbox_signed_i16_direct_range_conditional": [
+          -1.0,
+          0.999969482421875
+        ],
+        "delta_scaling_evidence": "No independent bbox mean/std or exp-argument multiplier recovered. Proposal output scale values do not establish bbox input scaling. The exp-like table supports an exponential-family operation but does not identify which delta channels or fixed-point conversion feed it.",
+        "proposal_count": 6,
+        "ratio_candidates": [
+          0.5,
+          0.6669999957084656,
+          1.0,
+          1.5,
+          2.0
+        ],
+        "scale_candidates": [
+          3.0,
+          6.0,
+          9.0,
+          16.0,
+          32.0
+        ],
+        "exp_like_table": {
+          "candidate_function": "piecewise least-squares affine approximation of exp(x)",
+          "candidate_domain": [
+            -6,
+            2
+          ],
+          "interval_width": 0.0625,
+          "slope_exact_word_matches": 128,
+          "slope_word_count": 128,
+          "positive_intercept_exact_word_matches": 112,
+          "positive_intercept_word_count": 112,
+          "empirical_all_intercept_word_matches": 128,
+          "first_slope_saturation_index": 107,
+          "range_warning": "The slope table saturates from index107 (argument interval [0.6875,0.75)); direct affine evaluation cannot reproduce exp over the entire nominal [-6,2] domain. Range reduction or scaling may exist.",
+          "unknowns": [
+            "Actual DSP use, argument scaling/indexing, coefficient signedness and overflow are not observed.",
+            "Matching table-generation formulas do not validate a floating-point bbox decoder.",
+            "Negative intercept encoding is an empirical byte reproduction, not a recovered ABI."
+          ]
+        },
+        "complete_anchor_signature_matches_in_bounded_search": 0
+      },
+      "44_hm_d_nw_sng": {
+        "sha256": "b510989f1e12fd1e6a2efbc5306b125289cb796c48e5ffefe7e4d4ce26390a50",
+        "proposal_numeric_fields_identical": true,
+        "parameter_blocks_identical": true,
+        "both_proposals_share_bbox_layer": true,
+        "shared_bbox_layer": 94,
+        "smallest_square_anchor_side": 48.0,
+        "bbox_output_scale": 3.0517578125e-05,
+        "bbox_signed_i16_direct_range_conditional": [
+          -1.0,
+          0.999969482421875
+        ],
+        "delta_scaling_evidence": "No independent bbox mean/std or exp-argument multiplier recovered. Proposal output scale values do not establish bbox input scaling. The exp-like table supports an exponential-family operation but does not identify which delta channels or fixed-point conversion feed it.",
+        "proposal_count": 2,
+        "ratio_candidates": [
+          0.5,
+          0.6669999957084656,
+          1.0,
+          1.5,
+          2.0
+        ],
+        "scale_candidates": [
+          3.0,
+          6.0,
+          9.0,
+          16.0,
+          32.0
+        ],
+        "exp_like_table": {
+          "candidate_function": "piecewise least-squares affine approximation of exp(x)",
+          "candidate_domain": [
+            -6,
+            2
+          ],
+          "interval_width": 0.0625,
+          "slope_exact_word_matches": 128,
+          "slope_word_count": 128,
+          "positive_intercept_exact_word_matches": 112,
+          "positive_intercept_word_count": 112,
+          "empirical_all_intercept_word_matches": 128,
+          "first_slope_saturation_index": 107,
+          "range_warning": "The slope table saturates from index107 (argument interval [0.6875,0.75)); direct affine evaluation cannot reproduce exp over the entire nominal [-6,2] domain. Range reduction or scaling may exist.",
+          "unknowns": [
+            "Actual DSP use, argument scaling/indexing, coefficient signedness and overflow are not observed.",
+            "Matching table-generation formulas do not validate a floating-point bbox decoder.",
+            "Negative intercept encoding is an empirical byte reproduction, not a recovered ABI."
+          ]
+        },
+        "complete_anchor_signature_matches_in_bounded_search": 0
+      }
+    },
+    "observations": [
+      "Proposal blocks contain 64 bytes of ratio/scale data and padding plus 512 bytes of exp-like affine coefficient tables.",
+      "For both pinned models all 128 slope words and all 112 nonnegative intercept words match the explicit formula exactly.",
+      "All known proposal records have identical numeric anchor fields and blocks within their model; no per-class small-anchor field was found.",
+      "The 44 model proposals share layer94 bbox deltas. Class-major paired classification channels have independent weight-negation and explicit-reshape support.",
+      "No matching complete 25x4 candidate anchor signature was found in the bounded full-component search.",
+      "No recovered bbox mean/std or exp-argument multiplier justifies replacing the current decoder with a tuned scale.",
+      "Original-model correspondence remains unresolved; no decoder or anchor candidate is selected by this diagnosis."
+    ],
+    "binding_limit": "Verification index files were rehashed; its recomputed-prediction, firmware-word and frozen-state checks are reported results, not rerun here."
+  },
+  "outer_axes": {
+    "status": "Static outer-axis probe completed; no layout validated",
+    "axis_orders": 720,
+    "score_equivalence_classes": 54,
+    "cross_model_macro_rank_spearman": 0.9185020596988174,
+    "lowest_macro_score_class": {
+      "representative": [
+        "Ob",
+        "Ib",
+        "O4",
+        "I4",
+        "H",
+        "W"
+      ],
+      "equivalence_size": 48,
+      "contains_existing_layout": true
+    },
+    "frozen_candidate_count": 0,
+    "qualifying_score_classes": 0,
+    "photograph_inference": false,
+    "training_steps": 0,
+    "test_access": false,
+    "limitations": [
+      "Lower spatial difference is a heuristic, not an original-layout proof.",
+      "A spatial-energy statistic cannot identify O vs I labels or distinguish transposed H/W.",
+      "The two models are related architectures and not guaranteed independent evidence.",
+      "No special padded/spatial tiling beyond six rectangular axes is tested."
+    ],
+    "verification_reported": {
+      "passed": true,
+      "independent_full_OI_reconstruction_checks_on_largest_tensor": 720,
+      "maximum_metric_error": 0.0,
+      "total_tensor_order_scores": 7200,
+      "source_hashes_match": true,
+      "frozen_candidate_count": 0,
+      "photo_inference": false,
+      "training_steps": 0,
+      "test_access": false,
+      "script_sha256": "e78e60656e0df479233e4ea1b4b909124bdf9b24a30ad47d2a2ee2ddb7957643",
+      "report_sha256": "0a1b8d7aaeedb20d9607bb81e219b25ec25b576b99dc5759e4b0ace2d8e48e42"
+    },
+    "verification_report_hash_matches_current": true,
+    "binding_limit": "Static metric verification counts are source-reported; this summary did not decode or permute weights."
+  },
+  "arithmetic": {
+    "scope": "Fixed original weights; train32 only; no optimizer/validation/test.",
+    "images": 32,
+    "independent_self_checks_reported": 4,
+    "candidates": [
+      {
+        "candidate": "float",
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.18369763835621838,
+            "person_ap50": 0.3634856131885072,
+            "face_ap50": 0.003909663523929583
+          },
+          "constant_gray117": {
+            "mean_ap50": 0.16633019711445846,
+            "person_ap50": 0.33108810023324314,
+            "face_ap50": 0.0015722939956737923
+          },
+          "wrong_image": {
+            "mean_ap50": 0.1481073292027811,
+            "person_ap50": 0.29193027419939166,
+            "face_ap50": 0.004284384206170534
+          }
+        }
+      },
+      {
+        "candidate": "clip_signed16",
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.1469810212697903,
+            "person_ap50": 0.291122095858774,
+            "face_ap50": 0.0028399466808065633
+          },
+          "constant_gray117": {
+            "mean_ap50": 0.15329882266502526,
+            "person_ap50": 0.3058473492882747,
+            "face_ap50": 0.0007502960417758622
+          },
+          "wrong_image": {
+            "mean_ap50": 0.18513425302282574,
+            "person_ap50": 0.3687698409106227,
+            "face_ap50": 0.0014986651350287713
+          }
+        }
+      },
+      {
+        "candidate": "round_signed16",
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.14964832571207617,
+            "person_ap50": 0.2964567047433458,
+            "face_ap50": 0.0028399466808065633
+          },
+          "constant_gray117": {
+            "mean_ap50": 0.15329882266502526,
+            "person_ap50": 0.3058473492882747,
+            "face_ap50": 0.0007502960417758622
+          },
+          "wrong_image": {
+            "mean_ap50": 0.18513634888777603,
+            "person_ap50": 0.3687751928582358,
+            "face_ap50": 0.001497504917316238
+          }
+        }
+      },
+      {
+        "candidate": "round_unsigned_relu16",
+        "metrics": {
+          "real": {
+            "mean_ap50": 0.13874116709215575,
+            "person_ap50": 0.2753381339278993,
+            "face_ap50": 0.0021442002564121955
+          },
+          "constant_gray117": {
+            "mean_ap50": 0.15440642021893713,
+            "person_ap50": 0.3078454105765392,
+            "face_ap50": 0.0009674298613350532
+          },
+          "wrong_image": {
+            "mean_ap50": 0.1507001383443025,
+            "person_ap50": 0.29979380583146525,
+            "face_ap50": 0.0016064708571397108
+          }
+        }
+      }
+    ],
+    "limitations": [
+      "16-bit output saturation, signedness and ties-to-even are diagnostic hypotheses.",
+      "Observer convolution summaries are pre-quantization; final logits and deltas are quantized.",
+      "No DSP instruction execution or original numerical comparison.",
+      "Detector reads post-quantization logits/deltas, then detections recomputes floating-point softmax; graph softmax-output quantization does not drive AP.",
+      "Unsigned mode applies only at nodes marked ReLU; other operators still use signed bounds. Neither mode is recovered original-camera arithmetic."
+    ],
+    "binding_limit": "Plan binds only two scripts; no full dependency or before/after model-state hashes recorded for this arithmetic run. Those missing bindings were not independently verified."
+  },
+  "arm_input_boundary": {
+    "historical_chain": {
+      "source_file": "03_program.bin",
+      "source_sha256": "fc496d62a91f6e9b1b84807183bb805bc546c9105d2938546b58a66ad9d132fe",
+      "load_base": "0x6280000",
+      "component_bytes": 16674816,
+      "direct_mapping_end_exclusive": "0x7267000",
+      "capstone_version": "5.0.7",
+      "scope": {
+        "kind": "static only",
+        "selected_blocks": 16,
+        "selected_code_bytes": 1360,
+        "whole_firmware_disassembly": false,
+        "target_execution": false,
+        "model_training": false
+      },
+      "answers": {
+        "input_pixel_format": "unresolved",
+        "mean_subtraction": "unresolved",
+        "normalization_scale": "unresolved",
+        "ROI_crop_and_resize": "unresolved",
+        "confirmed_boundary": "Descriptor assembly/copy/queue and a separate nearby opaque driver handoff, ending at the function pointer held in RAM[0x08aa7f04]."
+      },
+      "bounded_negative_findings": [
+        "No per-pixel processing or mean/scale arithmetic in the selected registration/copy functions.",
+        "Local candidate geometry functions found by adjacency were not connected to the confirmed registration chain and are not treated as CDNN preprocessing.",
+        "No connected device state, memory-object contents, original tensors or XM4 code execution were available."
+      ],
+      "observations": [
+        {
+          "id": "ARM-REG-64",
+          "addresses": [
+            "0x0679764c",
+            "0x0679766a",
+            "0x06797686",
+            "0x06797692",
+            "0x067976ae"
+          ],
+          "fact": "Caller assembles a64-byte registration descriptor containing two model pointers and0x400000 lengths. Six initial words come from0x067e034c, which writes fixed mapping addresses/lengths.",
+          "limit": "These are initialization/memory-descriptor values, not observed camera pixel samples or proof of an input tensor format."
+        },
+        {
+          "id": "ARM-REG-COPY",
+          "addresses": [
+            "0x067d1770",
+            "0x067d178a",
+            "0x067d1790",
+            "0x067d179e",
+            "0x066c259c"
+          ],
+          "fact": "Command0 wrapper copies exactly0x40 bytes unchanged into a0x5c-byte command at+4, appends two callback/context words, and calls0x067d170c. ARM memcpy body contains loads/stores and count arithmetic.",
+          "limit": "No pixel conversion, mean subtraction or normalization is performed in this selected wrapper or copy helper."
+        },
+        {
+          "id": "ARM-RING-92",
+          "addresses": [
+            "0x067d171e",
+            "0x067d1732",
+            "0x067d1746",
+            "0x067d1758",
+            "0x067d175e"
+          ],
+          "fact": "Submitter copies the0x5c-byte command to a5-slot ring at0x09111464 and passes its address to0x06738de4 through a handle loaded from0x06f498f4.",
+          "limit": "The queue consumer and its dispatch to CDNN/XM4 were not identified by this bounded trace; this is not an observed DSP invocation."
+        },
+        {
+          "id": "ARM-OPAQUE-DESC",
+          "addresses": [
+            "0x067e042c",
+            "0x067e0432",
+            "0x067e0438",
+            "0x067e0458",
+            "0x067e046e",
+            "0x06776f78",
+            "0x06776fa8"
+          ],
+          "fact": "Nearby submit path checks descriptor halfwords+0/+2 and word+0x20 for nonzero, then forwards the original descriptor pointer unchanged as r2 through the driver wrapper.",
+          "limit": "Field types/names and linkage from this nearby path to a specific CDNN input tensor remain unproven; width,height,Y/UV,ROI cannot be assigned from these checks alone."
+        },
+        {
+          "id": "ARM-INDIRECT-BOUNDARY",
+          "addresses": [
+            "0x065c6a0c",
+            "0x065c6a10",
+            "0x065c6a14",
+            "0x065c6a2c",
+            "0x065c6a30",
+            "0x065c6a32"
+          ],
+          "fact": "Driver stores the original descriptor pointer at object+0x10, callback at+0x14 and selector at+0x0c, then calls the runtime function-table slot+8 using BLX r1.",
+          "limit": "The function-table entry value is not recovered here. No claim that this slot executes on XM4, or that downstream preprocessing is absent."
+        },
+        {
+          "id": "ARM-TABLE-BASE",
+          "addresses": [
+            "0x065c6914",
+            "0x065c6984",
+            "0x065c6996",
+            "0x067b64f6",
+            "0x067b64f8"
+          ],
+          "fact": "The immediate constructor path uses fixed RAM object0x08aa7ee4 and writes function-table base0x08aa7efc into its first word. Thus the submit slot+8 reads RAM word0x08aa7f04 on this successful initialization path.",
+          "limit": "The table lies outside this component direct-load range; no initialized RAM content is available. Slot contents and downstream callee remain unresolved without widening scope."
+        },
+        {
+          "id": "ARM-FLOAT-FIELD",
+          "addresses": [
+            "0x067e0530",
+            "0x067e0564",
+            "0x067e0568",
+            "0x067e056c",
+            "0x067e0576",
+            "0x067e0586"
+          ],
+          "fact": "Descriptor comparison checks six16-bit fields(+0..+0xa), a float32 field at+0x0c by VCMP.F32, and a word at+0x20; adjacent copy routine preserves0x100 descriptor bytes.",
+          "limit": "A float32 field is established, but no value or mean/scale/threshold semantics. Float equality is not evidence for numerical preprocessing."
+        },
+        {
+          "id": "ARM-MODEL-LOAD",
+          "addresses": [
+            "0x067e0702",
+            "0x067e0770",
+            "0x067e0788",
+            "0x067e07b4"
+          ],
+          "fact": "Loader verifies CDNN magic, declared bound and model class counts6/2 while moving model/runtime components.",
+          "limit": "This path describes model loading, not camera-frame format or preprocessing."
+        }
+      ],
+      "binding_limit": "Report and script identities checked; original firmware component and disassembled blocks not independently reread/redecoded by this summary."
+    },
+    "current_boundary": {
+      "resolved_call_target": "0x067b6456 Thumb via original pointer0x067b6457",
+      "new_boundary": "Original descriptor pointer written unchanged to MMIO0x7c01f070.",
+      "input_format": "unresolved",
+      "mean_subtraction": "unresolved",
+      "scale": "unresolved",
+      "ROI_crop_resize": "unresolved"
+    },
+    "historical_unresolved_slot_limitation_superseded": true,
+    "optional_scatter_reports": [
+      {
+        "source": "artifacts/recognition-diagnosis/arm-input-scatter-boundary.json",
+        "source_file": "03_program.bin",
+        "source_sha256": "fc496d62a91f6e9b1b84807183bb805bc546c9105d2938546b58a66ad9d132fe",
+        "supersedes_limitations_of": "arm-input-boundary.json: function-table slot contents are now recovered statically through scatter; preprocessing semantics still unresolved.",
+        "scope": {
+          "static_original_firmware": true,
+          "qemu_started": false,
+          "training": false,
+          "selected_code_bytes": 318,
+          "physical_camera_execution": false
+        },
+        "answer": {
+          "resolved_call_target": "0x067b6456 Thumb via original pointer0x067b6457",
+          "new_boundary": "Original descriptor pointer written unchanged to MMIO0x7c01f070.",
+          "input_format": "unresolved",
+          "mean_subtraction": "unresolved",
+          "scale": "unresolved",
+          "ROI_crop_resize": "unresolved"
+        },
+        "limitations": [
+          "Recovered initial table contents from original scatter source, not captured live RAM; later mutations were not exhaustively searched.",
+          "Existing QEMU scatter equality only corroborates byte copying; no emulator peripheral response is used as camera truth.",
+          "No per-pixel arithmetic in the resolved submit/control functions does not mean preprocessing is absent upstream or inside hardware/DSP.",
+          "The nearby submission path still lacks a complete traced link to the CDNN inference queue consumer."
+        ],
+        "table_mapping": {
+          "destination_ram_va": "0x8aa7efc",
+          "formula": "file_offset = source_va - program_load_base + table_ram_va - scatter_destination",
+          "original_source_va": "0x70c88b4",
+          "program_file_offset": "0xe488b4",
+          "whole_copy_source_sha256": "a7eb78773ba35ed188deeb363d6cdaffa0163d3c64a53a9354e64964960f9edf",
+          "slot_entries": [
+            {
+              "offset": 0,
+              "ram_va": "0x8aa7efc",
+              "thumb_pointer": "0x67b6341",
+              "code_va": "0x67b6340"
+            },
+            {
+              "offset": 4,
+              "ram_va": "0x8aa7f00",
+              "thumb_pointer": "0x67b6409",
+              "code_va": "0x67b6408"
+            },
+            {
+              "offset": 8,
+              "ram_va": "0x8aa7f04",
+              "thumb_pointer": "0x67b6457",
+              "code_va": "0x67b6456"
+            },
+            {
+              "offset": 12,
+              "ram_va": "0x8aa7f08",
+              "thumb_pointer": "0x67b64ad",
+              "code_va": "0x67b64ac"
+            },
+            {
+              "offset": 16,
+              "ram_va": "0x8aa7f0c",
+              "thumb_pointer": "0x67b64c1",
+              "code_va": "0x67b64c0"
+            },
+            {
+              "offset": 20,
+              "ram_va": "0x8aa7f10",
+              "thumb_pointer": "0x67b64d3",
+              "code_va": "0x67b64d2"
+            },
+            {
+              "offset": 24,
+              "ram_va": "0x8aa7f14",
+              "thumb_pointer": "0x67b64e5",
+              "code_va": "0x67b64e4"
+            }
+          ]
+        },
+        "historical_emulation_corroboration": {
+          "report_sha256": "8698bb90fb8850bff61df585cb8fe7bf0737fa7c429a2ca7f63341339ff65194",
+          "recorded_copy_hash_matches_original_source": true,
+          "evidence_type": "Existing QEMU scatter-routine check with synthetic CPU/stack state; not physical-camera inference.",
+          "report_basename": "verification.json",
+          "historical_report_independently_read_by_summarizer": false
+        },
+        "observations": [
+          {
+            "id": "SCATTER-TABLE",
+            "fact": "The original first scatter copy relocates0x54fa4 bytes from0x070879b8 to0x08a67000. This includes the seven-word function table at0x08aa7efc.",
+            "evidence": [
+              "table0x062800fc",
+              "copy_handler0x062800c4",
+              "03_program.bin+0xe488b4"
+            ]
+          },
+          {
+            "id": "RESOLVED-SLOT",
+            "fact": "RAM0x08aa7f04 receives original Thumb pointer0x067b6457. Entry0x067b6456 loads object+0x10 (the descriptor saved by the traced wrapper) and passes it to0x067c14b6.",
+            "evidence": [
+              "0x067b645c:2869",
+              "0x067b645e:0bf02af8"
+            ]
+          },
+          {
+            "id": "MMIO-DESCRIPTOR",
+            "fact": "0x067c14b6 loads base0x7c01f000;0x067c14b8 stores the unchanged descriptor pointer to base+0x70, address0x7c01f070.",
+            "limit": "The register role is inferred as descriptor submission from this pointer flow; precise peripheral/XM4 ownership and hardware payload semantics are not established here.",
+            "evidence": [
+              "0x067c14b6:5c49",
+              "literal0x067c1628=0x7c01f000",
+              "0x067c14b8:0867"
+            ]
+          },
+          {
+            "id": "MMIO-CONTROL",
+            "fact": "The resolved function controls0x7c01f018 bit0, polls0x7c01f020 bits0x10/0x08 with a bounded retry, then changes control bits at0x7c01f1cc,0x7c01f140,0x7c01f1c0,0x7c01f1c4 and0x7c01f100.",
+            "limit": "These are register operations, not ARM pixel reads or known mean/scale operations.",
+            "evidence": [
+              "0x067b6464",
+              "0x067b6484",
+              "0x067c15c6",
+              "0x067c15e4",
+              "0x067c1538",
+              "0x067c155a",
+              "0x067c156a"
+            ]
+          }
+        ]
+      }
+    ],
+    "descriptor_producer_boundary": {
+      "source": "artifacts/recognition-diagnosis/arm-input-direct-callers.json",
+      "source_file": "03_program.bin",
+      "source_sha256": "fc496d62a91f6e9b1b84807183bb805bc546c9105d2938546b58a66ad9d132fe",
+      "source_bytes": 16674816,
+      "targets": [
+        "0x67e03ec",
+        "0x67e04ee"
+      ],
+      "thumb_branch_candidate_count": 221286,
+      "arm_branch_candidate_count": 114966,
+      "conclusion": {
+        "direct_caller_of_067e03ec": "Only0x067e0524 in this component, inside wrapper0x067e04ee.",
+        "descriptor_production": "Wrapper saves its entry r0 in r5, compares/copies the descriptor, then passes the same r5 pointer as r0. It does not populate pixel-format/width/height/stride/ROI/mean/scale fields.",
+        "next_boundary": "Caller/registration of wrapper0x067e04ee is unresolved within03_program.bin: no direct branch or exact pointer-word match to its ARM/Thumb address.",
+        "scope_limit": "Other components, indirect calls, computed pointers and original hardware activity were not searched or executed."
+      },
+      "direct_branch_hits": [
+        {
+          "va": "0x67e0524",
+          "target": "0x67e03ec",
+          "isa": "thumb",
+          "mnemonic": "bl"
+        }
+      ],
+      "exact_pointer_word_match_counts": {
+        "0x67e03ec": 0,
+        "0x67e03ed": 0,
+        "0x67e04ee": 0,
+        "0x67e04ef": 0
+      },
+      "caller_block_identity": {
+        "name": "descriptor_reuse_wrapper",
+        "start_va": "0x67e04ee",
+        "end_va_exclusive": "0x67e0530",
+        "file_offset": 5637358,
+        "bytes": 66,
+        "sha256": "b142b330d73be40aa0d49431beaff55f559981d5b6bb5f02e6c41cebee0670b8"
+      },
+      "binding_limit": "Report/script identities checked; bounded negative call-search findings were not independently redisassembled here."
+    },
+    "bounded_other_component_caller_search": {
+      "source": "artifacts/recognition-diagnosis/arm-input-postboot-callers.json",
+      "program_sha256": "fc496d62a91f6e9b1b84807183bb805bc546c9105d2938546b58a66ad9d132fe",
+      "targets": [
+        "0x67e03ec",
+        "0x67e04ee"
+      ],
+      "scope": "Only05_postboot1,07_postboot3 and20_osdover; no inference, training, QEMU or firmware execution.",
+      "conclusion": {
+        "direct_branch_hit_count": 0,
+        "pointer_word_hit_count": 0,
+        "format_fields_confirmed": false,
+        "remaining_boundary": "Interpret exact hits only after validating nearby instruction boundaries; negative results do not exclude indirect/computed pointers or other components."
+      },
+      "components": [
+        {
+          "file": "05_postboot1.bin",
+          "source_sha256": "e14b32e80c50d52e39edd6f7b725aba34b9f0a4ee12ad38987593f5cc8a8ec5f",
+          "bytes": 4718592,
+          "load_base": "0x7267000",
+          "load_table_va": "0x6f52bb0",
+          "storage_source": "0x40000000",
+          "thumb_candidates": 49833,
+          "arm_candidates": 44327,
+          "direct_branch_hits": [],
+          "exact_pointer_word_match_counts": {
+            "0x67e03ec": 0,
+            "0x67e03ed": 0,
+            "0x67e04ee": 0,
+            "0x67e04ef": 0
+          }
+        },
+        {
+          "file": "07_postboot3.bin",
+          "source_sha256": "435f3b6a4f2f3368107885025dc698acc333f6f048875727bed25b93d49b4dbc",
+          "bytes": 8257536,
+          "load_base": "0x7707000",
+          "load_table_va": "0x6f52bd0",
+          "storage_source": "0x404a0000",
+          "thumb_candidates": 63210,
+          "arm_candidates": 25427,
+          "direct_branch_hits": [],
+          "exact_pointer_word_match_counts": {
+            "0x67e03ec": 0,
+            "0x67e03ed": 0,
+            "0x67e04ee": 0,
+            "0x67e04ef": 0
+          }
+        },
+        {
+          "file": "20_osdover.bin",
+          "source_sha256": "f0305598ea9cac9ba916e5a8a6d0c4f62aad590f181b1908937676743ac15ab8",
+          "bytes": 10485760,
+          "load_base": null,
+          "storage_source": "0x41260000",
+          "branch_scan_skipped": true,
+          "reason": "Existing loader evidence identifies an FDL Font storage resource, without a permanent ARM executable load base; no base is guessed.",
+          "direct_branch_hits": [],
+          "exact_pointer_word_match_counts": {
+            "0x67e03ec": 0,
+            "0x67e03ed": 0,
+            "0x67e04ee": 0,
+            "0x67e04ef": 0
+          }
+        }
+      ],
+      "binding_limit": "Only the script hash is recorded; dependency script hashes are unavailable. Firmware hashes and bounded search results were not independently recomputed here. Font resource branch scanning was explicitly skipped."
+    }
+  },
+  "unresolved_before_training": [
+    "No preprocessing/layout/arithmetic candidate has established original-model image-dependent recognition.",
+    "Input-lane permutations, inter-layer channel correspondence and upsample routing/phase addressing remain unresolved.",
+    "Camera pixel format, ROI/crop/resize, subtraction direction and input scaling remain unresolved.",
+    "Proposal exp range reduction, argument scaling, coefficient signedness and overflow remain unresolved.",
+    "Original DSP numerical equivalence has not been measured; AP changes cannot substitute for it.",
+    "Smaller anchors improve counterfactual geometry only; they cannot be substituted into original trained heads without evidence."
+  ],
+  "file_identities_at_summary_time": {
+    "anchor_decode_investigation.py": {
+      "sha256": "8b2f9144c8b02efd78a4e2de863bfa1e89e4e06284ff0c6d4d53ecc1157355c9",
+      "bytes": 27890
+    },
+    "arithmetic_investigation.py": {
+      "sha256": "c99f9cf63be467105b42f55ae5e4a0df139b200c1e9c2e11db9c3768c5d7bdab",
+      "bytes": 7300
+    },
+    "arm_input_boundary.py": {
+      "sha256": "528b88b989907f07680a1a7a520f69e11be7560f66c1958c27ebb4ba5a55814a",
+      "bytes": 9791
+    },
+    "arm_input_direct_xrefs.py": {
+      "sha256": "231f6cef2286a3cffd7d0fb7cadfd275ed18d2dedda70da5fcdd169b995f68a2",
+      "bytes": 4628
+    },
+    "arm_input_postboot_xrefs.py": {
+      "sha256": "fef3d96e6fd0551d708ea8a9a46d0efafff81ab659695e53f61216f987a2f48b",
+      "bytes": 5691
+    },
+    "arm_input_scatter_boundary.py": {
+      "sha256": "0b4a9e20ee0a01df9f75888a4dcc64caa14cf1cace18f151124f840f47b9301d",
+      "bytes": 8171
+    },
+    "artifacts/recognition-diagnosis/anchors/geometry.json": {
+      "sha256": "f86cc6e614da87d5375e2d88ac663443237fd8185cf8bf68a5f4dc6bcaf4f839",
+      "bytes": 1111354
+    },
+    "artifacts/recognition-diagnosis/anchors/predeclared-plan.json": {
+      "sha256": "91aad634f8501b150b68f1bb44bfefac74110f95b1f0a66ac03e4c92956eca8a",
+      "bytes": 6870
+    },
+    "artifacts/recognition-diagnosis/anchors/report.json": {
+      "sha256": "28f49604a8506ee7d5c037eef42f97ec800dfca2261642b5f13a6ec5618d08ab",
+      "bytes": 172018
+    },
+    "artifacts/recognition-diagnosis/anchors/static-evidence.json": {
+      "sha256": "f67a1578cb7bde4b791c5e4f809570c9d47fb04fbd25f4c802f093d727cebf0b",
+      "bytes": 146106
+    },
+    "artifacts/recognition-diagnosis/anchors/verification.json": {
+      "sha256": "9fe669da7b89be8a9bbd125ee01f4778a8aa705b8ff74f88cb92d05e79091cf4",
+      "bytes": 25640
+    },
+    "artifacts/recognition-diagnosis/arithmetic/arithmetic-plan.json": {
+      "sha256": "609226a8701a665db7c99f27ff36b3bb8a835238fbcf48c5a8101632190b6b75",
+      "bytes": 694
+    },
+    "artifacts/recognition-diagnosis/arithmetic/frozen-probe-plan.json": {
+      "sha256": "c1e82ba93120272ebcc4720b9fc8ebf89e27a27ca84c52770e6c314e67e38597",
+      "bytes": 5780
+    },
+    "artifacts/recognition-diagnosis/arithmetic/runtime-summary.json": {
+      "sha256": "cd87084a9ca1564b107d9bf7250514d2f8f8b9d058d18d809ab4c08868f64830",
+      "bytes": 111851
+    },
+    "artifacts/recognition-diagnosis/arm-input-boundary.json": {
+      "sha256": "48c8f70ac71fd50e623f2e492efc52a5f767342d4096a59a364140a139760ff6",
+      "bytes": 119500
+    },
+    "artifacts/recognition-diagnosis/arm-input-direct-callers.json": {
+      "sha256": "8300d2aafb05392f3e1c446d96dd2fcf9346b594dd982e9f83e9cd160df79cc7",
+      "bytes": 6457
+    },
+    "artifacts/recognition-diagnosis/arm-input-postboot-callers.json": {
+      "sha256": "585e108a6aee36c5f0d6ad17a6219d4eb19790d2f2343851653f1a27918745a0",
+      "bytes": 2359
+    },
+    "artifacts/recognition-diagnosis/arm-input-scatter-boundary.json": {
+      "sha256": "790d0edd8d92f5b80530fbca0b532bf7ff3cfddf4ccd66a755e01f2c83a3099a",
+      "bytes": 33585
+    },
+    "artifacts/recognition-diagnosis/outer-axes/predeclared-plan.json": {
+      "sha256": "5c2b85d2f370be55ea1ea16da44602967bbeb1967a0f95abf581acacc25396cc",
+      "bytes": 61435
+    },
+    "artifacts/recognition-diagnosis/outer-axes/report.json": {
+      "sha256": "0a1b8d7aaeedb20d9607bb81e219b25ec25b576b99dc5759e4b0ace2d8e48e42",
+      "bytes": 5457
+    },
+    "artifacts/recognition-diagnosis/outer-axes/verification.json": {
+      "sha256": "16500e7903ccb41412e46bcfac066457d66ce44e6e0288b339d57e9a1807965f",
+      "bytes": 470
+    },
+    "artifacts/recognition-diagnosis/packing/findings.json": {
+      "sha256": "191ec27465db727af45fe9e87bce912b6a20ce33274a735c28f856f59645c7e4",
+      "bytes": 4002
+    },
+    "artifacts/recognition-diagnosis/packing/followup/runtime-summary.json": {
+      "sha256": "9f2c394d386b20e62cea49665b858420043d5e89c38d0ddd6e63ccfd9602597b",
+      "bytes": 112038
+    },
+    "artifacts/recognition-diagnosis/packing/followup/weight_layout_investigation-source.py": {
+      "sha256": "f3d81852c11666926c9fc738aedbbeb5bca5c569e6da83106cc36490ab6de1fe",
+      "bytes": 17482
+    },
+    "artifacts/recognition-diagnosis/packing/initial/runtime-summary.json": {
+      "sha256": "40e49279d9cc57051418b30099c49b3ed925ebac54a8c22eae04aab92be0c739",
+      "bytes": 324117
+    },
+    "artifacts/recognition-diagnosis/packing/initial/weight_layout_investigation-source.py": {
+      "sha256": "8bf0b35f0aaa773f32fa89ce1d64f146ce4d8938aec8e3828d934845d3866e08",
+      "bytes": 15485
+    },
+    "artifacts/recognition-diagnosis/packing/probe-semantic-checks.json": {
+      "sha256": "c9ea81673f97b4213fb3b8cecad22e727a0b2cee410ad073f0e939093569f80d",
+      "bytes": 1062
+    },
+    "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__direct/development/baseline_gray117/report.json": {
+      "sha256": "f3100e7ee27bbb00d334fc255d881684e420e45525f9b588ab74d5a21196d45b",
+      "bytes": 48359
+    },
+    "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__direct/development/gray117_times_input_scale/report.json": {
+      "sha256": "f873961a5e36c358123edb37e2785c06eec4228173c91c04908477eb24d24943",
+      "bytes": 48097
+    },
+    "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__direct/development/report.json": {
+      "sha256": "d8e5e02ab7a195b61332a3402b4f0d4baf36da3e3eeaca63b9e1a4084de1997e",
+      "bytes": 30715
+    },
+    "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__direct/validation/report.json": {
+      "sha256": "8955c1c05662d633d9c2bacb676953afe131fb7f445ad3af61d7daaeb49be4fb",
+      "bytes": 15428
+    },
+    "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__o4_h_o4_w/development/report.json": {
+      "sha256": "dd0dd10a39fd8022e2238249912baf3719f7128f18a5c42340ef0cec5dd22cf4",
+      "bytes": 30720
+    },
+    "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__o4_h_o4_w/validation/report.json": {
+      "sha256": "b4570f93bf1749d520047ddfc121d099a5b34bc18ab1549c820362d7ad5dbaa3",
+      "bytes": 15420
+    },
+    "artifacts/recognition-diagnosis/preprocessing/review-summary.json": {
+      "sha256": "a93e0c8dac75e8112bf59718d82b55b7425f692b3b953bc477d235483c3b9dc1",
+      "bytes": 9176
+    },
+    "candidate_network.py": {
+      "sha256": "0005f869aee9c69191fc74259a92e6f0bbf9e9aa1d43cceae7ee1694f682b559",
+      "bytes": 10418
+    },
+    "decode_parameters.py": {
+      "sha256": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+      "bytes": 10199
+    },
+    "extract.py": {
+      "sha256": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+      "bytes": 12898
+    },
+    "ops_investigation.py": {
+      "sha256": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+      "bytes": 8566
+    },
+    "packing_investigation.py": {
+      "sha256": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d",
+      "bytes": 11109
+    },
+    "preprocessing_investigation.py": {
+      "sha256": "d7d06b21580a576b5efd925418c56c5320a3e2f49e54aac260d4e39c46e4ab2a",
+      "bytes": 18942
+    },
+    "pretraining_data.py": {
+      "sha256": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+      "bytes": 15097
+    },
+    "pretraining_readiness.py": {
+      "sha256": "da1b255b982262e83ca6347f73fad632c6fad960f17c40f3e5cbdb5de122d34d",
+      "bytes": 20997
+    },
+    "proposal_hypothesis.py": {
+      "sha256": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+      "bytes": 7438
+    },
+    "summarize_recognition_diagnosis.py": {
+      "sha256": "8899bb69d72fe1d35a1d9a278171d99a2a9ca446c65be531bae93f0ae431e00a",
+      "bytes": 25162
+    },
+    "train_recognition.py": {
+      "sha256": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+      "bytes": 31820
+    },
+    "weight_layout_investigation.py": {
+      "sha256": "f3d81852c11666926c9fc738aedbbeb5bca5c569e6da83106cc36490ab6de1fe",
+      "bytes": 17482
+    },
+    "weight_outer_axis_probe.py": {
+      "sha256": "e78e60656e0df479233e4ea1b4b909124bdf9b24a30ad47d2a2ee2ddb7957643",
+      "bytes": 14585
+    }
+  },
+  "source_binding_checks": [
+    {
+      "source": "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__direct/development/report.json",
+      "recorded_hashes": {
+        "preprocessing_investigation.py": "d7d06b21580a576b5efd925418c56c5320a3e2f49e54aac260d4e39c46e4ab2a",
+        "candidate_network.py": "0005f869aee9c69191fc74259a92e6f0bbf9e9aa1d43cceae7ee1694f682b559",
+        "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+        "ops_investigation.py": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+        "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d",
+        "train_recognition.py": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+        "proposal_hypothesis.py": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+        "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+        "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798"
+      },
+      "matching_current_files": [
+        "candidate_network.py",
+        "decode_parameters.py",
+        "extract.py",
+        "ops_investigation.py",
+        "packing_investigation.py",
+        "preprocessing_investigation.py",
+        "pretraining_data.py",
+        "proposal_hypothesis.py",
+        "train_recognition.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__direct/validation/report.json",
+      "recorded_hashes": {
+        "preprocessing_investigation.py": "d7d06b21580a576b5efd925418c56c5320a3e2f49e54aac260d4e39c46e4ab2a",
+        "candidate_network.py": "0005f869aee9c69191fc74259a92e6f0bbf9e9aa1d43cceae7ee1694f682b559",
+        "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+        "ops_investigation.py": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+        "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d",
+        "train_recognition.py": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+        "proposal_hypothesis.py": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+        "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+        "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798"
+      },
+      "matching_current_files": [
+        "candidate_network.py",
+        "decode_parameters.py",
+        "extract.py",
+        "ops_investigation.py",
+        "packing_investigation.py",
+        "preprocessing_investigation.py",
+        "pretraining_data.py",
+        "proposal_hypothesis.py",
+        "train_recognition.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__o4_h_o4_w/development/report.json",
+      "recorded_hashes": {
+        "preprocessing_investigation.py": "d7d06b21580a576b5efd925418c56c5320a3e2f49e54aac260d4e39c46e4ab2a",
+        "candidate_network.py": "0005f869aee9c69191fc74259a92e6f0bbf9e9aa1d43cceae7ee1694f682b559",
+        "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+        "ops_investigation.py": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+        "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d",
+        "train_recognition.py": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+        "proposal_hypothesis.py": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+        "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+        "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798"
+      },
+      "matching_current_files": [
+        "candidate_network.py",
+        "decode_parameters.py",
+        "extract.py",
+        "ops_investigation.py",
+        "packing_investigation.py",
+        "preprocessing_investigation.py",
+        "pretraining_data.py",
+        "proposal_hypothesis.py",
+        "train_recognition.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/preprocessing/o4_i4_hw__o4_h_o4_w/validation/report.json",
+      "recorded_hashes": {
+        "preprocessing_investigation.py": "d7d06b21580a576b5efd925418c56c5320a3e2f49e54aac260d4e39c46e4ab2a",
+        "candidate_network.py": "0005f869aee9c69191fc74259a92e6f0bbf9e9aa1d43cceae7ee1694f682b559",
+        "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+        "ops_investigation.py": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+        "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d",
+        "train_recognition.py": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+        "proposal_hypothesis.py": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+        "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+        "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798"
+      },
+      "matching_current_files": [
+        "candidate_network.py",
+        "decode_parameters.py",
+        "extract.py",
+        "ops_investigation.py",
+        "packing_investigation.py",
+        "preprocessing_investigation.py",
+        "pretraining_data.py",
+        "proposal_hypothesis.py",
+        "train_recognition.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/packing/findings.json",
+      "recorded_hashes": {
+        "train_recognition.py": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+        "candidate_network.py": "0005f869aee9c69191fc74259a92e6f0bbf9e9aa1d43cceae7ee1694f682b559",
+        "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+        "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+        "ops_investigation.py": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+        "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d",
+        "proposal_hypothesis.py": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+        "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+        "pretraining_readiness.py": "da1b255b982262e83ca6347f73fad632c6fad960f17c40f3e5cbdb5de122d34d",
+        "weight_layout_investigation.py": "f3d81852c11666926c9fc738aedbbeb5bca5c569e6da83106cc36490ab6de1fe"
+      },
+      "matching_current_files": [
+        "candidate_network.py",
+        "decode_parameters.py",
+        "extract.py",
+        "ops_investigation.py",
+        "packing_investigation.py",
+        "pretraining_data.py",
+        "pretraining_readiness.py",
+        "proposal_hypothesis.py",
+        "train_recognition.py",
+        "weight_layout_investigation.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/packing/probe-semantic-checks.json",
+      "recorded_hashes": {
+        "weight_layout_investigation.py": "f3d81852c11666926c9fc738aedbbeb5bca5c569e6da83106cc36490ab6de1fe"
+      },
+      "matching_current_files": [
+        "weight_layout_investigation.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/packing/initial/runtime-summary.json",
+      "recorded_hashes": {
+        "weight_layout_investigation.py": "8bf0b35f0aaa773f32fa89ce1d64f146ce4d8938aec8e3828d934845d3866e08"
+      },
+      "matching_current_files": [],
+      "missing_files": [],
+      "mismatches": [
+        {
+          "file": "weight_layout_investigation.py",
+          "recorded_sha256": "8bf0b35f0aaa773f32fa89ce1d64f146ce4d8938aec8e3828d934845d3866e08",
+          "current_sha256": "f3d81852c11666926c9fc738aedbbeb5bca5c569e6da83106cc36490ab6de1fe"
+        }
+      ],
+      "historical_snapshots": [
+        {
+          "file": "weight_layout_investigation.py",
+          "snapshot": "artifacts/recognition-diagnosis/packing/initial/weight_layout_investigation-source.py",
+          "snapshot_sha256": "8bf0b35f0aaa773f32fa89ce1d64f146ce4d8938aec8e3828d934845d3866e08",
+          "matches_recorded_hash": true
+        }
+      ],
+      "all_recorded_hashes_match_current": false,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/packing/followup/runtime-summary.json",
+      "recorded_hashes": {
+        "weight_layout_investigation.py": "f3d81852c11666926c9fc738aedbbeb5bca5c569e6da83106cc36490ab6de1fe"
+      },
+      "matching_current_files": [
+        "weight_layout_investigation.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [
+        {
+          "file": "weight_layout_investigation.py",
+          "snapshot": "artifacts/recognition-diagnosis/packing/followup/weight_layout_investigation-source.py",
+          "snapshot_sha256": "f3d81852c11666926c9fc738aedbbeb5bca5c569e6da83106cc36490ab6de1fe",
+          "matches_recorded_hash": true
+        }
+      ],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/anchors/report.json",
+      "recorded_hashes": {
+        "anchor_decode_investigation.py": "8b2f9144c8b02efd78a4e2de863bfa1e89e4e06284ff0c6d4d53ecc1157355c9",
+        "candidate_network.py": "0005f869aee9c69191fc74259a92e6f0bbf9e9aa1d43cceae7ee1694f682b559",
+        "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+        "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+        "ops_investigation.py": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+        "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d",
+        "proposal_hypothesis.py": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+        "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+        "train_recognition.py": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765"
+      },
+      "matching_current_files": [
+        "anchor_decode_investigation.py",
+        "candidate_network.py",
+        "decode_parameters.py",
+        "extract.py",
+        "ops_investigation.py",
+        "packing_investigation.py",
+        "pretraining_data.py",
+        "proposal_hypothesis.py",
+        "train_recognition.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/anchors/predeclared-plan.json",
+      "recorded_hashes": {
+        "anchor_decode_investigation.py": "8b2f9144c8b02efd78a4e2de863bfa1e89e4e06284ff0c6d4d53ecc1157355c9",
+        "candidate_network.py": "0005f869aee9c69191fc74259a92e6f0bbf9e9aa1d43cceae7ee1694f682b559",
+        "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+        "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+        "ops_investigation.py": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+        "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d",
+        "proposal_hypothesis.py": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+        "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+        "train_recognition.py": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765"
+      },
+      "matching_current_files": [
+        "anchor_decode_investigation.py",
+        "candidate_network.py",
+        "decode_parameters.py",
+        "extract.py",
+        "ops_investigation.py",
+        "packing_investigation.py",
+        "pretraining_data.py",
+        "proposal_hypothesis.py",
+        "train_recognition.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/outer-axes/report.json",
+      "recorded_hashes": {
+        "weight_outer_axis_probe.py": "e78e60656e0df479233e4ea1b4b909124bdf9b24a30ad47d2a2ee2ddb7957643",
+        "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+        "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+        "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d"
+      },
+      "matching_current_files": [
+        "decode_parameters.py",
+        "extract.py",
+        "packing_investigation.py",
+        "weight_outer_axis_probe.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/outer-axes/predeclared-plan.json",
+      "recorded_hashes": {
+        "weight_outer_axis_probe.py": "e78e60656e0df479233e4ea1b4b909124bdf9b24a30ad47d2a2ee2ddb7957643",
+        "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+        "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+        "packing_investigation.py": "eeea598c51cdd7345640989847214100e889fe57fec0a87c0a4954328b8aac1d"
+      },
+      "matching_current_files": [
+        "decode_parameters.py",
+        "extract.py",
+        "packing_investigation.py",
+        "weight_outer_axis_probe.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/arithmetic/arithmetic-plan.json",
+      "recorded_hashes": {
+        "arithmetic_investigation.py": "c99f9cf63be467105b42f55ae5e4a0df139b200c1e9c2e11db9c3768c5d7bdab",
+        "weight_layout_investigation.py": "f3d81852c11666926c9fc738aedbbeb5bca5c569e6da83106cc36490ab6de1fe"
+      },
+      "matching_current_files": [
+        "arithmetic_investigation.py",
+        "weight_layout_investigation.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/arithmetic/runtime-summary.json",
+      "recorded_hashes": {
+        "weight_layout_investigation.py": "f3d81852c11666926c9fc738aedbbeb5bca5c569e6da83106cc36490ab6de1fe"
+      },
+      "matching_current_files": [
+        "weight_layout_investigation.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/arm-input-boundary.json",
+      "recorded_hashes": {
+        "arm_input_boundary.py": "528b88b989907f07680a1a7a520f69e11be7560f66c1958c27ebb4ba5a55814a"
+      },
+      "matching_current_files": [
+        "arm_input_boundary.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/arm-input-scatter-boundary.json",
+      "recorded_hashes": {
+        "arm_input_boundary.py": "528b88b989907f07680a1a7a520f69e11be7560f66c1958c27ebb4ba5a55814a",
+        "arm_input_scatter_boundary.py": "0b4a9e20ee0a01df9f75888a4dcc64caa14cf1cace18f151124f840f47b9301d"
+      },
+      "matching_current_files": [
+        "arm_input_boundary.py",
+        "arm_input_scatter_boundary.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/arm-input-direct-callers.json",
+      "recorded_hashes": {
+        "arm_input_direct_xrefs.py": "231f6cef2286a3cffd7d0fb7cadfd275ed18d2dedda70da5fcdd169b995f68a2"
+      },
+      "matching_current_files": [
+        "arm_input_direct_xrefs.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    },
+    {
+      "source": "artifacts/recognition-diagnosis/arm-input-postboot-callers.json",
+      "recorded_hashes": {
+        "arm_input_postboot_xrefs.py": "fef3d96e6fd0551d708ea8a9a46d0efafff81ab659695e53f61216f987a2f48b"
+      },
+      "matching_current_files": [
+        "arm_input_postboot_xrefs.py"
+      ],
+      "missing_files": [],
+      "mismatches": [],
+      "historical_snapshots": [],
+      "all_recorded_hashes_match_current": true,
+      "all_recorded_hashes_match_current_or_snapshot": true
+    }
+  ],
+  "unavailable_source_bindings": [],
+  "all_recorded_source_hashes_match_current_files": false,
+  "all_recorded_source_hashes_match_current_or_saved_snapshots": true,
+  "identity_audit_limit": "Matching hashes establish present file consistency with recorded identities, not authenticity of past execution or numerical correctness. Missing bindings are not inferred."
+}

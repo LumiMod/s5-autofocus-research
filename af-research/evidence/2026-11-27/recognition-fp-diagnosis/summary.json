@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-27",
+  "status": "diagnosed; limited loss repair verified; detection acceptance unresolved; training paused",
+  "dataset_manifest_sha256": "af5459ddebd98947b154580cd176e7846abcceffe5539ac6f0001f6a485a3fc8",
+  "optimizer_steps_this_work": 0,
+  "new_validation_inference": false,
+  "test_inference": false,
+  "graph_changed": false,
+  "existing_checkpoint_files_changed": false,
+  "new_loss_installed_in_training_runner": false,
+  "score_or_nms_thresholds_changed": false,
+  "saved_validation_metrics": {
+    "baseline_original": {
+      "person": {
+        "ap50": 0.6059052916065439,
+        "predictions": 86,
+        "tp": 70,
+        "fp": 16,
+        "fn": 50,
+        "precision": 0.813953488372093,
+        "recall": 0.5833333333333334,
+        "fp_categories": {
+          "duplicate": 0,
+          "other_class_overlap": 0,
+          "localization_iou_01_to_05": 13,
+          "background_low_overlap": 3
+        }
+      },
+      "person_face": {
+        "ap50": 0.3433486688556611,
+        "predictions": 95,
+        "tp": 47,
+        "fp": 48,
+        "fn": 63,
+        "precision": 0.49473684210526314,
+        "recall": 0.42727272727272725,
+        "fp_categories": {
+          "duplicate": 0,
+          "other_class_overlap": 1,
+          "localization_iou_01_to_05": 33,
+          "background_low_overlap": 14
+        }
+      }
+    },
+    "baseline_small": {
+      "person": {
+        "ap50": 0.5922176173634642,
+        "predictions": 84,
+        "tp": 70,
+        "fp": 14,
+        "fn": 50,
+        "precision": 0.8333333333333334,
+        "recall": 0.5833333333333334,
+        "fp_categories": {
+          "duplicate": 0,
+          "other_class_overlap": 0,
+          "localization_iou_01_to_05": 12,
+          "background_low_overlap": 2
+        }
+      },
+      "person_face": {
+        "ap50": 0.34152197687355385,
+        "predictions": 91,
+        "tp": 47,
+        "fp": 44,
+        "fn": 63,
+        "precision": 0.5164835164835165,
+        "recall": 0.42727272727272725,
+        "fp_categories": {
+          "duplicate": 1,
+          "other_class_overlap": 0,
+          "localization_iou_01_to_05": 34,
+          "background_low_overlap": 9
+        }
+      }
+    },
+    "epoch-06": {
+      "person": {
+        "ap50": 0.6759017376515178,
+        "predictions": 145,
+        "tp": 81,
+        "fp": 64,
+        "fn": 39,
+        "precision": 0.5586206896551724,
+        "recall": 0.675,
+        "fp_categories": {
+          "duplicate": 1,
+          "other_class_overlap": 0,
+          "localization_iou_01_to_05": 53,
+          "background_low_overlap": 10
+        }
+      },
+      "person_face": {
+        "ap50": 0.3829682921329551,
+        "predictions": 272,
+        "tp": 57,
+        "fp": 215,
+        "fn": 53,
+        "precision": 0.20955882352941177,
+        "recall": 0.5181818181818182,
+        "fp_categories": {
+          "duplicate": 2,
+          "other_class_overlap": 7,
+          "localization_iou_01_to_05": 138,
+          "background_low_overlap": 68
+        }
+      }
+    }
+  },
+  "frozen_train32_head_interventions": {
+    "transfer0": {
+      "state_sha256": "c8975c7378b67004e0952b5a1c9031ebfa13fc80d329a335fa781675f9da5cfd",
+      "person": {
+        "ap_at_iou": 0.7128363467971075,
+        "tp_at_score": 25,
+        "fp_at_score": 4
+      },
+      "face": {
+        "ap_at_iou": 0.358703678811699,
+        "tp_at_score": 18,
+        "fp_at_score": 19
+      },
+      "small_faces": {
+        "ground_truth": 10,
+        "matched_at_score": 0,
+        "matched_all_saved_scores": 0,
+        "recall_at_score": 0.0
+      }
+    },
+    "trained6": {
+      "state_sha256": "d0755b534ec50e53750e8d651bbc50ca1ecf42092ecaf145630f1fa02153d2da",
+      "person": {
+        "ap_at_iou": 0.7522716505560766,
+        "tp_at_score": 34,
+        "fp_at_score": 26
+      },
+      "face": {
+        "ap_at_iou": 0.3469226454986591,
+        "tp_at_score": 23,
+        "fp_at_score": 83
+      },
+      "small_faces": {
+        "ground_truth": 10,
+        "matched_at_score": 0,
+        "matched_all_saved_scores": 2,
+        "recall_at_score": 0.0
+      }
+    },
+    "trained_scores_initial_boxes": {
+      "state_sha256": "5666908d5fa0302d192a3d9f30052ff2deb2b2875e1e92711ad02488703086f8",
+      "person": {
+        "ap_at_iou": 0.7380734443959532,
+        "tp_at_score": 32,
+        "fp_at_score": 23
+      },
+      "face": {
+        "ap_at_iou": 0.3676826463561083,
+        "tp_at_score": 23,
+        "fp_at_score": 71
+      },
+      "small_faces": {
+        "ground_truth": 10,
+        "matched_at_score": 0,
+        "matched_all_saved_scores": 0,
+        "recall_at_score": 0.0
+      }
+    },
+    "initial_scores_trained_boxes": {
+      "state_sha256": "75ac0556fa23162201628b60af9b15472e90f5b063e9e065df2727a4962da738",
+      "person": {
+        "ap_at_iou": 0.6762053081821904,
+        "tp_at_score": 26,
+        "fp_at_score": 6
+      },
+      "face": {
+        "ap_at_iou": 0.23579129626845416,
+        "tp_at_score": 20,
+        "fp_at_score": 50
+      },
+      "small_faces": {
+        "ground_truth": 10,
+        "matched_at_score": 0,
+        "matched_all_saved_scores": 3,
+        "recall_at_score": 0.0
+      }
+    }
+  },
+  "frozen_train32_final_highscore": {
+    "person": {
+      "negative_decoded_good": 5155,
+      "negative_decoded_good_highscore": 1449,
+      "small_good_negative": 0,
+      "small_good_negative_highscore": 0,
+      "guarded_negative_pool": 248046,
+      "guard_ignored_static_negatives": 25130,
+      "TP": 34,
+      "TP_label_1": 25,
+      "FP": 26,
+      "FP_label_-1": 10,
+      "FP_decoded_03_to_below_05": 14,
+      "TP_label_-1": 9,
+      "FP_label_0": 16,
+      "FP_label0_decoded_03_to_below_05": 6,
+      "FP_decoded_below_03": 12,
+      "FP_label0_decoded_below_03": 10
+    },
+    "person_face": {
+      "negative_decoded_good": 1902,
+      "negative_decoded_good_highscore": 877,
+      "small_good_negative": 12,
+      "small_good_negative_highscore": 2,
+      "guarded_negative_pool": 267215,
+      "guard_ignored_static_negatives": 10403,
+      "TP": 23,
+      "TP_label_-1": 7,
+      "FP": 83,
+      "FP_label_0": 73,
+      "FP_decoded_03_to_below_05": 31,
+      "FP_label0_decoded_03_to_below_05": 23,
+      "TP_label_1": 16,
+      "FP_decoded_below_03": 49,
+      "FP_label0_decoded_below_03": 49,
+      "FP_decoded_ge_05": 3,
+      "FP_label0_decoded_ge_05": 1,
+      "FP_label_-1": 10
+    }
+  },
+  "historical_train32_sampling": {
+    "person": {
+      "negative_draws": 18678,
+      "selected_highscore_negatives": 358,
+      "final_score_highnegative_opportunities": 31122,
+      "selected_correct_decoded_negatives": 368,
+      "selected_guard_would_ignore": 1725,
+      "selected_small_good_negatives": 0,
+      "unguarded_top64_correct_decoded_negatives": 4092,
+      "guarded_top64_correct_decoded_negatives": 0,
+      "final_label0_fp": 16,
+      "final_label0_fp_never_sampled_negative": 14,
+      "guard_eligible_final_fp": 10,
+      "guard_eligible_final_fp_never_sampled_negative": 9
+    },
+    "person_face": {
+      "negative_draws": 20850,
+      "selected_highscore_negatives": 310,
+      "final_score_highnegative_opportunities": 26394,
+      "selected_correct_decoded_negatives": 149,
+      "selected_guard_would_ignore": 747,
+      "selected_small_good_negatives": 0,
+      "unguarded_top64_correct_decoded_negatives": 1764,
+      "guarded_top64_correct_decoded_negatives": 0,
+      "final_label0_fp": 73,
+      "final_label0_fp_never_sampled_negative": 67,
+      "guard_eligible_final_fp": 49,
+      "guard_eligible_final_fp_never_sampled_negative": 45
+    }
+  },
+  "historical_train32_per_gt_positive_counts": {
+    "person/small": {
+      "gt": 1,
+      "draws": 6,
+      "minimum": 5,
+      "median": 5.0,
+      "maximum": 5,
+      "visits_with_one_positive": 0
+    },
+    "person/other": {
+      "gt": 42,
+      "draws": 252,
+      "minimum": 1,
+      "median": 32.0,
+      "maximum": 32,
+      "visits_with_one_positive": 10
+    },
+    "person_face/small": {
+      "gt": 10,
+      "draws": 60,
+      "minimum": 1,
+      "median": 1.0,
+      "maximum": 4,
+      "visits_with_one_positive": 36
+    },
+    "person_face/other": {
+      "gt": 32,
+      "draws": 192,
+      "minimum": 1,
+      "median": 16.5,
+      "maximum": 32,
+      "visits_with_one_positive": 6
+    }
+  },
+  "frozen_train32_small_face_failures": {
+    "all_pretop_qualifying_candidates_suppressed_by_nms": 4,
+    "decoded_geometry_insufficient": 1,
+    "classification_confidence_insufficient": 5
+  },
+  "loss_candidate": {
+    "module": "recognition_balanced_loss.py",
+    "shared_static_gt_owners_unchanged": true,
+    "per_gt_positive_and_bbox_mass_equal": true,
+    "class_positive_budget": 32,
+    "class_total_budget": 128,
+    "bbox_budget": 128,
+    "hard_negative_max": 64,
+    "remaining_negatives": "random without replacement",
+    "ignore_static_negatives_if_decoded_same_class_iou_at_least": 0.3,
+    "fixtures": {
+      "imbalanced_gt_coverage_and_mass": true,
+      "coverage_overflow_rejected": true,
+      "good_decoded_negative_guard_and_gradient_sign": true,
+      "empty_gt_background_only": true,
+      "negative_budget_ties_no_duplicates": true,
+      "empty_sample_differentiable_zero": true
+    },
+    "frozen_output_gradient_images": 32,
+    "passed_supervision_checks": true,
+    "passed_detection_acceptance": false,
+    "actual_frozen_train32_face_fp_supervision": {
+      "total_fp": 83,
+      "guard_eligible": 49,
+      "selected_hard": 37,
+      "selected_random": 1,
+      "eligible_unselected": 11,
+      "dynamically_guarded": 24,
+      "statically_ignored": 10,
+      "correctly_decoded_static_negative_small_face_candidates_protected": 12
+    }
+  },
+  "ready_to_train": false,
+  "unresolved": [
+    "The guard excludes IoU .3-.5 localization false positives as well as correct boxes.",
+    "Three of four highest-scoring NMS suppressors of small faces are guarded; they are not directly penalized.",
+    "Five confidence-limited and one geometry-limited train32 small faces have no post-repair improvement evidence.",
+    "No background-only data or S5 camera-domain detector validation.",
+    "All four NMS examples are occluded; retained boxes resemble larger head regions. Original face/head box convention is unknown.",
+    "Host-restored graph arithmetic and deployment are not validated against the S5 DSP."
+  ],
+  "interpretation": [
+    "Saved validation FP taxonomy describes geometry against existing annotations, not confirmed visual background.",
+    "Historical selections are exact; their high-score status is scored retrospectively with epoch06 outputs.",
+    "Head interventions and supervision checks use training images; they are not independent accuracy.",
+    "No new trained detector or firmware was produced."
+  ],
+  "verified_current_sources": {
+    "train_recognition.py": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+    "candidate_network.py": "38a19df551ea4648a8cd792d10b1ab149c41b81abf4515a03b70934b864ca5f8",
+    "decode_parameters.py": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+    "extract.py": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+    "ops_investigation.py": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+    "packing_investigation.py": "4aa3f22feed71493d146d11e83fcad78d49ce414896972d31b0af4a70a75346f",
+    "proposal_hypothesis.py": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+    "pretraining_data.py": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+    "pretraining_readiness.py": "da1b255b982262e83ca6347f73fad632c6fad960f17c40f3e5cbdb5de122d34d",
+    "diagnose_head_interactions.py": "3c685b6dacb4858d89c9583d083ecf180fdd2af78b113eefa5e1fd65de018d25",
+    "train_small_anchor_transfer.py": "525272d7d19f3919ea35ac038fb870766e7bbed2bbddf1407e58544393801363",
+    "verify_external_baselines.py": "46093e97afd28c40512d528d1e3600812616916bba77c8df88bc80953e6a1727",
+    "verify_balanced_loss.py": "8c855ae62cbcb09ed5f0db2d579a4e0743d3994b6b975bdf8a69e1b0499cf4e1",
+    "recognition_balanced_loss.py": "04f0f0148fbf3029ca7503413eb495cbffb777eef1b11148609ee2bc72821809",
+    "research_paths.py": "17fc95de086fbe80acc16ae042049364b8c39befc6fc0b5461ee55688a8494a9",
+    "diagnose_training_sampling.py": "1735831b405937003aea8e56d85c83ed7b195bfea5ce975bef82a3f643319099",
+    "small_face_path_diagnosis.py": "29c9f4cf78cad9ef51e819415683bc38880f3a76914e6c2863f9001552a10ab3"
+  },
+  "artifacts": {
+    "saved_fp": {
+      "path": "artifacts/recognition-fp-diagnosis/saved-predictions/report.json",
+      "sha256": "312b2b55823068a143ed90928799b53c585c73c373d1208b1e762f75eb31edc9",
+      "bytes": 14765377
+    },
+    "saved_fp_independent": {
+      "path": "artifacts/recognition-fp-diagnosis/saved-predictions/independent-verification.json",
+      "sha256": "ae0036665164846ef04c6a3240994a7a9144fb198f10aa686937d2580573cd58",
+      "bytes": 2128
+    },
+    "sampling": {
+      "path": "artifacts/recognition-fp-diagnosis/training-sampling/report.json",
+      "sha256": "8ca99108cbf00b41bbaf4d3ac2ba67abae750e12896ec2521e98f928dedd28d6",
+      "bytes": 1667465
+    },
+    "targets": {
+      "path": "artifacts/recognition-fp-diagnosis/target-conflicts/report.json",
+      "sha256": "1fcb9b7f809b07079b2712852df829ccd14749d7a39a2ae0403c23040b338421",
+      "bytes": 50511
+    },
+    "head_interventions": {
+      "path": "artifacts/recognition-fp-diagnosis/head-interactions/report.json",
+      "sha256": "54146e2aef94b4c01a49d09b2ce9671d7c75d5e9b262ea1a6704c5dd9649d14d",
+      "bytes": 22680
+    },
+    "loss_verification": {
+      "path": "artifacts/recognition-fp-diagnosis/balanced-loss-verification/report.json",
+      "sha256": "f5c913633a77322c8c76a92d77e0cb2ad6628b09048a8032171babaa4592d9f6",
+      "bytes": 1089017
+    },
+    "independent_head_loss": {
+      "path": "artifacts/recognition-fp-diagnosis/target-conflicts/independent-head-and-loss-review-extended.json",
+      "sha256": "fe2ac429ac55f8cef2d44f4657d85db660fceee1c2bffcb1999fea78c558d7d7",
+      "bytes": 5639
+    },
+    "repair_coverage": {
+      "path": "artifacts/recognition-fp-diagnosis/training-sampling/independent-balanced-loss-coverage.json",
+      "sha256": "0bb88a60dfd5d3e2edacac71a4a09a670b8f28eab5f465801b53357fdb94bc57",
+      "bytes": 104348
+    },
+    "nms_preview_selection": {
+      "path": "artifacts/recognition-fp-diagnosis/nms-evidence/selection.json",
+      "sha256": "98d706b53887397c6e58409122072e17ea175a3bcfa5c811517919abd0f10925",
+      "bytes": 15774
+    },
+    "box_convention_caveat": {
+      "path": "artifacts/recognition-fp-diagnosis/target-conflicts/box-convention-caveat.json",
+      "sha256": "5a21346c84381a286e335d2975626e3cf7adfc6aca141a95ad870768c9835276",
+      "bytes": 129797
+    },
+    "recognition_balanced_loss.py": {
+      "path": "recognition_balanced_loss.py",
+      "sha256": "04f0f0148fbf3029ca7503413eb495cbffb777eef1b11148609ee2bc72821809",
+      "bytes": 6917
+    },
+    "verify_balanced_loss.py": {
+      "path": "verify_balanced_loss.py",
+      "sha256": "8c855ae62cbcb09ed5f0db2d579a4e0743d3994b6b975bdf8a69e1b0499cf4e1",
+      "bytes": 12236
+    },
+    "diagnose_head_interactions.py": {
+      "path": "diagnose_head_interactions.py",
+      "sha256": "3c685b6dacb4858d89c9583d083ecf180fdd2af78b113eefa5e1fd65de018d25",
+      "bytes": 7147
+    },
+    "diagnose_saved_false_positives.py": {
+      "path": "diagnose_saved_false_positives.py",
+      "sha256": "115fcaf63306463301e8a572307916692d585bb995dcc13b44ea6312ad71f0c8",
+      "bytes": 20027
+    },
+    "diagnose_training_sampling.py": {
+      "path": "diagnose_training_sampling.py",
+      "sha256": "1735831b405937003aea8e56d85c83ed7b195bfea5ce975bef82a3f643319099",
+      "bytes": 24836
+    },
+    "diagnose_target_conflicts.py": {
+      "path": "diagnose_target_conflicts.py",
+      "sha256": "217e09ea1aeef3cded4533d07572fada3b7716f038364d987266143589e2ca95",
+      "bytes": 11495
+    },
+    "summarize_fp_diagnosis.py": {
+      "path": "summarize_fp_diagnosis.py",
+      "sha256": "07a40fd824d9dc133cb9a9b54052fa73de56e1e3c2755b23e9265deb8265554f",
+      "bytes": 7134
+    }
+  }
+}

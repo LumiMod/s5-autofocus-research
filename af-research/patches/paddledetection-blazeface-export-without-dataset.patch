@@ -1,0 +1,27 @@
+diff --git a/ppdet/data/source/widerface.py b/ppdet/data/source/widerface.py
+index d7a95de..994d428 100644
+--- a/ppdet/data/source/widerface.py
++++ b/ppdet/data/source/widerface.py
+@@ -206,12 +206,13 @@ class WIDERFaceValDataset(WIDERFaceDataSet):
+         self.medium_mat_path = os.path.join(self.dataset_dir, self.gt_mat_path, 'wider_medium_val.mat')
+         self.easy_mat_path = os.path.join(self.dataset_dir, self.gt_mat_path, 'wider_easy_val.mat')
+ 
++    def parse_dataset(self):
++        # Export constructs this YAML object without using the evaluation data.
++        # Keep the required-file checks at the point evaluation actually starts.
+         assert os.path.exists(self.val_mat), f'{self.val_mat} not exist'
+         assert os.path.exists(self.hard_mat_path), f'{self.hard_mat_path} not exist'
+         assert os.path.exists(self.medium_mat_path), f'{self.medium_mat_path} not exist'
+         assert os.path.exists(self.easy_mat_path), f'{self.easy_mat_path} not exist'
+-
+-    def parse_dataset(self):
+         super().parse_dataset()
+ 
+         box_list, flie_list, event_list, hard_info_list, medium_info_list, \
+@@ -258,4 +259,4 @@ class WIDERFaceValDataset(WIDERFaceDataSet):
+         medium_info_list = medium_mat['gt_list']
+         easy_info_list = easy_mat['gt_list']
+ 
+-        return box_list, file_list, event_list, hard_info_list, medium_info_list, easy_info_list
+\ No newline at end of file
++        return box_list, file_list, event_list, hard_info_list, medium_info_list, easy_info_list

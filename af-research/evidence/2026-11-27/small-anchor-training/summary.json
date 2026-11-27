@@ -1,0 +1,4100 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-27",
+  "scope": "Original S5 graph with explicit K4 and five smaller anchor scales; bounded host training.",
+  "manifest_sha256": "af5459ddebd98947b154580cd176e7846abcceffe5539ac6f0001f6a485a3fc8",
+  "model_sha256": "b510989f1e12fd1e6a2efbc5306b125289cb796c48e5ffefe7e4d4ce26390a50",
+  "architecture_changes": false,
+  "feature_grid": [
+    16,
+    24
+  ],
+  "stride": [
+    16,
+    16
+  ],
+  "anchors_per_location": 25,
+  "head_channels": [
+    50,
+    50,
+    100
+  ],
+  "scales": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "original_scales": [
+    3.0,
+    6.0,
+    9.0,
+    16.0,
+    32.0
+  ],
+  "design_train_only": {
+    "original": {
+      "person/all": {
+        "gt": 463,
+        "max_iou": {
+          "p50": 0.7575633948805962,
+          "p90": 0.8716131779314659,
+          "p95": 0.8961741166668835,
+          "max": 0.9707423654992801
+        },
+        "covered_ge_03": 448,
+        "covered_ge_05": 435,
+        "coverage_ge_05": 0.9395248380129589,
+        "free_center_covered_ge_05": 438,
+        "free_center_pass_but_grid_fail_ge_05": 3,
+        "fully_inside_anchors_covered_ge_05": 424,
+        "clipped_anchors_covered_ge_05": 442,
+        "best_anchor_crosses_boundary": 160,
+        "gt_near_boundary": 377,
+        "near_boundary_covered_ge_05": 364,
+        "fitting_abs_xy": {
+          "p50": 0.0767543866666666,
+          "p90": 0.15374991853302244,
+          "p95": 0.17246513001398578,
+          "max": 0.35505501090909086
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.20763936477824455,
+          "p90": 0.4262485817062773,
+          "p95": 0.5768409860374453,
+          "max": 2.0614230361771466
+        },
+        "fit_any_component_abs_gt1": 10,
+        "fit_any_component_abs_gt2": 1
+      },
+      "person/small_lt32": {
+        "gt": 21,
+        "max_iou": {
+          "p50": 0.1910009652892561,
+          "p90": 0.41885953252661867,
+          "p95": 0.42769511387327785,
+          "max": 0.43469183765935016
+        },
+        "covered_ge_03": 6,
+        "covered_ge_05": 0,
+        "coverage_ge_05": 0.0,
+        "free_center_covered_ge_05": 0,
+        "free_center_pass_but_grid_fail_ge_05": 0,
+        "fully_inside_anchors_covered_ge_05": 0,
+        "clipped_anchors_covered_ge_05": 2,
+        "best_anchor_crosses_boundary": 7,
+        "gt_near_boundary": 7,
+        "near_boundary_covered_ge_05": 0,
+        "fitting_abs_xy": {
+          "p50": 0.15401076363636348,
+          "p90": 0.2545454545454545,
+          "p95": 0.3228747636363636,
+          "max": 0.35505501090909086
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.9628107475090462,
+          "p90": 1.4289002488622449,
+          "p95": 1.4623224987821797,
+          "max": 2.0614230361771466
+        },
+        "fit_any_component_abs_gt1": 10,
+        "fit_any_component_abs_gt2": 1
+      },
+      "person/medium_32_to_lt96": {
+        "gt": 66,
+        "max_iou": {
+          "p50": 0.6524808413310185,
+          "p90": 0.7901000014087755,
+          "p95": 0.8458581136863288,
+          "max": 0.9149433217520019
+        },
+        "covered_ge_03": 66,
+        "covered_ge_05": 61,
+        "coverage_ge_05": 0.9242424242424242,
+        "free_center_covered_ge_05": 64,
+        "free_center_pass_but_grid_fail_ge_05": 3,
+        "fully_inside_anchors_covered_ge_05": 57,
+        "clipped_anchors_covered_ge_05": 64,
+        "best_anchor_crosses_boundary": 11,
+        "gt_near_boundary": 37,
+        "near_boundary_covered_ge_05": 33,
+        "fitting_abs_xy": {
+          "p50": 0.11195445435897408,
+          "p90": 0.17917637594405578,
+          "p95": 0.20729347636363654,
+          "max": 0.2749262933333336
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.2658272664117922,
+          "p90": 0.5399045479824394,
+          "p95": 0.5868134412947374,
+          "max": 0.7884573603642702
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person/large_ge96": {
+        "gt": 376,
+        "max_iou": {
+          "p50": 0.7728932235882511,
+          "p90": 0.8769938294454869,
+          "p95": 0.901737380505209,
+          "max": 0.9707423654992801
+        },
+        "covered_ge_03": 376,
+        "covered_ge_05": 374,
+        "coverage_ge_05": 0.9946808510638298,
+        "free_center_covered_ge_05": 374,
+        "free_center_pass_but_grid_fail_ge_05": 0,
+        "fully_inside_anchors_covered_ge_05": 367,
+        "clipped_anchors_covered_ge_05": 376,
+        "best_anchor_crosses_boundary": 142,
+        "gt_near_boundary": 333,
+        "near_boundary_covered_ge_05": 331,
+        "fitting_abs_xy": {
+          "p50": 0.06759114188034193,
+          "p90": 0.1339203299393939,
+          "p95": 0.1530861292307693,
+          "max": 0.3464354819710145
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.20225290161025844,
+          "p90": 0.32943333613173675,
+          "p95": 0.38870116739840865,
+          "max": 0.5828324442968019
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/all": {
+        "gt": 420,
+        "max_iou": {
+          "p50": 0.6264647775675459,
+          "p90": 0.8248303695037331,
+          "p95": 0.8620363261151351,
+          "max": 0.9277332237801671
+        },
+        "covered_ge_03": 347,
+        "covered_ge_05": 308,
+        "coverage_ge_05": 0.7333333333333333,
+        "free_center_covered_ge_05": 312,
+        "free_center_pass_but_grid_fail_ge_05": 4,
+        "fully_inside_anchors_covered_ge_05": 307,
+        "clipped_anchors_covered_ge_05": 310,
+        "best_anchor_crosses_boundary": 50,
+        "gt_near_boundary": 81,
+        "near_boundary_covered_ge_05": 69,
+        "fitting_abs_xy": {
+          "p50": 0.10548664615384623,
+          "p90": 0.2322455064242428,
+          "p95": 0.2795923772121212,
+          "max": 0.4157629478787879
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.2942199291422791,
+          "p90": 1.2437938454218038,
+          "p95": 1.453167647269326,
+          "max": 2.3910358657474777
+        },
+        "fit_any_component_abs_gt1": 57,
+        "fit_any_component_abs_gt2": 4
+      },
+      "person_face/small_lt32": {
+        "gt": 103,
+        "max_iou": {
+          "p50": 0.22252171945339677,
+          "p90": 0.39713946011976065,
+          "p95": 0.41793263873491715,
+          "max": 0.46800838553525526
+        },
+        "covered_ge_03": 30,
+        "covered_ge_05": 0,
+        "coverage_ge_05": 0.0,
+        "free_center_covered_ge_05": 0,
+        "free_center_pass_but_grid_fail_ge_05": 0,
+        "fully_inside_anchors_covered_ge_05": 0,
+        "clipped_anchors_covered_ge_05": 1,
+        "best_anchor_crosses_boundary": 19,
+        "gt_near_boundary": 11,
+        "near_boundary_covered_ge_05": 0,
+        "fitting_abs_xy": {
+          "p50": 0.21791930181818184,
+          "p90": 0.34750838690909086,
+          "p95": 0.3593564024242423,
+          "max": 0.4157629478787879
+        },
+        "fitting_abs_log_wh": {
+          "p50": 1.0570632559877964,
+          "p90": 1.7624273758251177,
+          "p95": 1.9790396320444534,
+          "max": 2.3910358657474777
+        },
+        "fit_any_component_abs_gt1": 57,
+        "fit_any_component_abs_gt2": 4
+      },
+      "person_face/medium_32_to_lt96": {
+        "gt": 206,
+        "max_iou": {
+          "p50": 0.6332205971792138,
+          "p90": 0.8015769147555907,
+          "p95": 0.8173791617438234,
+          "max": 0.8757157378279102
+        },
+        "covered_ge_03": 206,
+        "covered_ge_05": 197,
+        "coverage_ge_05": 0.9563106796116505,
+        "free_center_covered_ge_05": 201,
+        "free_center_pass_but_grid_fail_ge_05": 4,
+        "fully_inside_anchors_covered_ge_05": 197,
+        "clipped_anchors_covered_ge_05": 198,
+        "best_anchor_crosses_boundary": 16,
+        "gt_near_boundary": 25,
+        "near_boundary_covered_ge_05": 24,
+        "fitting_abs_xy": {
+          "p50": 0.10409660144927563,
+          "p90": 0.17305800205128208,
+          "p95": 0.1944737600000005,
+          "max": 0.28478125948717914
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.26715457104227075,
+          "p90": 0.42649890324748974,
+          "p95": 0.4937252050821105,
+          "max": 0.8362480242006186
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/large_ge96": {
+        "gt": 111,
+        "max_iou": {
+          "p50": 0.7797568019303511,
+          "p90": 0.8784773060029283,
+          "p95": 0.8940382234088822,
+          "max": 0.9277332237801671
+        },
+        "covered_ge_03": 111,
+        "covered_ge_05": 111,
+        "coverage_ge_05": 1.0,
+        "free_center_covered_ge_05": 111,
+        "free_center_pass_but_grid_fail_ge_05": 0,
+        "fully_inside_anchors_covered_ge_05": 110,
+        "clipped_anchors_covered_ge_05": 111,
+        "best_anchor_crosses_boundary": 15,
+        "gt_near_boundary": 45,
+        "near_boundary_covered_ge_05": 45,
+        "fitting_abs_xy": {
+          "p50": 0.05652680799999995,
+          "p90": 0.125,
+          "p95": 0.1354927313861019,
+          "max": 0.19086944000000017
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.16290347093685306,
+          "p90": 0.29973629198858653,
+          "p95": 0.3386257109317019,
+          "max": 0.40108775479443637
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      }
+    },
+    "small16_keep256": {
+      "person/all": {
+        "gt": 463,
+        "max_iou": {
+          "p50": 0.7213776938140309,
+          "p90": 0.8712242148474024,
+          "p95": 0.896206327203074,
+          "max": 0.9707423654992801
+        },
+        "covered_ge_03": 461,
+        "covered_ge_05": 442,
+        "coverage_ge_05": 0.9546436285097192,
+        "free_center_covered_ge_05": 459,
+        "free_center_pass_but_grid_fail_ge_05": 17,
+        "fully_inside_anchors_covered_ge_05": 417,
+        "clipped_anchors_covered_ge_05": 451,
+        "best_anchor_crosses_boundary": 167,
+        "gt_near_boundary": 377,
+        "near_boundary_covered_ge_05": 365,
+        "fitting_abs_xy": {
+          "p50": 0.09540927425000006,
+          "p90": 0.18819493393006997,
+          "p95": 0.2359983887272727,
+          "max": 0.47669643895652175
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.23526488542379073,
+          "p90": 0.44167107553579127,
+          "p95": 0.524737924366531,
+          "max": 0.9628107475090372
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person/small_lt32": {
+        "gt": 21,
+        "max_iou": {
+          "p50": 0.5020206269845084,
+          "p90": 0.6780607027083518,
+          "p95": 0.7231464791163017,
+          "max": 0.7749897291601661
+        },
+        "covered_ge_03": 19,
+        "covered_ge_05": 11,
+        "coverage_ge_05": 0.5238095238095238,
+        "free_center_covered_ge_05": 20,
+        "free_center_pass_but_grid_fail_ge_05": 9,
+        "fully_inside_anchors_covered_ge_05": 11,
+        "clipped_anchors_covered_ge_05": 11,
+        "best_anchor_crosses_boundary": 0,
+        "gt_near_boundary": 7,
+        "near_boundary_covered_ge_05": 4,
+        "fitting_abs_xy": {
+          "p50": 0.18181818181818182,
+          "p90": 0.2468749999999993,
+          "p95": 0.3176471999999997,
+          "max": 0.3333333119999999
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.42332256767034493,
+          "p90": 0.7049814096355458,
+          "p95": 0.7576857016975165,
+          "max": 0.9628107475090372
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person/medium_32_to_lt96": {
+        "gt": 66,
+        "max_iou": {
+          "p50": 0.5743614365259215,
+          "p90": 0.7335202517262019,
+          "p95": 0.768867482973448,
+          "max": 0.8085616956949258
+        },
+        "covered_ge_03": 66,
+        "covered_ge_05": 57,
+        "coverage_ge_05": 0.8636363636363636,
+        "free_center_covered_ge_05": 65,
+        "free_center_pass_but_grid_fail_ge_05": 8,
+        "fully_inside_anchors_covered_ge_05": 54,
+        "clipped_anchors_covered_ge_05": 64,
+        "best_anchor_crosses_boundary": 11,
+        "gt_near_boundary": 37,
+        "near_boundary_covered_ge_05": 30,
+        "fitting_abs_xy": {
+          "p50": 0.11763274615384584,
+          "p90": 0.25395549090909086,
+          "p95": 0.27652438276923075,
+          "max": 0.4424242327272726
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.347743815127442,
+          "p90": 0.5196655190745438,
+          "p95": 0.5459271462366455,
+          "max": 0.791208402527369
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person/large_ge96": {
+        "gt": 376,
+        "max_iou": {
+          "p50": 0.7493630686284327,
+          "p90": 0.8769938294454869,
+          "p95": 0.9041746017028975,
+          "max": 0.9707423654992801
+        },
+        "covered_ge_03": 376,
+        "covered_ge_05": 374,
+        "coverage_ge_05": 0.9946808510638298,
+        "free_center_covered_ge_05": 374,
+        "free_center_pass_but_grid_fail_ge_05": 0,
+        "fully_inside_anchors_covered_ge_05": 352,
+        "clipped_anchors_covered_ge_05": 376,
+        "best_anchor_crosses_boundary": 156,
+        "gt_near_boundary": 333,
+        "near_boundary_covered_ge_05": 331,
+        "fitting_abs_xy": {
+          "p50": 0.07857171300000003,
+          "p90": 0.15979821693181817,
+          "p95": 0.18845355965034966,
+          "max": 0.47669643895652175
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.22096945129849477,
+          "p90": 0.4037652949043824,
+          "p95": 0.45694461310572915,
+          "max": 0.7006154799531855
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/all": {
+        "gt": 420,
+        "max_iou": {
+          "p50": 0.6355135380390113,
+          "p90": 0.8158803975340925,
+          "p95": 0.8474986247428763,
+          "max": 0.9106126728884505
+        },
+        "covered_ge_03": 408,
+        "covered_ge_05": 353,
+        "coverage_ge_05": 0.8404761904761905,
+        "free_center_covered_ge_05": 407,
+        "free_center_pass_but_grid_fail_ge_05": 54,
+        "fully_inside_anchors_covered_ge_05": 347,
+        "clipped_anchors_covered_ge_05": 356,
+        "best_anchor_crosses_boundary": 42,
+        "gt_near_boundary": 81,
+        "near_boundary_covered_ge_05": 74,
+        "fitting_abs_xy": {
+          "p50": 0.11547063769230768,
+          "p90": 0.27487047266666625,
+          "p95": 0.3253859008252967,
+          "max": 0.6312684800000005
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.2802103170140676,
+          "p90": 0.5188280108587584,
+          "p95": 0.5887256886534477,
+          "max": 1.143867093591157
+        },
+        "fit_any_component_abs_gt1": 3,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/small_lt32": {
+        "gt": 103,
+        "max_iou": {
+          "p50": 0.4866842633884172,
+          "p90": 0.7112461369578037,
+          "p95": 0.7391662508823401,
+          "max": 0.8721617361286094
+        },
+        "covered_ge_03": 91,
+        "covered_ge_05": 48,
+        "coverage_ge_05": 0.46601941747572817,
+        "free_center_covered_ge_05": 91,
+        "free_center_pass_but_grid_fail_ge_05": 43,
+        "fully_inside_anchors_covered_ge_05": 45,
+        "clipped_anchors_covered_ge_05": 50,
+        "best_anchor_crosses_boundary": 5,
+        "gt_near_boundary": 11,
+        "near_boundary_covered_ge_05": 6,
+        "fitting_abs_xy": {
+          "p50": 0.20000000000000018,
+          "p90": 0.37946908159999987,
+          "p95": 0.4296460639999995,
+          "max": 0.6312684800000005
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.3861830868920514,
+          "p90": 0.7225098867633726,
+          "p95": 0.8851670188916841,
+          "max": 1.143867093591157
+        },
+        "fit_any_component_abs_gt1": 3,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/medium_32_to_lt96": {
+        "gt": 206,
+        "max_iou": {
+          "p50": 0.6417726680089038,
+          "p90": 0.8019510754611943,
+          "p95": 0.8253601550061582,
+          "max": 0.8870958592428851
+        },
+        "covered_ge_03": 206,
+        "covered_ge_05": 194,
+        "coverage_ge_05": 0.941747572815534,
+        "free_center_covered_ge_05": 205,
+        "free_center_pass_but_grid_fail_ge_05": 11,
+        "fully_inside_anchors_covered_ge_05": 194,
+        "clipped_anchors_covered_ge_05": 195,
+        "best_anchor_crosses_boundary": 7,
+        "gt_near_boundary": 25,
+        "near_boundary_covered_ge_05": 23,
+        "fitting_abs_xy": {
+          "p50": 0.10533200538461546,
+          "p90": 0.2269295794871793,
+          "p95": 0.2553441599999999,
+          "max": 0.32943472000000007
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.2577011344957584,
+          "p90": 0.439122657877646,
+          "p95": 0.5121257994046394,
+          "max": 0.6752577941070574
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/large_ge96": {
+        "gt": 111,
+        "max_iou": {
+          "p50": 0.71875,
+          "p90": 0.8594452572713843,
+          "p95": 0.8645888516192284,
+          "max": 0.9106126728884505
+        },
+        "covered_ge_03": 111,
+        "covered_ge_05": 111,
+        "coverage_ge_05": 1.0,
+        "free_center_covered_ge_05": 111,
+        "free_center_pass_but_grid_fail_ge_05": 0,
+        "fully_inside_anchors_covered_ge_05": 108,
+        "clipped_anchors_covered_ge_05": 111,
+        "best_anchor_crosses_boundary": 30,
+        "gt_near_boundary": 45,
+        "near_boundary_covered_ge_05": 45,
+        "fitting_abs_xy": {
+          "p50": 0.07024340999999978,
+          "p90": 0.16155230666666678,
+          "p95": 0.19845718659090908,
+          "max": 0.37350740923076925
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.23947039176213386,
+          "p90": 0.4536671904815978,
+          "p95": 0.5194203591902562,
+          "max": 0.563309960496291
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      }
+    },
+    "small8_keep128": {
+      "person/all": {
+        "gt": 463,
+        "max_iou": {
+          "p50": 0.40750686208450576,
+          "p90": 0.7264159662071565,
+          "p95": 0.7846863459176195,
+          "max": 0.924721389401357
+        },
+        "covered_ge_03": 294,
+        "covered_ge_05": 179,
+        "coverage_ge_05": 0.38660907127429806,
+        "free_center_covered_ge_05": 196,
+        "free_center_pass_but_grid_fail_ge_05": 17,
+        "fully_inside_anchors_covered_ge_05": 176,
+        "clipped_anchors_covered_ge_05": 186,
+        "best_anchor_crosses_boundary": 32,
+        "gt_near_boundary": 377,
+        "near_boundary_covered_ge_05": 109,
+        "fitting_abs_xy": {
+          "p50": 0.40191740000000004,
+          "p90": 0.75,
+          "p95": 0.7582866273333334,
+          "max": 0.7916666666666666
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.683722054039756,
+          "p90": 0.9808292530117262,
+          "p95": 0.9808292530117262,
+          "max": 0.9808292530117262
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person/small_lt32": {
+        "gt": 21,
+        "max_iou": {
+          "p50": 0.5020206269845084,
+          "p90": 0.6780607027083518,
+          "p95": 0.7231464791163017,
+          "max": 0.7749897291601661
+        },
+        "covered_ge_03": 20,
+        "covered_ge_05": 11,
+        "coverage_ge_05": 0.5238095238095238,
+        "free_center_covered_ge_05": 20,
+        "free_center_pass_but_grid_fail_ge_05": 9,
+        "fully_inside_anchors_covered_ge_05": 11,
+        "clipped_anchors_covered_ge_05": 11,
+        "best_anchor_crosses_boundary": 0,
+        "gt_near_boundary": 7,
+        "near_boundary_covered_ge_05": 4,
+        "fitting_abs_xy": {
+          "p50": 0.19230769230769232,
+          "p90": 0.3176471999999997,
+          "p95": 0.3333333119999999,
+          "max": 0.37333337600000077
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.42332256767034493,
+          "p90": 0.7035102925955459,
+          "p95": 0.7049814096355458,
+          "max": 0.7576857016975165
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person/medium_32_to_lt96": {
+        "gt": 66,
+        "max_iou": {
+          "p50": 0.5743614365259215,
+          "p90": 0.7335202517262019,
+          "p95": 0.768867482973448,
+          "max": 0.8085616956949258
+        },
+        "covered_ge_03": 66,
+        "covered_ge_05": 57,
+        "coverage_ge_05": 0.8636363636363636,
+        "free_center_covered_ge_05": 65,
+        "free_center_pass_but_grid_fail_ge_05": 8,
+        "fully_inside_anchors_covered_ge_05": 54,
+        "clipped_anchors_covered_ge_05": 64,
+        "best_anchor_crosses_boundary": 11,
+        "gt_near_boundary": 37,
+        "near_boundary_covered_ge_05": 30,
+        "fitting_abs_xy": {
+          "p50": 0.11763274615384584,
+          "p90": 0.25395549090909086,
+          "p95": 0.27652438276923075,
+          "max": 0.4424242327272726
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.347743815127442,
+          "p90": 0.5196655190745438,
+          "p95": 0.5459271462366455,
+          "max": 0.791208402527369
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person/large_ge96": {
+        "gt": 376,
+        "max_iou": {
+          "p50": 0.3321419470070226,
+          "p90": 0.7196143264552801,
+          "p95": 0.7984265565038762,
+          "max": 0.924721389401357
+        },
+        "covered_ge_03": 208,
+        "covered_ge_05": 111,
+        "coverage_ge_05": 0.29521276595744683,
+        "free_center_covered_ge_05": 111,
+        "free_center_pass_but_grid_fail_ge_05": 0,
+        "fully_inside_anchors_covered_ge_05": 111,
+        "clipped_anchors_covered_ge_05": 111,
+        "best_anchor_crosses_boundary": 21,
+        "gt_near_boundary": 333,
+        "near_boundary_covered_ge_05": 75,
+        "fitting_abs_xy": {
+          "p50": 0.5382289773333333,
+          "p90": 0.75,
+          "p95": 0.7630917036666666,
+          "max": 0.7916666666666666
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.8231073769393619,
+          "p90": 0.9808292530117262,
+          "p95": 0.9808292530117262,
+          "max": 0.9808292530117262
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/all": {
+        "gt": 420,
+        "max_iou": {
+          "p50": 0.6076659547569985,
+          "p90": 0.8055262111391662,
+          "p95": 0.8448873050776892,
+          "max": 0.9106126728884505
+        },
+        "covered_ge_03": 395,
+        "covered_ge_05": 321,
+        "coverage_ge_05": 0.7642857142857142,
+        "free_center_covered_ge_05": 386,
+        "free_center_pass_but_grid_fail_ge_05": 65,
+        "fully_inside_anchors_covered_ge_05": 318,
+        "clipped_anchors_covered_ge_05": 324,
+        "best_anchor_crosses_boundary": 21,
+        "gt_near_boundary": 81,
+        "near_boundary_covered_ge_05": 47,
+        "fitting_abs_xy": {
+          "p50": 0.1233727204743083,
+          "p90": 0.32877198817391395,
+          "p95": 0.47851449275362296,
+          "max": 0.75
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.29152083956354524,
+          "p90": 0.5956104210543856,
+          "p95": 0.8343885215670135,
+          "max": 1.143867093591157
+        },
+        "fit_any_component_abs_gt1": 3,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/small_lt32": {
+        "gt": 103,
+        "max_iou": {
+          "p50": 0.4867407880312899,
+          "p90": 0.7112461369578037,
+          "p95": 0.7391662508823401,
+          "max": 0.8721617361286094
+        },
+        "covered_ge_03": 92,
+        "covered_ge_05": 49,
+        "coverage_ge_05": 0.47572815533980584,
+        "free_center_covered_ge_05": 103,
+        "free_center_pass_but_grid_fail_ge_05": 54,
+        "fully_inside_anchors_covered_ge_05": 46,
+        "clipped_anchors_covered_ge_05": 51,
+        "best_anchor_crosses_boundary": 5,
+        "gt_near_boundary": 11,
+        "near_boundary_covered_ge_05": 6,
+        "fitting_abs_xy": {
+          "p50": 0.2000770782608692,
+          "p90": 0.37946908159999987,
+          "p95": 0.4296460639999995,
+          "max": 0.6312684800000005
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.3833292989166171,
+          "p90": 0.7001166916984259,
+          "p95": 0.8697936302610311,
+          "max": 1.143867093591157
+        },
+        "fit_any_component_abs_gt1": 3,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/medium_32_to_lt96": {
+        "gt": 206,
+        "max_iou": {
+          "p50": 0.6417726680089038,
+          "p90": 0.8019510754611943,
+          "p95": 0.8253601550061582,
+          "max": 0.8870958592428851
+        },
+        "covered_ge_03": 206,
+        "covered_ge_05": 194,
+        "coverage_ge_05": 0.941747572815534,
+        "free_center_covered_ge_05": 205,
+        "free_center_pass_but_grid_fail_ge_05": 11,
+        "fully_inside_anchors_covered_ge_05": 194,
+        "clipped_anchors_covered_ge_05": 195,
+        "best_anchor_crosses_boundary": 7,
+        "gt_near_boundary": 25,
+        "near_boundary_covered_ge_05": 23,
+        "fitting_abs_xy": {
+          "p50": 0.10533200538461546,
+          "p90": 0.2269295794871793,
+          "p95": 0.2553441599999999,
+          "max": 0.32943472000000007
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.2577011344957584,
+          "p90": 0.439122657877646,
+          "p95": 0.5121257994046394,
+          "max": 0.6752577941070574
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      },
+      "person_face/large_ge96": {
+        "gt": 111,
+        "max_iou": {
+          "p50": 0.6346534161760073,
+          "p90": 0.8391521619983906,
+          "p95": 0.860678951084269,
+          "max": 0.9106126728884505
+        },
+        "covered_ge_03": 97,
+        "covered_ge_05": 78,
+        "coverage_ge_05": 0.7027027027027027,
+        "free_center_covered_ge_05": 78,
+        "free_center_pass_but_grid_fail_ge_05": 0,
+        "fully_inside_anchors_covered_ge_05": 78,
+        "clipped_anchors_covered_ge_05": 78,
+        "best_anchor_crosses_boundary": 9,
+        "gt_near_boundary": 45,
+        "near_boundary_covered_ge_05": 18,
+        "fitting_abs_xy": {
+          "p50": 0.09583332999999994,
+          "p90": 0.6202982666666667,
+          "p95": 0.75,
+          "max": 0.75
+        },
+        "fitting_abs_log_wh": {
+          "p50": 0.30932124755526214,
+          "p90": 0.9007865453381899,
+          "p95": 0.9808292530117262,
+          "max": 0.9808292530117262
+        },
+        "fit_any_component_abs_gt1": 0,
+        "fit_any_component_abs_gt2": 0
+      }
+    }
+  },
+  "target_consistency": {
+    "target_consistency_passed": true,
+    "geometric_all_gt_iou_ge_05": false,
+    "images": 320,
+    "gt_count": 883,
+    "groups": {
+      "person/all": {
+        "gt": 463,
+        "zero_geometric_overlap": 0,
+        "geometry_iou_ge_03": 461,
+        "geometry_iou_ge_05": 442,
+        "geometry_iou_below_05": 21,
+        "forced_matched": 463,
+        "forced_below_01": 0,
+        "forced_below_03": 2,
+        "forced_below_05": 21,
+        "forced_iou_min": 0.2736860346024247,
+        "forced_iou_median": 0.7213776917810142
+      },
+      "person/small_lt32": {
+        "gt": 21,
+        "zero_geometric_overlap": 0,
+        "geometry_iou_ge_03": 19,
+        "geometry_iou_ge_05": 11,
+        "geometry_iou_below_05": 10,
+        "forced_matched": 21,
+        "forced_below_01": 0,
+        "forced_below_03": 2,
+        "forced_below_05": 10,
+        "forced_iou_min": 0.2736860346024247,
+        "forced_iou_median": 0.5020203968121174
+      },
+      "person/medium_32_96": {
+        "gt": 66,
+        "zero_geometric_overlap": 0,
+        "geometry_iou_ge_03": 66,
+        "geometry_iou_ge_05": 57,
+        "geometry_iou_below_05": 9,
+        "forced_matched": 66,
+        "forced_below_01": 0,
+        "forced_below_03": 0,
+        "forced_below_05": 9,
+        "forced_iou_min": 0.3741496631003803,
+        "forced_iou_median": 0.5743615125013184
+      },
+      "person/large_ge96": {
+        "gt": 376,
+        "zero_geometric_overlap": 0,
+        "geometry_iou_ge_03": 376,
+        "geometry_iou_ge_05": 374,
+        "geometry_iou_below_05": 2,
+        "forced_matched": 376,
+        "forced_below_01": 0,
+        "forced_below_03": 0,
+        "forced_below_05": 2,
+        "forced_iou_min": 0.44702352706021375,
+        "forced_iou_median": 0.7493630965907077
+      },
+      "person_face/all": {
+        "gt": 420,
+        "zero_geometric_overlap": 0,
+        "geometry_iou_ge_03": 408,
+        "geometry_iou_ge_05": 353,
+        "geometry_iou_below_05": 67,
+        "forced_matched": 420,
+        "forced_below_01": 1,
+        "forced_below_03": 12,
+        "forced_below_05": 67,
+        "forced_iou_min": 0.048139163821822324,
+        "forced_iou_median": 0.6355134913575545
+      },
+      "person_face/small_lt32": {
+        "gt": 103,
+        "zero_geometric_overlap": 0,
+        "geometry_iou_ge_03": 91,
+        "geometry_iou_ge_05": 48,
+        "geometry_iou_below_05": 55,
+        "forced_matched": 103,
+        "forced_below_01": 1,
+        "forced_below_03": 12,
+        "forced_below_05": 55,
+        "forced_iou_min": 0.048139163821822324,
+        "forced_iou_median": 0.486684535142171
+      },
+      "person_face/medium_32_96": {
+        "gt": 206,
+        "zero_geometric_overlap": 0,
+        "geometry_iou_ge_03": 206,
+        "geometry_iou_ge_05": 194,
+        "geometry_iou_below_05": 12,
+        "forced_matched": 206,
+        "forced_below_01": 0,
+        "forced_below_03": 0,
+        "forced_below_05": 12,
+        "forced_iou_min": 0.39082117377066394,
+        "forced_iou_median": 0.6417723826844195
+      },
+      "person_face/large_ge96": {
+        "gt": 111,
+        "zero_geometric_overlap": 0,
+        "geometry_iou_ge_03": 111,
+        "geometry_iou_ge_05": 111,
+        "geometry_iou_below_05": 0,
+        "forced_matched": 111,
+        "forced_below_01": 0,
+        "forced_below_03": 0,
+        "forced_below_05": 0,
+        "forced_iou_min": 0.5312243979866571,
+        "forced_iou_median": 0.71875
+      }
+    },
+    "actual_loss_gradient_probes": 960
+  },
+  "semantic_tests_passed": true,
+  "transfer": {
+    "old_scale_index_by_new_scale": [
+      0,
+      0,
+      0,
+      2,
+      3
+    ],
+    "decoded_box_checks": {
+      "exact_box_max_abs_error": 1.1368683772161603e-13,
+      "float32_box_max_abs_error": 6.895866607692369e-05,
+      "old_delta_max_abs": 0.2059106513934084,
+      "new_delta_max_abs": 1.2415688037872314
+    },
+    "limit": "Copies selected old slots and analytically adjusts regression; does not retain the entire original proposal set. Initial fixed-scale i16 proxy clips19 bbox weights."
+  },
+  "runs": {
+    "recognition-small-anchor-v1": {
+      "initialization": "original_weights_direct_anchor_change",
+      "plan_sha256": "8b0d475975578743a42f90b5360ce5984938192cb2adf92f6cebc885093440d0",
+      "scales": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "layout": "gemm_k4",
+      "initial_state_sha256": "e0679380728c5cfc73a2b8aae5052e4111167e4d68aad4768ea25e2b617688a7",
+      "original_state_sha256": "e0679380728c5cfc73a2b8aae5052e4111167e4d68aad4768ea25e2b617688a7",
+      "trainable_parameters": 89800,
+      "epochs": 6,
+      "optimizer_steps": 480,
+      "backbone_unchanged": true,
+      "original_anchor_baseline": {
+        "person": {
+          "ground_truth_boxes": 120,
+          "predictions": 1950,
+          "ap_at_iou": 0.6059052916065439,
+          "tp_at_score": 70,
+          "fp_at_score": 16,
+          "fn_at_score": 50,
+          "recall_all_saved_scores": 0.7666666666666667,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 3,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 16,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 6,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.375
+            },
+            "96_or_larger": {
+              "ground_truth": 92,
+              "matched_at_score": 70,
+              "matched_all_saved_scores": 86,
+              "recall_at_score": 0.7608695652173914,
+              "recall_all_saved_scores": 0.9347826086956522
+            }
+          }
+        },
+        "person_face": {
+          "ground_truth_boxes": 110,
+          "predictions": 2396,
+          "ap_at_iou": 0.3433486688556611,
+          "tp_at_score": 47,
+          "fp_at_score": 48,
+          "fn_at_score": 63,
+          "recall_all_saved_scores": 0.5727272727272728,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 25,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 48,
+              "matched_at_score": 28,
+              "matched_all_saved_scores": 37,
+              "recall_at_score": 0.5833333333333334,
+              "recall_all_saved_scores": 0.7708333333333334
+            },
+            "96_or_larger": {
+              "ground_truth": 28,
+              "matched_at_score": 19,
+              "matched_all_saved_scores": 26,
+              "recall_at_score": 0.6785714285714286,
+              "recall_all_saved_scores": 0.9285714285714286
+            }
+          }
+        },
+        "small_faces": {
+          "ground_truth": 34,
+          "matched_at_score": 0,
+          "matched_all_saved_scores": 0,
+          "recall_at_score": 0.0
+        },
+        "mean_ap": 0.4746269802311025
+      },
+      "new_anchor_epoch0": {
+        "person": {
+          "ground_truth_boxes": 120,
+          "predictions": 2399,
+          "ap_at_iou": 0.000584311077524263,
+          "tp_at_score": 2,
+          "fp_at_score": 330,
+          "fn_at_score": 118,
+          "recall_all_saved_scores": 0.09166666666666666,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 3,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 16,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "96_or_larger": {
+              "ground_truth": 92,
+              "matched_at_score": 2,
+              "matched_all_saved_scores": 11,
+              "recall_at_score": 0.021739130434782608,
+              "recall_all_saved_scores": 0.11956521739130435
+            }
+          }
+        },
+        "person_face": {
+          "ground_truth_boxes": 110,
+          "predictions": 2400,
+          "ap_at_iou": 0.0014009787497912519,
+          "tp_at_score": 2,
+          "fp_at_score": 615,
+          "fn_at_score": 108,
+          "recall_all_saved_scores": 0.15454545454545454,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 25,
+              "matched_at_score": 1,
+              "matched_all_saved_scores": 3,
+              "recall_at_score": 0.04,
+              "recall_all_saved_scores": 0.12
+            },
+            "32_to_below96": {
+              "ground_truth": 48,
+              "matched_at_score": 1,
+              "matched_all_saved_scores": 11,
+              "recall_at_score": 0.020833333333333332,
+              "recall_all_saved_scores": 0.22916666666666666
+            },
+            "96_or_larger": {
+              "ground_truth": 28,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 3,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.10714285714285714
+            }
+          }
+        },
+        "small_faces": {
+          "ground_truth": 34,
+          "matched_at_score": 1,
+          "matched_all_saved_scores": 3,
+          "recall_at_score": 0.029411764705882353
+        },
+        "mean_ap": 0.0009926449136577575
+      },
+      "primary_fixed_epoch6": {
+        "metrics": {
+          "person": {
+            "ground_truth_boxes": 120,
+            "predictions": 2147,
+            "ap_at_iou": 0.4246527717871586,
+            "tp_at_score": 71,
+            "fp_at_score": 326,
+            "fn_at_score": 49,
+            "recall_all_saved_scores": 0.6666666666666666,
+            "size_strata": {
+              "below16": {
+                "ground_truth": 3,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "16_to_below32": {
+                "ground_truth": 9,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "32_to_below96": {
+                "ground_truth": 16,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 2,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.125
+              },
+              "96_or_larger": {
+                "ground_truth": 92,
+                "matched_at_score": 71,
+                "matched_all_saved_scores": 78,
+                "recall_at_score": 0.7717391304347826,
+                "recall_all_saved_scores": 0.8478260869565217
+              }
+            }
+          },
+          "person_face": {
+            "ground_truth_boxes": 110,
+            "predictions": 2397,
+            "ap_at_iou": 0.10377888981547313,
+            "tp_at_score": 30,
+            "fp_at_score": 504,
+            "fn_at_score": 80,
+            "recall_all_saved_scores": 0.44545454545454544,
+            "size_strata": {
+              "below16": {
+                "ground_truth": 9,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "16_to_below32": {
+                "ground_truth": 25,
+                "matched_at_score": 1,
+                "matched_all_saved_scores": 4,
+                "recall_at_score": 0.04,
+                "recall_all_saved_scores": 0.16
+              },
+              "32_to_below96": {
+                "ground_truth": 48,
+                "matched_at_score": 17,
+                "matched_all_saved_scores": 26,
+                "recall_at_score": 0.3541666666666667,
+                "recall_all_saved_scores": 0.5416666666666666
+              },
+              "96_or_larger": {
+                "ground_truth": 28,
+                "matched_at_score": 12,
+                "matched_all_saved_scores": 19,
+                "recall_at_score": 0.42857142857142855,
+                "recall_all_saved_scores": 0.6785714285714286
+              }
+            }
+          },
+          "small_faces": {
+            "ground_truth": 34,
+            "matched_at_score": 1,
+            "matched_all_saved_scores": 4,
+            "recall_at_score": 0.029411764705882353
+          },
+          "mean_ap": 0.2642158308013159
+        },
+        "acceptance": {
+          "checks": {
+            "small_face_recall_at_least_half": false,
+            "small_face_matches_at_least_17_of34": false,
+            "face_ap_floor_and_improvement": false,
+            "person_ap_drop_at_most_0_05": false,
+            "mean_ap_gain_at_least_0_02": false,
+            "person_beats_every_control_by_0_15": true,
+            "person_face_beats_every_control_by_0_15": false
+          },
+          "passed": false,
+          "camera_readiness": false
+        }
+      },
+      "final_quantized_proxy": {
+        "metrics": {
+          "person": {
+            "ground_truth_boxes": 120,
+            "predictions": 2147,
+            "ap_at_iou": 0.4246680156895976,
+            "tp_at_score": 71,
+            "fp_at_score": 326,
+            "fn_at_score": 49,
+            "recall_all_saved_scores": 0.6666666666666666,
+            "size_strata": {
+              "below16": {
+                "ground_truth": 3,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "16_to_below32": {
+                "ground_truth": 9,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "32_to_below96": {
+                "ground_truth": 16,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 2,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.125
+              },
+              "96_or_larger": {
+                "ground_truth": 92,
+                "matched_at_score": 71,
+                "matched_all_saved_scores": 78,
+                "recall_at_score": 0.7717391304347826,
+                "recall_all_saved_scores": 0.8478260869565217
+              }
+            }
+          },
+          "person_face": {
+            "ground_truth_boxes": 110,
+            "predictions": 2397,
+            "ap_at_iou": 0.10377795471113689,
+            "tp_at_score": 30,
+            "fp_at_score": 504,
+            "fn_at_score": 80,
+            "recall_all_saved_scores": 0.44545454545454544,
+            "size_strata": {
+              "below16": {
+                "ground_truth": 9,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "16_to_below32": {
+                "ground_truth": 25,
+                "matched_at_score": 1,
+                "matched_all_saved_scores": 4,
+                "recall_at_score": 0.04,
+                "recall_all_saved_scores": 0.16
+              },
+              "32_to_below96": {
+                "ground_truth": 48,
+                "matched_at_score": 17,
+                "matched_all_saved_scores": 26,
+                "recall_at_score": 0.3541666666666667,
+                "recall_all_saved_scores": 0.5416666666666666
+              },
+              "96_or_larger": {
+                "ground_truth": 28,
+                "matched_at_score": 12,
+                "matched_all_saved_scores": 19,
+                "recall_at_score": 0.42857142857142855,
+                "recall_all_saved_scores": 0.6785714285714286
+              }
+            }
+          },
+          "small_faces": {
+            "ground_truth": 34,
+            "matched_at_score": 1,
+            "matched_all_saved_scores": 4,
+            "recall_at_score": 0.029411764705882353
+          },
+          "mean_ap": 0.26422298520036724
+        },
+        "acceptance": {
+          "checks": {
+            "small_face_recall_at_least_half": false,
+            "small_face_matches_at_least_17_of34": false,
+            "face_ap_floor_and_improvement": false,
+            "person_ap_drop_at_most_0_05": false,
+            "mean_ap_gain_at_least_0_02": false,
+            "person_beats_every_control_by_0_15": true,
+            "person_face_beats_every_control_by_0_15": false
+          },
+          "passed": false,
+          "camera_readiness": false
+        },
+        "quantization": {
+          "scope": "Host head-weight/bias round-even+clip proxy using original scales; activations, accumulation and DSP execution are not emulated.",
+          "rounding": "nearest_ties_to_even",
+          "float_division_dtype": "float64",
+          "weight_integer_dtype": "int16",
+          "bias_integer_dtype": "int32",
+          "dequantization_dtype": "float32",
+          "heads": [
+            {
+              "name": "rpn_cls_score1",
+              "weight_scale": 3.522327097016387e-05,
+              "bias_scale": 8.042313481837482e-09,
+              "weight": {
+                "elements": 22400,
+                "clipped_elements": 0,
+                "max_abs_error": 1.7609447240829468e-05,
+                "rms_error": 1.0112435937521617e-05,
+                "integer_sha256": "d55644207bc5b9650c0392d8280590139332c5c288d5d054976ad137579db518",
+                "integer_elements_different_from_original": 22258,
+                "max_integer_lsb_difference_from_original": 966
+              },
+              "bias": {
+                "elements": 50,
+                "clipped_elements": 0,
+                "max_abs_error": 7.450580596923828e-09,
+                "rms_error": 1.0536712127723508e-09,
+                "integer_sha256": "d3a8fa2de17d654a6ce3a180d6c6a9242ce0e0d0d1efb13d711fcd2539d86e72",
+                "integer_elements_different_from_original": 50,
+                "max_integer_lsb_difference_from_original": 3544862
+              }
+            },
+            {
+              "name": "rpn_cls_score2",
+              "weight_scale": 4.239520785631612e-05,
+              "bias_scale": 9.679837376097566e-09,
+              "weight": {
+                "elements": 22400,
+                "clipped_elements": 0,
+                "max_abs_error": 2.119690179824829e-05,
+                "rms_error": 1.2206172335847312e-05,
+                "integer_sha256": "dcc1b0c457c8bae5c24872283c38337a1c49340d01ad104de7d783a712b010c1",
+                "integer_elements_different_from_original": 22260,
+                "max_integer_lsb_difference_from_original": 901
+              },
+              "bias": {
+                "elements": 50,
+                "clipped_elements": 0,
+                "max_abs_error": 0.0,
+                "rms_error": 0.0,
+                "integer_sha256": "6b4f120985fee6366d961c232ef2cf3fe698f5263dad2b5c47d23ec1d5a20092",
+                "integer_elements_different_from_original": 50,
+                "max_integer_lsb_difference_from_original": 2990416
+              }
+            },
+            {
+              "name": "rpn_bbox_pred",
+              "weight_scale": 3.3242070003325352e-06,
+              "bias_scale": 7.58995755134606e-10,
+              "weight": {
+                "elements": 44800,
+                "clipped_elements": 0,
+                "max_abs_error": 1.6624107956886292e-06,
+                "rms_error": 9.355925869947105e-07,
+                "integer_sha256": "f4994b33290c01fb87ed63bb5c814b02ffa4e952d7ae5b7b1151253365e559cd",
+                "integer_elements_different_from_original": 42484,
+                "max_integer_lsb_difference_from_original": 6301
+              },
+              "bias": {
+                "elements": 100,
+                "clipped_elements": 0,
+                "max_abs_error": 4.656612873077393e-10,
+                "rms_error": 1.4201357144345358e-10,
+                "integer_sha256": "45a04a081ec1f2ff57b8e4fdc6d2273626765156933e48685f8f64b5d079d039",
+                "integer_elements_different_from_original": 100,
+                "max_integer_lsb_difference_from_original": 9504603
+              }
+            }
+          ],
+          "firmware_written": false,
+          "camera_deployment_verified": false
+        }
+      },
+      "auxiliary_best_epoch": 6,
+      "epoch_metrics": [
+        {
+          "epoch": 1,
+          "global_step": 80,
+          "mean_training_loss": 1.5628408130258322,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2357,
+              "ap_at_iou": 0.05628779858340038,
+              "tp_at_score": 31,
+              "fp_at_score": 274,
+              "fn_at_score": 89,
+              "recall_all_saved_scores": 0.575,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 31,
+                  "matched_all_saved_scores": 69,
+                  "recall_at_score": 0.33695652173913043,
+                  "recall_all_saved_scores": 0.75
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.004460279426189745,
+              "tp_at_score": 8,
+              "fp_at_score": 550,
+              "fn_at_score": 102,
+              "recall_all_saved_scores": 0.2545454545454545,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 3,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.12
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 5,
+                  "matched_all_saved_scores": 17,
+                  "recall_at_score": 0.10416666666666667,
+                  "recall_all_saved_scores": 0.3541666666666667
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 3,
+                  "matched_all_saved_scores": 8,
+                  "recall_at_score": 0.10714285714285714,
+                  "recall_all_saved_scores": 0.2857142857142857
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 3,
+              "recall_at_score": 0.0
+            },
+            "mean_ap": 0.030374039004795062
+          }
+        },
+        {
+          "epoch": 2,
+          "global_step": 160,
+          "mean_training_loss": 1.2335862572537735,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2241,
+              "ap_at_iou": 0.13124562863857378,
+              "tp_at_score": 51,
+              "fp_at_score": 293,
+              "fn_at_score": 69,
+              "recall_all_saved_scores": 0.6,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 51,
+                  "matched_all_saved_scores": 72,
+                  "recall_at_score": 0.5543478260869565,
+                  "recall_all_saved_scores": 0.782608695652174
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.020863977511223517,
+              "tp_at_score": 17,
+              "fp_at_score": 526,
+              "fn_at_score": 93,
+              "recall_all_saved_scores": 0.3181818181818182,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 1,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.04
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 10,
+                  "matched_all_saved_scores": 21,
+                  "recall_at_score": 0.20833333333333334,
+                  "recall_all_saved_scores": 0.4375
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 7,
+                  "matched_all_saved_scores": 13,
+                  "recall_at_score": 0.25,
+                  "recall_all_saved_scores": 0.4642857142857143
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 1,
+              "recall_at_score": 0.0
+            },
+            "mean_ap": 0.07605480307489865
+          }
+        },
+        {
+          "epoch": 3,
+          "global_step": 240,
+          "mean_training_loss": 1.007329102093354,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2182,
+              "ap_at_iou": 0.23841859170733837,
+              "tp_at_score": 60,
+              "fp_at_score": 297,
+              "fn_at_score": 60,
+              "recall_all_saved_scores": 0.6166666666666667,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 1,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0625
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 60,
+                  "matched_all_saved_scores": 73,
+                  "recall_at_score": 0.6521739130434783,
+                  "recall_all_saved_scores": 0.7934782608695652
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.04059794545916093,
+              "tp_at_score": 21,
+              "fp_at_score": 517,
+              "fn_at_score": 89,
+              "recall_all_saved_scores": 0.35454545454545455,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 2,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.08
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 12,
+                  "matched_all_saved_scores": 21,
+                  "recall_at_score": 0.25,
+                  "recall_all_saved_scores": 0.4375
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 9,
+                  "matched_all_saved_scores": 16,
+                  "recall_at_score": 0.32142857142857145,
+                  "recall_all_saved_scores": 0.5714285714285714
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 2,
+              "recall_at_score": 0.0
+            },
+            "mean_ap": 0.13950826858324966
+          }
+        },
+        {
+          "epoch": 4,
+          "global_step": 320,
+          "mean_training_loss": 0.8486767491325736,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2155,
+              "ap_at_iou": 0.29710428164681635,
+              "tp_at_score": 62,
+              "fp_at_score": 306,
+              "fn_at_score": 58,
+              "recall_all_saved_scores": 0.6,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 1,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0625
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 62,
+                  "matched_all_saved_scores": 71,
+                  "recall_at_score": 0.6739130434782609,
+                  "recall_all_saved_scores": 0.7717391304347826
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.06997252988318478,
+              "tp_at_score": 25,
+              "fp_at_score": 513,
+              "fn_at_score": 85,
+              "recall_all_saved_scores": 0.39090909090909093,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 1,
+                  "matched_all_saved_scores": 2,
+                  "recall_at_score": 0.04,
+                  "recall_all_saved_scores": 0.08
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 14,
+                  "matched_all_saved_scores": 25,
+                  "recall_at_score": 0.2916666666666667,
+                  "recall_all_saved_scores": 0.5208333333333334
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 10,
+                  "matched_all_saved_scores": 16,
+                  "recall_at_score": 0.35714285714285715,
+                  "recall_all_saved_scores": 0.5714285714285714
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 1,
+              "matched_all_saved_scores": 2,
+              "recall_at_score": 0.029411764705882353
+            },
+            "mean_ap": 0.18353840576500058
+          }
+        },
+        {
+          "epoch": 5,
+          "global_step": 400,
+          "mean_training_loss": 0.728073050105013,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2164,
+              "ap_at_iou": 0.36551653682047636,
+              "tp_at_score": 70,
+              "fp_at_score": 318,
+              "fn_at_score": 50,
+              "recall_all_saved_scores": 0.6583333333333333,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 1,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0625
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 70,
+                  "matched_all_saved_scores": 78,
+                  "recall_at_score": 0.7608695652173914,
+                  "recall_all_saved_scores": 0.8478260869565217
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.07545325812444806,
+              "tp_at_score": 21,
+              "fp_at_score": 496,
+              "fn_at_score": 89,
+              "recall_all_saved_scores": 0.38181818181818183,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 2,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.08
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 11,
+                  "matched_all_saved_scores": 22,
+                  "recall_at_score": 0.22916666666666666,
+                  "recall_all_saved_scores": 0.4583333333333333
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 10,
+                  "matched_all_saved_scores": 18,
+                  "recall_at_score": 0.35714285714285715,
+                  "recall_all_saved_scores": 0.6428571428571429
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 2,
+              "recall_at_score": 0.0
+            },
+            "mean_ap": 0.2204848974724622
+          }
+        },
+        {
+          "epoch": 6,
+          "global_step": 480,
+          "mean_training_loss": 0.6367964716628194,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2147,
+              "ap_at_iou": 0.4246527717871586,
+              "tp_at_score": 71,
+              "fp_at_score": 326,
+              "fn_at_score": 49,
+              "recall_all_saved_scores": 0.6666666666666666,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 2,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.125
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 71,
+                  "matched_all_saved_scores": 78,
+                  "recall_at_score": 0.7717391304347826,
+                  "recall_all_saved_scores": 0.8478260869565217
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2397,
+              "ap_at_iou": 0.10377888981547313,
+              "tp_at_score": 30,
+              "fp_at_score": 504,
+              "fn_at_score": 80,
+              "recall_all_saved_scores": 0.44545454545454544,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 1,
+                  "matched_all_saved_scores": 4,
+                  "recall_at_score": 0.04,
+                  "recall_all_saved_scores": 0.16
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 17,
+                  "matched_all_saved_scores": 26,
+                  "recall_at_score": 0.3541666666666667,
+                  "recall_all_saved_scores": 0.5416666666666666
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 12,
+                  "matched_all_saved_scores": 19,
+                  "recall_at_score": 0.42857142857142855,
+                  "recall_all_saved_scores": 0.6785714285714286
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 1,
+              "matched_all_saved_scores": 4,
+              "recall_at_score": 0.029411764705882353
+            },
+            "mean_ap": 0.2642158308013159
+          }
+        }
+      ],
+      "independent_verification_sha256": "7b73d68b3dd50e1b5da85926d9d859d73af1000acd7f55ce671bb23a37872ed4",
+      "checkpoint_identities": [
+        {
+          "path": "artifacts/recognition-small-anchor-v1/baseline_small/checkpoint.pt",
+          "sha256": "8b86fd24a306b6e590cad67ec31ecc4802aebcdb3b1a79916e372f89c4a6eef9",
+          "bytes": 5871054
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v1/epoch-01/checkpoint.pt",
+          "sha256": "7a64dcb36ba407ad2b45e9ed599f85e5f2e77905a973beb3bc734dc9b64d56ef",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v1/epoch-02/checkpoint.pt",
+          "sha256": "0d0d08b9df9cfd65704035d9a22b1b6195da6a45108f8b3011c51ba9b45278c3",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v1/epoch-03/checkpoint.pt",
+          "sha256": "25242fc662838ba23ab911f0fafcd8bf7d795f0a811e596a8e7993330128a716",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v1/epoch-04/checkpoint.pt",
+          "sha256": "26dd14ddee593fde4bae8e08a35bbf2aac13df7e656996388e896b2406df4558",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v1/epoch-05/checkpoint.pt",
+          "sha256": "83485482cd23ada5a94d5f170014c702630432cbc3852520a111ac902cb7d2cc",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v1/epoch-06/checkpoint.pt",
+          "sha256": "58ee06d56a5902d4a90aff1aa675fe4803271b5234c6808d4b75c13853acf556",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v1/final_quantized/checkpoint.pt",
+          "sha256": "b3b0f4075193c8b1bfb2a62d45e94406f50c07fdadc80e0cb2c55b01c3ea90ba",
+          "bytes": 5865101
+        }
+      ],
+      "test_inference": false,
+      "camera_deployment_verified": false,
+      "reporting_recovery": true
+    },
+    "recognition-small-anchor-v2": {
+      "initialization": "analytic_log_nearest_anchor_transfer",
+      "plan_sha256": "2c5c4d156fbe7a09d8d80227c52268de084159a2bb87dc086bc3f26b723d098c",
+      "scales": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "layout": "gemm_k4",
+      "initial_state_sha256": "c8975c7378b67004e0952b5a1c9031ebfa13fc80d329a335fa781675f9da5cfd",
+      "original_state_sha256": "e0679380728c5cfc73a2b8aae5052e4111167e4d68aad4768ea25e2b617688a7",
+      "trainable_parameters": 89800,
+      "epochs": 6,
+      "optimizer_steps": 480,
+      "backbone_unchanged": true,
+      "original_anchor_baseline": {
+        "person": {
+          "ground_truth_boxes": 120,
+          "predictions": 1950,
+          "ap_at_iou": 0.6059052916065439,
+          "tp_at_score": 70,
+          "fp_at_score": 16,
+          "fn_at_score": 50,
+          "recall_all_saved_scores": 0.7666666666666667,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 3,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 16,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 6,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.375
+            },
+            "96_or_larger": {
+              "ground_truth": 92,
+              "matched_at_score": 70,
+              "matched_all_saved_scores": 86,
+              "recall_at_score": 0.7608695652173914,
+              "recall_all_saved_scores": 0.9347826086956522
+            }
+          }
+        },
+        "person_face": {
+          "ground_truth_boxes": 110,
+          "predictions": 2396,
+          "ap_at_iou": 0.3433486688556611,
+          "tp_at_score": 47,
+          "fp_at_score": 48,
+          "fn_at_score": 63,
+          "recall_all_saved_scores": 0.5727272727272728,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 25,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 48,
+              "matched_at_score": 28,
+              "matched_all_saved_scores": 37,
+              "recall_at_score": 0.5833333333333334,
+              "recall_all_saved_scores": 0.7708333333333334
+            },
+            "96_or_larger": {
+              "ground_truth": 28,
+              "matched_at_score": 19,
+              "matched_all_saved_scores": 26,
+              "recall_at_score": 0.6785714285714286,
+              "recall_all_saved_scores": 0.9285714285714286
+            }
+          }
+        },
+        "small_faces": {
+          "ground_truth": 34,
+          "matched_at_score": 0,
+          "matched_all_saved_scores": 0,
+          "recall_at_score": 0.0
+        },
+        "mean_ap": 0.4746269802311025
+      },
+      "new_anchor_epoch0": {
+        "person": {
+          "ground_truth_boxes": 120,
+          "predictions": 2378,
+          "ap_at_iou": 0.5922176173634642,
+          "tp_at_score": 70,
+          "fp_at_score": 14,
+          "fn_at_score": 50,
+          "recall_all_saved_scores": 0.7333333333333333,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 3,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 16,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 5,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.3125
+            },
+            "96_or_larger": {
+              "ground_truth": 92,
+              "matched_at_score": 70,
+              "matched_all_saved_scores": 83,
+              "recall_at_score": 0.7608695652173914,
+              "recall_all_saved_scores": 0.9021739130434783
+            }
+          }
+        },
+        "person_face": {
+          "ground_truth_boxes": 110,
+          "predictions": 2397,
+          "ap_at_iou": 0.34152197687355385,
+          "tp_at_score": 47,
+          "fp_at_score": 44,
+          "fn_at_score": 63,
+          "recall_all_saved_scores": 0.5636363636363636,
+          "size_strata": {
+            "below16": {
+              "ground_truth": 9,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "16_to_below32": {
+              "ground_truth": 25,
+              "matched_at_score": 0,
+              "matched_all_saved_scores": 0,
+              "recall_at_score": 0.0,
+              "recall_all_saved_scores": 0.0
+            },
+            "32_to_below96": {
+              "ground_truth": 48,
+              "matched_at_score": 29,
+              "matched_all_saved_scores": 37,
+              "recall_at_score": 0.6041666666666666,
+              "recall_all_saved_scores": 0.7708333333333334
+            },
+            "96_or_larger": {
+              "ground_truth": 28,
+              "matched_at_score": 18,
+              "matched_all_saved_scores": 25,
+              "recall_at_score": 0.6428571428571429,
+              "recall_all_saved_scores": 0.8928571428571429
+            }
+          }
+        },
+        "small_faces": {
+          "ground_truth": 34,
+          "matched_at_score": 0,
+          "matched_all_saved_scores": 0,
+          "recall_at_score": 0.0
+        },
+        "mean_ap": 0.46686979711850907
+      },
+      "primary_fixed_epoch6": {
+        "metrics": {
+          "person": {
+            "ground_truth_boxes": 120,
+            "predictions": 2297,
+            "ap_at_iou": 0.6759017376515178,
+            "tp_at_score": 81,
+            "fp_at_score": 64,
+            "fn_at_score": 39,
+            "recall_all_saved_scores": 0.825,
+            "size_strata": {
+              "below16": {
+                "ground_truth": 3,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "16_to_below32": {
+                "ground_truth": 9,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 2,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.2222222222222222
+              },
+              "32_to_below96": {
+                "ground_truth": 16,
+                "matched_at_score": 1,
+                "matched_all_saved_scores": 10,
+                "recall_at_score": 0.0625,
+                "recall_all_saved_scores": 0.625
+              },
+              "96_or_larger": {
+                "ground_truth": 92,
+                "matched_at_score": 80,
+                "matched_all_saved_scores": 87,
+                "recall_at_score": 0.8695652173913043,
+                "recall_all_saved_scores": 0.9456521739130435
+              }
+            }
+          },
+          "person_face": {
+            "ground_truth_boxes": 110,
+            "predictions": 2400,
+            "ap_at_iou": 0.3829682921329551,
+            "tp_at_score": 57,
+            "fp_at_score": 215,
+            "fn_at_score": 53,
+            "recall_all_saved_scores": 0.6727272727272727,
+            "size_strata": {
+              "below16": {
+                "ground_truth": 9,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "16_to_below32": {
+                "ground_truth": 25,
+                "matched_at_score": 3,
+                "matched_all_saved_scores": 10,
+                "recall_at_score": 0.12,
+                "recall_all_saved_scores": 0.4
+              },
+              "32_to_below96": {
+                "ground_truth": 48,
+                "matched_at_score": 34,
+                "matched_all_saved_scores": 37,
+                "recall_at_score": 0.7083333333333334,
+                "recall_all_saved_scores": 0.7708333333333334
+              },
+              "96_or_larger": {
+                "ground_truth": 28,
+                "matched_at_score": 20,
+                "matched_all_saved_scores": 27,
+                "recall_at_score": 0.7142857142857143,
+                "recall_all_saved_scores": 0.9642857142857143
+              }
+            }
+          },
+          "small_faces": {
+            "ground_truth": 34,
+            "matched_at_score": 3,
+            "matched_all_saved_scores": 10,
+            "recall_at_score": 0.08823529411764706
+          },
+          "mean_ap": 0.5294350148922364
+        },
+        "acceptance": {
+          "checks": {
+            "small_face_recall_at_least_half": false,
+            "small_face_matches_at_least_17_of34": false,
+            "face_ap_floor_and_improvement": false,
+            "person_ap_drop_at_most_0_05": true,
+            "mean_ap_gain_at_least_0_02": true,
+            "person_beats_every_control_by_0_15": true,
+            "person_face_beats_every_control_by_0_15": true
+          },
+          "passed": false,
+          "camera_readiness": false
+        }
+      },
+      "final_quantized_proxy": {
+        "metrics": {
+          "person": {
+            "ground_truth_boxes": 120,
+            "predictions": 2297,
+            "ap_at_iou": 0.6759253524955441,
+            "tp_at_score": 81,
+            "fp_at_score": 64,
+            "fn_at_score": 39,
+            "recall_all_saved_scores": 0.825,
+            "size_strata": {
+              "below16": {
+                "ground_truth": 3,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "16_to_below32": {
+                "ground_truth": 9,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 2,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.2222222222222222
+              },
+              "32_to_below96": {
+                "ground_truth": 16,
+                "matched_at_score": 1,
+                "matched_all_saved_scores": 10,
+                "recall_at_score": 0.0625,
+                "recall_all_saved_scores": 0.625
+              },
+              "96_or_larger": {
+                "ground_truth": 92,
+                "matched_at_score": 80,
+                "matched_all_saved_scores": 87,
+                "recall_at_score": 0.8695652173913043,
+                "recall_all_saved_scores": 0.9456521739130435
+              }
+            }
+          },
+          "person_face": {
+            "ground_truth_boxes": 110,
+            "predictions": 2400,
+            "ap_at_iou": 0.3843467660376107,
+            "tp_at_score": 58,
+            "fp_at_score": 214,
+            "fn_at_score": 52,
+            "recall_all_saved_scores": 0.6727272727272727,
+            "size_strata": {
+              "below16": {
+                "ground_truth": 9,
+                "matched_at_score": 0,
+                "matched_all_saved_scores": 0,
+                "recall_at_score": 0.0,
+                "recall_all_saved_scores": 0.0
+              },
+              "16_to_below32": {
+                "ground_truth": 25,
+                "matched_at_score": 4,
+                "matched_all_saved_scores": 11,
+                "recall_at_score": 0.16,
+                "recall_all_saved_scores": 0.44
+              },
+              "32_to_below96": {
+                "ground_truth": 48,
+                "matched_at_score": 34,
+                "matched_all_saved_scores": 36,
+                "recall_at_score": 0.7083333333333334,
+                "recall_all_saved_scores": 0.75
+              },
+              "96_or_larger": {
+                "ground_truth": 28,
+                "matched_at_score": 20,
+                "matched_all_saved_scores": 27,
+                "recall_at_score": 0.7142857142857143,
+                "recall_all_saved_scores": 0.9642857142857143
+              }
+            }
+          },
+          "small_faces": {
+            "ground_truth": 34,
+            "matched_at_score": 4,
+            "matched_all_saved_scores": 11,
+            "recall_at_score": 0.11764705882352941
+          },
+          "mean_ap": 0.5301360592665774
+        },
+        "acceptance": {
+          "checks": {
+            "small_face_recall_at_least_half": false,
+            "small_face_matches_at_least_17_of34": false,
+            "face_ap_floor_and_improvement": false,
+            "person_ap_drop_at_most_0_05": true,
+            "mean_ap_gain_at_least_0_02": true,
+            "person_beats_every_control_by_0_15": true,
+            "person_face_beats_every_control_by_0_15": true
+          },
+          "passed": false,
+          "camera_readiness": false
+        },
+        "quantization": {
+          "scope": "Host head-weight/bias round-even+clip proxy using original scales; activations, accumulation and DSP execution are not emulated.",
+          "rounding": "nearest_ties_to_even",
+          "float_division_dtype": "float64",
+          "weight_integer_dtype": "int16",
+          "bias_integer_dtype": "int32",
+          "dequantization_dtype": "float32",
+          "heads": [
+            {
+              "name": "rpn_cls_score1",
+              "weight_scale": 3.522327097016387e-05,
+              "bias_scale": 8.042313481837482e-09,
+              "weight": {
+                "elements": 22400,
+                "clipped_elements": 0,
+                "max_abs_error": 1.761317253112793e-05,
+                "rms_error": 1.0197050992349755e-05,
+                "integer_sha256": "ccc36ee53beff03e5300496729a0f57af56f02684818a8fbbc9b9bbf6fb4a627",
+                "integer_elements_different_from_original": 22339,
+                "max_integer_lsb_difference_from_original": 8133
+              },
+              "bias": {
+                "elements": 50,
+                "clipped_elements": 0,
+                "max_abs_error": 7.450580596923828e-09,
+                "rms_error": 1.0536712127723508e-09,
+                "integer_sha256": "55f16c8f96139c77ca9d9799bb4433c708997308c9cc3c54a86843cfbae09139",
+                "integer_elements_different_from_original": 50,
+                "max_integer_lsb_difference_from_original": 15796148
+              }
+            },
+            {
+              "name": "rpn_cls_score2",
+              "weight_scale": 4.239520785631612e-05,
+              "bias_scale": 9.679837376097566e-09,
+              "weight": {
+                "elements": 22400,
+                "clipped_elements": 0,
+                "max_abs_error": 2.119503915309906e-05,
+                "rms_error": 1.2244374546549859e-05,
+                "integer_sha256": "568ca85470404b317885ac200ff674a20b727a2fd01fd8130d982605c2112c10",
+                "integer_elements_different_from_original": 22356,
+                "max_integer_lsb_difference_from_original": 5127
+              },
+              "bias": {
+                "elements": 50,
+                "clipped_elements": 0,
+                "max_abs_error": 0.0,
+                "rms_error": 0.0,
+                "integer_sha256": "0d2d71f52ed5f91657ead5d4ec35c9107c2ccf5287604c36dca0b9d4f60ead90",
+                "integer_elements_different_from_original": 50,
+                "max_integer_lsb_difference_from_original": 9648749
+              }
+            },
+            {
+              "name": "rpn_bbox_pred",
+              "weight_scale": 3.3242070003325352e-06,
+              "bias_scale": 7.58995755134606e-10,
+              "weight": {
+                "elements": 44800,
+                "clipped_elements": 17,
+                "max_abs_error": 0.06524413079023361,
+                "rms_error": 0.0006279699651854092,
+                "integer_sha256": "b17b1e181dcb6da28d4ba942ac7720fa97cdc39c853160f7bc29728e56780988",
+                "integer_elements_different_from_original": 44377,
+                "max_integer_lsb_difference_from_original": 26400
+              },
+              "bias": {
+                "elements": 100,
+                "clipped_elements": 0,
+                "max_abs_error": 4.656612873077393e-10,
+                "rms_error": 1.5986588629545196e-10,
+                "integer_sha256": "a499910416c4af5994e16b44345da59e16d74d7b0a4dd4b1aae81679c5f6d7e0",
+                "integer_elements_different_from_original": 100,
+                "max_integer_lsb_difference_from_original": 1439639779
+              }
+            }
+          ],
+          "firmware_written": false,
+          "camera_deployment_verified": false
+        }
+      },
+      "auxiliary_best_epoch": 6,
+      "epoch_metrics": [
+        {
+          "epoch": 1,
+          "global_step": 80,
+          "mean_training_loss": 0.7494452550279675,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2385,
+              "ap_at_iou": 0.6159881429514336,
+              "tp_at_score": 70,
+              "fp_at_score": 17,
+              "fn_at_score": 50,
+              "recall_all_saved_scores": 0.7833333333333333,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 1,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.1111111111111111
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 7,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.4375
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 70,
+                  "matched_all_saved_scores": 86,
+                  "recall_at_score": 0.7608695652173914,
+                  "recall_all_saved_scores": 0.9347826086956522
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.34329809950205237,
+              "tp_at_score": 49,
+              "fp_at_score": 60,
+              "fn_at_score": 61,
+              "recall_all_saved_scores": 0.5727272727272728,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 1,
+                  "matched_all_saved_scores": 5,
+                  "recall_at_score": 0.04,
+                  "recall_all_saved_scores": 0.2
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 29,
+                  "matched_all_saved_scores": 33,
+                  "recall_at_score": 0.6041666666666666,
+                  "recall_all_saved_scores": 0.6875
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 19,
+                  "matched_all_saved_scores": 25,
+                  "recall_at_score": 0.6785714285714286,
+                  "recall_all_saved_scores": 0.8928571428571429
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 1,
+              "matched_all_saved_scores": 5,
+              "recall_at_score": 0.029411764705882353
+            },
+            "mean_ap": 0.47964312122674296
+          }
+        },
+        {
+          "epoch": 2,
+          "global_step": 160,
+          "mean_training_loss": 0.6175142034859163,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2365,
+              "ap_at_iou": 0.6332061110001809,
+              "tp_at_score": 71,
+              "fp_at_score": 25,
+              "fn_at_score": 49,
+              "recall_all_saved_scores": 0.8,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 3,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.3333333333333333
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 7,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.4375
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 71,
+                  "matched_all_saved_scores": 86,
+                  "recall_at_score": 0.7717391304347826,
+                  "recall_all_saved_scores": 0.9347826086956522
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.3404558220346841,
+              "tp_at_score": 52,
+              "fp_at_score": 110,
+              "fn_at_score": 58,
+              "recall_all_saved_scores": 0.7090909090909091,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 2,
+                  "matched_all_saved_scores": 15,
+                  "recall_at_score": 0.08,
+                  "recall_all_saved_scores": 0.6
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 32,
+                  "matched_all_saved_scores": 38,
+                  "recall_at_score": 0.6666666666666666,
+                  "recall_all_saved_scores": 0.7916666666666666
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 18,
+                  "matched_all_saved_scores": 25,
+                  "recall_at_score": 0.6428571428571429,
+                  "recall_all_saved_scores": 0.8928571428571429
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 2,
+              "matched_all_saved_scores": 15,
+              "recall_at_score": 0.058823529411764705
+            },
+            "mean_ap": 0.4868309665174325
+          }
+        },
+        {
+          "epoch": 3,
+          "global_step": 240,
+          "mean_training_loss": 0.5290863176982384,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2357,
+              "ap_at_iou": 0.6653395880669305,
+              "tp_at_score": 74,
+              "fp_at_score": 29,
+              "fn_at_score": 46,
+              "recall_all_saved_scores": 0.8416666666666667,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 2,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.2222222222222222
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 10,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.625
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 74,
+                  "matched_all_saved_scores": 89,
+                  "recall_at_score": 0.8043478260869565,
+                  "recall_all_saved_scores": 0.967391304347826
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.36485124867290936,
+              "tp_at_score": 55,
+              "fp_at_score": 156,
+              "fn_at_score": 55,
+              "recall_all_saved_scores": 0.6818181818181818,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 2,
+                  "matched_all_saved_scores": 11,
+                  "recall_at_score": 0.08,
+                  "recall_all_saved_scores": 0.44
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 33,
+                  "matched_all_saved_scores": 38,
+                  "recall_at_score": 0.6875,
+                  "recall_all_saved_scores": 0.7916666666666666
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 20,
+                  "matched_all_saved_scores": 26,
+                  "recall_at_score": 0.7142857142857143,
+                  "recall_all_saved_scores": 0.9285714285714286
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 2,
+              "matched_all_saved_scores": 11,
+              "recall_at_score": 0.058823529411764705
+            },
+            "mean_ap": 0.5150954183699199
+          }
+        },
+        {
+          "epoch": 4,
+          "global_step": 320,
+          "mean_training_loss": 0.46653996224340516,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2323,
+              "ap_at_iou": 0.6746744703018137,
+              "tp_at_score": 80,
+              "fp_at_score": 39,
+              "fn_at_score": 40,
+              "recall_all_saved_scores": 0.825,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 3,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.3333333333333333
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 9,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.5625
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 80,
+                  "matched_all_saved_scores": 87,
+                  "recall_at_score": 0.8695652173913043,
+                  "recall_all_saved_scores": 0.9456521739130435
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.34336425372713747,
+              "tp_at_score": 53,
+              "fp_at_score": 180,
+              "fn_at_score": 57,
+              "recall_all_saved_scores": 0.6545454545454545,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 2,
+                  "matched_all_saved_scores": 10,
+                  "recall_at_score": 0.08,
+                  "recall_all_saved_scores": 0.4
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 31,
+                  "matched_all_saved_scores": 37,
+                  "recall_at_score": 0.6458333333333334,
+                  "recall_all_saved_scores": 0.7708333333333334
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 20,
+                  "matched_all_saved_scores": 25,
+                  "recall_at_score": 0.7142857142857143,
+                  "recall_all_saved_scores": 0.8928571428571429
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 2,
+              "matched_all_saved_scores": 10,
+              "recall_at_score": 0.058823529411764705
+            },
+            "mean_ap": 0.5090193620144756
+          }
+        },
+        {
+          "epoch": 5,
+          "global_step": 400,
+          "mean_training_loss": 0.41723828965914433,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2300,
+              "ap_at_iou": 0.6730555997283719,
+              "tp_at_score": 80,
+              "fp_at_score": 53,
+              "fn_at_score": 40,
+              "recall_all_saved_scores": 0.7916666666666666,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 8,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.5
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 80,
+                  "matched_all_saved_scores": 87,
+                  "recall_at_score": 0.8695652173913043,
+                  "recall_all_saved_scores": 0.9456521739130435
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.37421601679380845,
+              "tp_at_score": 56,
+              "fp_at_score": 204,
+              "fn_at_score": 54,
+              "recall_all_saved_scores": 0.6363636363636364,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 2,
+                  "matched_all_saved_scores": 7,
+                  "recall_at_score": 0.08,
+                  "recall_all_saved_scores": 0.28
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 34,
+                  "matched_all_saved_scores": 37,
+                  "recall_at_score": 0.7083333333333334,
+                  "recall_all_saved_scores": 0.7708333333333334
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 20,
+                  "matched_all_saved_scores": 26,
+                  "recall_at_score": 0.7142857142857143,
+                  "recall_all_saved_scores": 0.9285714285714286
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 2,
+              "matched_all_saved_scores": 7,
+              "recall_at_score": 0.058823529411764705
+            },
+            "mean_ap": 0.5236358082610901
+          }
+        },
+        {
+          "epoch": 6,
+          "global_step": 480,
+          "mean_training_loss": 0.3804543794656638,
+          "metrics": {
+            "person": {
+              "ground_truth_boxes": 120,
+              "predictions": 2297,
+              "ap_at_iou": 0.6759017376515178,
+              "tp_at_score": 81,
+              "fp_at_score": 64,
+              "fn_at_score": 39,
+              "recall_all_saved_scores": 0.825,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 3,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 2,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.2222222222222222
+                },
+                "32_to_below96": {
+                  "ground_truth": 16,
+                  "matched_at_score": 1,
+                  "matched_all_saved_scores": 10,
+                  "recall_at_score": 0.0625,
+                  "recall_all_saved_scores": 0.625
+                },
+                "96_or_larger": {
+                  "ground_truth": 92,
+                  "matched_at_score": 80,
+                  "matched_all_saved_scores": 87,
+                  "recall_at_score": 0.8695652173913043,
+                  "recall_all_saved_scores": 0.9456521739130435
+                }
+              }
+            },
+            "person_face": {
+              "ground_truth_boxes": 110,
+              "predictions": 2400,
+              "ap_at_iou": 0.3829682921329551,
+              "tp_at_score": 57,
+              "fp_at_score": 215,
+              "fn_at_score": 53,
+              "recall_all_saved_scores": 0.6727272727272727,
+              "size_strata": {
+                "below16": {
+                  "ground_truth": 9,
+                  "matched_at_score": 0,
+                  "matched_all_saved_scores": 0,
+                  "recall_at_score": 0.0,
+                  "recall_all_saved_scores": 0.0
+                },
+                "16_to_below32": {
+                  "ground_truth": 25,
+                  "matched_at_score": 3,
+                  "matched_all_saved_scores": 10,
+                  "recall_at_score": 0.12,
+                  "recall_all_saved_scores": 0.4
+                },
+                "32_to_below96": {
+                  "ground_truth": 48,
+                  "matched_at_score": 34,
+                  "matched_all_saved_scores": 37,
+                  "recall_at_score": 0.7083333333333334,
+                  "recall_all_saved_scores": 0.7708333333333334
+                },
+                "96_or_larger": {
+                  "ground_truth": 28,
+                  "matched_at_score": 20,
+                  "matched_all_saved_scores": 27,
+                  "recall_at_score": 0.7142857142857143,
+                  "recall_all_saved_scores": 0.9642857142857143
+                }
+              }
+            },
+            "small_faces": {
+              "ground_truth": 34,
+              "matched_at_score": 3,
+              "matched_all_saved_scores": 10,
+              "recall_at_score": 0.08823529411764706
+            },
+            "mean_ap": 0.5294350148922364
+          }
+        }
+      ],
+      "independent_verification_sha256": "31909fb92ca7c685da9da55c7ac2b91ff8a3b74c2161ab962eeb97c4e6a0f973",
+      "checkpoint_identities": [
+        {
+          "path": "artifacts/recognition-small-anchor-v2/baseline_small/checkpoint.pt",
+          "sha256": "95adf448573d1ad3463b4f603850a82455000c041dbed05886ecb2a44d58ff67",
+          "bytes": 5871054
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v2/epoch-01/checkpoint.pt",
+          "sha256": "3940cb237979515bbf2ad887ac083773b8a87a87749ff0cea3161554c238303a",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v2/epoch-02/checkpoint.pt",
+          "sha256": "b748aaaccbf409329ff61caf3fab7f3955993f04ad5e7d43d186f5a779a35b02",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v2/epoch-03/checkpoint.pt",
+          "sha256": "904829950c0fc787ee6f5c8e002aa34419ca8afac563cc65df8961afb7c01415",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v2/epoch-04/checkpoint.pt",
+          "sha256": "660b40a8d294284418e92931f6e2910827a7fd8fbcf9ef7b9c6f2a4e0563bfee",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v2/epoch-05/checkpoint.pt",
+          "sha256": "2c11a092e2cba05dcb2d88335b2ac106891b5ce97c3bad5e083ef487ccc409ec",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v2/epoch-06/checkpoint.pt",
+          "sha256": "f6bbe7cb47ec86124e53dbc21d706ade00ff003bb8dfae25b8ee108b338a4e51",
+          "bytes": 6594336
+        },
+        {
+          "path": "artifacts/recognition-small-anchor-v2/final_quantized/checkpoint.pt",
+          "sha256": "f456d690eaa468e9adcbb74dc15dca43a9e40ba802a980851bc86055bff5a953",
+          "bytes": 5865101
+        }
+      ],
+      "test_inference": false,
+      "camera_deployment_verified": false,
+      "reporting_recovery": false
+    }
+  },
+  "total_optimizer_steps": 960,
+  "held_out_test_inference": false,
+  "current_comparison_preview": "artifacts/recognition-small-anchor-v2-preview-label-fix/comparison.png",
+  "post_training_train32_stage_diagnostic": {
+    "original": {
+      "person/all": {
+        "gt": 43,
+        "failure_stage_counts": {
+          "detected": 28,
+          "classification_confidence_insufficient": 12,
+          "nms_or_final30_removed": 3
+        },
+        "anchor_covered": 41,
+        "decoded_all_covered": 43,
+        "decoded_confident_covered": 31,
+        "final_one_to_one_matched": 28
+      },
+      "person/small_lt32": {
+        "gt": 1,
+        "failure_stage_counts": {
+          "classification_confidence_insufficient": 1
+        },
+        "anchor_covered": 0,
+        "decoded_all_covered": 1,
+        "decoded_confident_covered": 0,
+        "final_one_to_one_matched": 0
+      },
+      "person_face/all": {
+        "gt": 42,
+        "failure_stage_counts": {
+          "detected": 20,
+          "decoded_geometry_insufficient": 9,
+          "classification_confidence_insufficient": 7,
+          "nms_or_final30_removed": 6
+        },
+        "anchor_covered": 31,
+        "decoded_all_covered": 33,
+        "decoded_confident_covered": 26,
+        "final_one_to_one_matched": 20
+      },
+      "person_face/small_lt32": {
+        "gt": 10,
+        "failure_stage_counts": {
+          "decoded_geometry_insufficient": 9,
+          "classification_confidence_insufficient": 1
+        },
+        "anchor_covered": 0,
+        "decoded_all_covered": 1,
+        "decoded_confident_covered": 0,
+        "final_one_to_one_matched": 0
+      }
+    },
+    "trained": {
+      "person/all": {
+        "gt": 43,
+        "failure_stage_counts": {
+          "detected": 34,
+          "classification_confidence_insufficient": 6,
+          "nms_or_final30_removed": 3
+        },
+        "anchor_covered": 42,
+        "decoded_all_covered": 43,
+        "decoded_confident_covered": 37,
+        "final_one_to_one_matched": 34
+      },
+      "person/small_lt32": {
+        "gt": 1,
+        "failure_stage_counts": {
+          "classification_confidence_insufficient": 1
+        },
+        "anchor_covered": 1,
+        "decoded_all_covered": 1,
+        "decoded_confident_covered": 0,
+        "final_one_to_one_matched": 0
+      },
+      "person_face/all": {
+        "gt": 42,
+        "failure_stage_counts": {
+          "detected": 23,
+          "nms_or_final30_removed": 9,
+          "decoded_geometry_insufficient": 1,
+          "classification_confidence_insufficient": 9
+        },
+        "anchor_covered": 36,
+        "decoded_all_covered": 41,
+        "decoded_confident_covered": 32,
+        "final_one_to_one_matched": 23
+      },
+      "person_face/small_lt32": {
+        "gt": 10,
+        "failure_stage_counts": {
+          "nms_or_final30_removed": 4,
+          "decoded_geometry_insufficient": 1,
+          "classification_confidence_insufficient": 5
+        },
+        "anchor_covered": 5,
+        "decoded_all_covered": 9,
+        "decoded_confident_covered": 4,
+        "final_one_to_one_matched": 0
+      }
+    },
+    "limit": "Same fixed training32, stage attribution only; not independent accuracy. NMS and final30 removal are grouped."
+  },
+  "original_dsp_numerical_parity": false,
+  "firmware_exported": false,
+  "camera_deployment_verified": false,
+  "limits": [
+    "Candidate geometry coverage and consistent GT ownership do not establish detection success.",
+    "Validation80 is reused for diagnostics and finite experiments; it is not an independent test result.",
+    "Dataset has no negative-only backgrounds or camera-domain focus/tracking measurements.",
+    "Quantized proxy rounds/clips only heads with original scales; it does not reproduce full DSP arithmetic.",
+    "Fixed epoch6 remains the primary outcome even if an earlier epoch scores higher."
+  ],
+  "source_bindings": [
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "train_recognition.py",
+      "sha256": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/train_recognition.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "candidate_network.py",
+      "sha256": "38a19df551ea4648a8cd792d10b1ab149c41b81abf4515a03b70934b864ca5f8",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/candidate_network.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "decode_parameters.py",
+      "sha256": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/decode_parameters.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "extract.py",
+      "sha256": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/extract.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "ops_investigation.py",
+      "sha256": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/ops_investigation.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "packing_investigation.py",
+      "sha256": "4aa3f22feed71493d146d11e83fcad78d49ce414896972d31b0af4a70a75346f",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/packing_investigation.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "proposal_hypothesis.py",
+      "sha256": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/proposal_hypothesis.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "pretraining_data.py",
+      "sha256": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/pretraining_data.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "pretraining_readiness.py",
+      "sha256": "da1b255b982262e83ca6347f73fad632c6fad960f17c40f3e5cbdb5de122d34d",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/pretraining_readiness.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "train_small_anchor.py",
+      "sha256": "ddd1b1aceb7045b4cc64fbcdb7d24d8b47c59561258e83417f129a330e2962d5",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/train_small_anchor.py"
+    },
+    {
+      "run": "recognition-small-anchor-v1",
+      "source": "verify_external_baselines.py",
+      "sha256": "46093e97afd28c40512d528d1e3600812616916bba77c8df88bc80953e6a1727",
+      "snapshot": "artifacts/recognition-small-anchor-v1/source-snapshot/verify_external_baselines.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "train_recognition.py",
+      "sha256": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/train_recognition.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "candidate_network.py",
+      "sha256": "38a19df551ea4648a8cd792d10b1ab149c41b81abf4515a03b70934b864ca5f8",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/candidate_network.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "decode_parameters.py",
+      "sha256": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/decode_parameters.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "extract.py",
+      "sha256": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/extract.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "ops_investigation.py",
+      "sha256": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/ops_investigation.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "packing_investigation.py",
+      "sha256": "4aa3f22feed71493d146d11e83fcad78d49ce414896972d31b0af4a70a75346f",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/packing_investigation.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "proposal_hypothesis.py",
+      "sha256": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/proposal_hypothesis.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "pretraining_data.py",
+      "sha256": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/pretraining_data.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "pretraining_readiness.py",
+      "sha256": "da1b255b982262e83ca6347f73fad632c6fad960f17c40f3e5cbdb5de122d34d",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/pretraining_readiness.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "train_small_anchor_transfer.py",
+      "sha256": "525272d7d19f3919ea35ac038fb870766e7bbed2bbddf1407e58544393801363",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/train_small_anchor_transfer.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "anchor_head_transfer.py",
+      "sha256": "9171848ffc4bf9f69c0be25ab19045000e63c26278a9a8d4960996c0c405b47b",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/anchor_head_transfer.py"
+    },
+    {
+      "run": "recognition-small-anchor-v2",
+      "source": "verify_external_baselines.py",
+      "sha256": "46093e97afd28c40512d528d1e3600812616916bba77c8df88bc80953e6a1727",
+      "snapshot": "artifacts/recognition-small-anchor-v2/source-snapshot/verify_external_baselines.py"
+    }
+  ],
+  "artifact_identities": [
+    {
+      "path": "artifacts/recognition-small-anchor-v1/anchors-original.npy",
+      "sha256": "f37677d70e57ce2d13569e86d1e4bf5479c10cac7e9fe56c053f05e75792388b",
+      "bytes": 153728
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/anchors-small.npy",
+      "sha256": "610d9742087159f198f6014adcb58ee036affe6fe0fe70f67dc5a08ec44f0664",
+      "bytes": 153728
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/baseline_original/metrics.json",
+      "sha256": "1a7f6efd9f78648f5b2e90cf18285d2ce089d743083d500b5c55ba9076a82f80",
+      "bytes": 3460
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/baseline_original/predictions.json",
+      "sha256": "626fc1767a48cd4601662f80740811c00a566e9750e88f204ce6b41d0a3bd6ce",
+      "bytes": 1100275
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/baseline_small/checkpoint.pt",
+      "sha256": "8b86fd24a306b6e590cad67ec31ecc4802aebcdb3b1a79916e372f89c4a6eef9",
+      "bytes": 5871054
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/baseline_small/metrics.json",
+      "sha256": "8f9ed395880f08924d905fc14f781c3a04c6762bf3a43848472d27d7a9a4404f",
+      "bytes": 3486
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/baseline_small/predictions.json",
+      "sha256": "05a951eb76ccdf06767555bde6a269311c93e51ed996206f10f53823f66debc2",
+      "bytes": 1218962
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch0/fixed_gray117.json",
+      "sha256": "49221ff931d580ac00670b13e16350bf5bc7287ce1ae572089223f08520cb870",
+      "bytes": 1184992
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch0/metrics.json",
+      "sha256": "bb4c8f9c74a68312849485ba9ed5a6dc571e06cb1bc891ce3b0129f5ae1f96e8",
+      "bytes": 14664
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch0/real.json",
+      "sha256": "05a951eb76ccdf06767555bde6a269311c93e51ed996206f10f53823f66debc2",
+      "bytes": 1218962
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch0/same_mean.json",
+      "sha256": "ce21a9ec50a93f342050ebaa7bead1bfba8acc16d91324aae94d7882583a1ebe",
+      "bytes": 1189157
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch0/shuffled.json",
+      "sha256": "9317d0b3da294d04535ed9ef1a281d3ea10bce73aaf5004ebc05639aa7909430",
+      "bytes": 1219046
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch6/fixed_gray117.json",
+      "sha256": "a5f0f12d9ad90f58ff3c034de4fd59e1461dbcbb369c76630005af81b041512e",
+      "bytes": 1164747
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch6/metrics.json",
+      "sha256": "ad48f942656efab5236a8582ae0f4513da4bed601af185432ef12a72f4d95f98",
+      "bytes": 14741
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch6/real.json",
+      "sha256": "2d62b6a2288a9640f47dd267786d3ef753f5560b807ce7035ff506a6b38f3ad8",
+      "bytes": 1142202
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch6/same_mean.json",
+      "sha256": "edf7e6afcc5b626d40f75df5971b2236a271c8f178dfc87ae2920caf3ed1e301",
+      "bytes": 1166519
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch6/shuffled-before-float-boundary-fix.json",
+      "sha256": "9d78f821b266d704c4291611e3fb39a2efc526807f8ad94dced03e824dcbfe7e",
+      "bytes": 1142452
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/epoch6/shuffled.json",
+      "sha256": "6cdb3dac3776a92bba207936fc50897869e796f2ff21f94b6cb579df68218176",
+      "bytes": 1142428
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/final_quantized/fixed_gray117.json",
+      "sha256": "03235f93becb7cdcba2f6cefc2863ab82e3692cb1e3bacbfe6fb98a3b161a935",
+      "bytes": 1162756
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/final_quantized/metrics.json",
+      "sha256": "7f175fd780a75dbacaef8e191aae77458e430b71ad7b5329eeb1be5d4d671a17",
+      "bytes": 14739
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/final_quantized/real.json",
+      "sha256": "cca1785d4751586e807b8db45929fc7b37f0ed4f5ce19847352a5fbdbb8f383c",
+      "bytes": 1142196
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/final_quantized/same_mean.json",
+      "sha256": "126f911fce6323d4084d1591f571f2ed9e91a3a91223dc3c1f13c18e5324033b",
+      "bytes": 1166729
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/final_quantized/shuffled-before-float-boundary-fix.json",
+      "sha256": "6748ca378aa3e8c860e093b82843f85d3fb431c2a3fad752aa2fa865e257ce89",
+      "bytes": 1142542
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/controls/final_quantized/shuffled.json",
+      "sha256": "f6f6f7b128581954c69ff93f0cbe8ac1e4a873bb364cfd092cab3022ab5c96dc",
+      "bytes": 1142518
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-01/checkpoint.pt",
+      "sha256": "7a64dcb36ba407ad2b45e9ed599f85e5f2e77905a973beb3bc734dc9b64d56ef",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-01/metrics.json",
+      "sha256": "60a36ffa9d986ca1904ca5cd3e94c015485c67e8498483f579ad158bf4f73239",
+      "bytes": 3446
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-01/predictions.json",
+      "sha256": "c9db1e8122323dbdcaf54df0e7da2f3b5c4d10c7c1996eabb8a8dd9a92015f06",
+      "bytes": 1205966
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-02/checkpoint.pt",
+      "sha256": "0d0d08b9df9cfd65704035d9a22b1b6195da6a45108f8b3011c51ba9b45278c3",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-02/metrics.json",
+      "sha256": "6dd683b4529190da7594daef71c6e331f9d2a145c68f038059716bb7a9f01d23",
+      "bytes": 3428
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-02/predictions.json",
+      "sha256": "11add180bdb03b9496b1d58e896888251560a71ea1f9d01c74e550e716b9d8b8",
+      "bytes": 1174453
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-03/checkpoint.pt",
+      "sha256": "25242fc662838ba23ab911f0fafcd8bf7d795f0a811e596a8e7993330128a716",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-03/metrics.json",
+      "sha256": "0cce08d0080b30025172233f2dabd797693c67a1e916c536683760a42b47f75b",
+      "bytes": 3444
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-03/predictions.json",
+      "sha256": "7b91a275e5d3fd1788aa5cab40d55fe747fe1ec59b797fc046c99b191f3e3471",
+      "bytes": 1157059
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-04/checkpoint.pt",
+      "sha256": "26dd14ddee593fde4bae8e08a35bbf2aac13df7e656996388e896b2406df4558",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-04/metrics.json",
+      "sha256": "b0c770325c7cb02db0817c4e7a989ff09fdd567a482ce0a1be73120c72c4e8bb",
+      "bytes": 3475
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-04/predictions.json",
+      "sha256": "99dfdba475c4040d35f211e6a689ed3167cfca1629440341c674adb5ba39ef25",
+      "bytes": 1148302
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-05/checkpoint.pt",
+      "sha256": "83485482cd23ada5a94d5f170014c702630432cbc3852520a111ac902cb7d2cc",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-05/metrics.json",
+      "sha256": "8a4df15da7e441c331b1fe014d3e1e2b7a0f496f194f47aa22ccd9f96009aa70",
+      "bytes": 3470
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-05/predictions.json",
+      "sha256": "e28168d6e557c0f7a6f7fa7c16c7059721af3f29a645b90c88c1ce57b594bff2",
+      "bytes": 1148363
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-06/checkpoint.pt",
+      "sha256": "58ee06d56a5902d4a90aff1aa675fe4803271b5234c6808d4b75c13853acf556",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-06/metrics.json",
+      "sha256": "79d4888a2279ffd50db5c7461e00d68b8b55c8bf6fa7441b90cb8403e1c520d6",
+      "bytes": 3487
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch-06/predictions.json",
+      "sha256": "2d62b6a2288a9640f47dd267786d3ef753f5560b807ce7035ff506a6b38f3ad8",
+      "bytes": 1142202
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/epoch0-quantization-check.json",
+      "sha256": "d32fb06af015271c98cf8b24d2272fec515a7b2a7f72bce1ec4c86a936bf87a8",
+      "bytes": 2890
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/final_quantized/checkpoint.pt",
+      "sha256": "b3b0f4075193c8b1bfb2a62d45e94406f50c07fdadc80e0cb2c55b01c3ea90ba",
+      "bytes": 5865101
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/final_quantized/metrics.json",
+      "sha256": "1ce4ce84f76f768f606732da6031abedebd63cf27a51b47d6e448ebbe2d07de4",
+      "bytes": 3487
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/final_quantized/predictions.json",
+      "sha256": "cca1785d4751586e807b8db45929fc7b37f0ed4f5ce19847352a5fbdbb8f383c",
+      "bytes": 1142196
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/final_quantized/quantization.json",
+      "sha256": "62d85994676c1428b1c1976105d45704a527f847ca5460b1a8f250f08a356ca5",
+      "bytes": 3083
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/finalization.json",
+      "sha256": "1f9b94447960919e7754b4ddb6487b5fe40d41e8dae31bd374173d7bcb3f55b2",
+      "bytes": 4474
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/independent-verification-with-v2-verifier.json",
+      "sha256": "0b36df5378ce89cfd1e32743792e5724cb9c8097efbbb6b4d5e05a7018cdc14e",
+      "bytes": 22649
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/independent-verification.json",
+      "sha256": "7b73d68b3dd50e1b5da85926d9d859d73af1000acd7f55ce671bb23a37872ed4",
+      "bytes": 21933
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/plan.json",
+      "sha256": "8b0d475975578743a42f90b5360ce5984938192cb2adf92f6cebc885093440d0",
+      "bytes": 25202
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/candidate_network.py",
+      "sha256": "38a19df551ea4648a8cd792d10b1ab149c41b81abf4515a03b70934b864ca5f8",
+      "bytes": 10648
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/decode_parameters.py",
+      "sha256": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+      "bytes": 10199
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/extract.py",
+      "sha256": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+      "bytes": 12898
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/ops_investigation.py",
+      "sha256": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+      "bytes": 8566
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/packing_investigation.py",
+      "sha256": "4aa3f22feed71493d146d11e83fcad78d49ce414896972d31b0af4a70a75346f",
+      "bytes": 11846
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/pretraining_data.py",
+      "sha256": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+      "bytes": 15097
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/pretraining_readiness.py",
+      "sha256": "da1b255b982262e83ca6347f73fad632c6fad960f17c40f3e5cbdb5de122d34d",
+      "bytes": 20997
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/proposal_hypothesis.py",
+      "sha256": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+      "bytes": 7438
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/train_recognition.py",
+      "sha256": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+      "bytes": 31820
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/train_small_anchor.py",
+      "sha256": "ddd1b1aceb7045b4cc64fbcdb7d24d8b47c59561258e83417f129a330e2962d5",
+      "bytes": 21056
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/source-snapshot/verify_external_baselines.py",
+      "sha256": "46093e97afd28c40512d528d1e3600812616916bba77c8df88bc80953e6a1727",
+      "bytes": 18085
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/steps.jsonl",
+      "sha256": "b92d8814bfd7e919f8d1096b33230cb4a3b132c815e6e9b1e885a13d76fcbbf3",
+      "bytes": 268502
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/summary.json",
+      "sha256": "b7c3f019b57cb9e39bb9aa84c560fa1e9cbb5e83755248b250c6371dbfde13e1",
+      "bytes": 51709
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/training.jsonl",
+      "sha256": "4de81fa0d80bfe300b4493df9ae01277e25df992cfe3bf8c0db43b283695ea07",
+      "bytes": 1690228
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/verification-source-snapshot/finalize_small_anchor_run.py",
+      "sha256": "39c2fda4ec494f69f3f7a99affd8c90ba0d28b03f953e3b0767202fdcbb9cab5",
+      "bytes": 7754
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v1/verification-source-snapshot/verify_small_anchor_run.py",
+      "sha256": "87ec9de8995736a4d6d33e16eaaf1145d9a69d1e467b24f7c4e47d383216a5f0",
+      "bytes": 32561
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/anchors-original.npy",
+      "sha256": "f37677d70e57ce2d13569e86d1e4bf5479c10cac7e9fe56c053f05e75792388b",
+      "bytes": 153728
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/anchors-small.npy",
+      "sha256": "610d9742087159f198f6014adcb58ee036affe6fe0fe70f67dc5a08ec44f0664",
+      "bytes": 153728
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/baseline_original/metrics.json",
+      "sha256": "1a7f6efd9f78648f5b2e90cf18285d2ce089d743083d500b5c55ba9076a82f80",
+      "bytes": 3460
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/baseline_original/predictions.json",
+      "sha256": "ab0b1b0b824ab6f9d3fbc506ce1c838bbbf0c0fb1418288d85413bb5754e1701",
+      "bytes": 1100275
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/baseline_small/checkpoint.pt",
+      "sha256": "95adf448573d1ad3463b4f603850a82455000c041dbed05886ecb2a44d58ff67",
+      "bytes": 5871054
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/baseline_small/metrics.json",
+      "sha256": "ff95c2f89f96669b8b6742c0e78c10da7ce30e9572833cb5a80b01ce359be712",
+      "bytes": 3464
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/baseline_small/predictions.json",
+      "sha256": "1a6549a09a594176d084035f37d7f4206165ff70d522bd1e9c69c5e073c08ae8",
+      "bytes": 1210416
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch0/fixed_gray117.json",
+      "sha256": "3cecf715cab750ab7118a83512cd0d22446f1f0e9b62b3682ac1bde1e266041d",
+      "bytes": 1154429
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch0/metrics.json",
+      "sha256": "6c85cfa27ce520d4b3ccd33bebfeeb317f9d4dcc12eefff90e3e665af4df4039",
+      "bytes": 14752
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch0/real.json",
+      "sha256": "1a6549a09a594176d084035f37d7f4206165ff70d522bd1e9c69c5e073c08ae8",
+      "bytes": 1210416
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch0/same_mean.json",
+      "sha256": "d1893266c40b7e106bb7f645bf78b2f66b8fe98b57b2695f88f770fb34d7a390",
+      "bytes": 1163180
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch0/shuffled.json",
+      "sha256": "cdae5cdd7a827effc306d4d6c6a670d30465c91ff7335d61d3e6b644158f202b",
+      "bytes": 1210431
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch6/fixed_gray117.json",
+      "sha256": "3b88d195f1f84a378532b625ed04555319788dc78d2246d5a94c51847f0d63ee",
+      "bytes": 1169104
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch6/metrics.json",
+      "sha256": "f1c61630eed33dd2fee3356d4c0e3b63e268539fb2bd9b3e4168e9b4cec2d772",
+      "bytes": 14780
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch6/real.json",
+      "sha256": "7fbf10a996e8684f6f696db26291753eff3d06625631af431a63c99f8ff2b3b9",
+      "bytes": 1178629
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch6/same_mean.json",
+      "sha256": "4fa7fc97e22618cfa3444ea26394e86c0d58dd344531fcb59304fad878f44fe2",
+      "bytes": 1170961
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/epoch6/shuffled.json",
+      "sha256": "8be4daeefc060ce931454cd872ae5da5fd3d76255d4fb901cf50fbfc5c852e4d",
+      "bytes": 1178629
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/final_quantized/fixed_gray117.json",
+      "sha256": "b1d22e6e68b7e18d470e38b80ba422ebb8fe7e5791bd36f6e21ddd21c7644f7a",
+      "bytes": 1169090
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/final_quantized/metrics.json",
+      "sha256": "765848438a323b9d72cf2d433d44580167df65938288bb70707fabe0cfce20ce",
+      "bytes": 14772
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/final_quantized/real.json",
+      "sha256": "5c9c4c7b22b1f17fe2cb2a7fd88ce05849943935548c03f3bffcaa26dfda74a0",
+      "bytes": 1178539
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/final_quantized/same_mean.json",
+      "sha256": "2d7aac5d4d953672a00e13ef109614e5788839a70785e510ee67e4b24bf26e9f",
+      "bytes": 1170947
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/controls/final_quantized/shuffled.json",
+      "sha256": "6d3178fcbec30cd944e744b76c3b31b53f329fcb804169fd1732e82a1756d68e",
+      "bytes": 1178614
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-01/checkpoint.pt",
+      "sha256": "3940cb237979515bbf2ad887ac083773b8a87a87749ff0cea3161554c238303a",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-01/metrics.json",
+      "sha256": "28f2c69a81544ffa5e0d936ae4c6264f56110564be5467a1dab747d02e13beda",
+      "bytes": 3483
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-01/predictions.json",
+      "sha256": "d33bc2a97f23922eee690ea1fd954519fd67021fe3ef9646fe6f011042c2acf2",
+      "bytes": 1212208
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-02/checkpoint.pt",
+      "sha256": "b748aaaccbf409329ff61caf3fab7f3955993f04ad5e7d43d186f5a779a35b02",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-02/metrics.json",
+      "sha256": "415107d98b16b3ecf482622336e4305a85c3e7fbbf43d70368a2552045b8d065",
+      "bytes": 3484
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-02/predictions.json",
+      "sha256": "91e3c60b9eb2042500420411da7a9f05fbf8ca961e0059d0282227cd6208509c",
+      "bytes": 1205601
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-03/checkpoint.pt",
+      "sha256": "904829950c0fc787ee6f5c8e002aa34419ca8afac563cc65df8961afb7c01415",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-03/metrics.json",
+      "sha256": "f5d0d0c0f788114973f5c53b15ef5e9f2995895d7a58d29c46a4fc4a06495e0a",
+      "bytes": 3486
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-03/predictions.json",
+      "sha256": "f5633edb0951f1eb27c51f569581d70700ef49a8331f7d6aa1f860fa1f57691b",
+      "bytes": 1200156
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-04/checkpoint.pt",
+      "sha256": "660b40a8d294284418e92931f6e2910827a7fd8fbcf9ef7b9c6f2a4e0563bfee",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-04/metrics.json",
+      "sha256": "0149fef6464f2caafd599b6d237279bd45b4aadeab99f5fa76fcfb3a7912b4ac",
+      "bytes": 3485
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-04/predictions.json",
+      "sha256": "8bcfc29324e3be25944dcbbc261fb701566dbb91f60004e2d0cf64a204ab3f58",
+      "bytes": 1188795
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-05/checkpoint.pt",
+      "sha256": "2c11a092e2cba05dcb2d88335b2ac106891b5ce97c3bad5e083ef487ccc409ec",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-05/metrics.json",
+      "sha256": "0b70ad6d77c8a9c2f3fa1d08a82c65f971c3fdbd7b78743f0a560ea57f59d061",
+      "bytes": 3480
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-05/predictions.json",
+      "sha256": "c9310f7004ba2f65982c99cc2528883827257ee7bb6ece6ce03e67193a61c36e",
+      "bytes": 1180738
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-06/checkpoint.pt",
+      "sha256": "f6bbe7cb47ec86124e53dbc21d706ade00ff003bb8dfae25b8ee108b338a4e51",
+      "bytes": 6594336
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-06/metrics.json",
+      "sha256": "b8d6cd757bc4866eac757754d03d837d8fa5a7ca029c5b54d32b3c0fb6af79fa",
+      "bytes": 3485
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch-06/predictions.json",
+      "sha256": "7fbf10a996e8684f6f696db26291753eff3d06625631af431a63c99f8ff2b3b9",
+      "bytes": 1178629
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/epoch0-quantization-check.json",
+      "sha256": "b0cccc2a7382025bf53f5638eb0e0425addb393b9ecc0db3febf73ca10853ba3",
+      "bytes": 6174
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/final_quantized/checkpoint.pt",
+      "sha256": "f456d690eaa468e9adcbb74dc15dca43a9e40ba802a980851bc86055bff5a953",
+      "bytes": 5865101
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/final_quantized/metrics.json",
+      "sha256": "6e9dc03de3840de1e04b033234deeb0ed78f56819084a76403fc86e63485f4cb",
+      "bytes": 3473
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/final_quantized/predictions.json",
+      "sha256": "5c9c4c7b22b1f17fe2cb2a7fd88ce05849943935548c03f3bffcaa26dfda74a0",
+      "bytes": 1178539
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/final_quantized/quantization.json",
+      "sha256": "c69aea62804fe811bc94158c2d68e44518108c5d980663d61ad1ed230e439f4b",
+      "bytes": 3087
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/independent-verification.json",
+      "sha256": "31909fb92ca7c685da9da55c7ac2b91ff8a3b74c2161ab962eeb97c4e6a0f973",
+      "bytes": 22223
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/plan.json",
+      "sha256": "2c5c4d156fbe7a09d8d80227c52268de084159a2bb87dc086bc3f26b723d098c",
+      "bytes": 44498
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/anchor_head_transfer.py",
+      "sha256": "9171848ffc4bf9f69c0be25ab19045000e63c26278a9a8d4960996c0c405b47b",
+      "bytes": 18654
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/candidate_network.py",
+      "sha256": "38a19df551ea4648a8cd792d10b1ab149c41b81abf4515a03b70934b864ca5f8",
+      "bytes": 10648
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/decode_parameters.py",
+      "sha256": "f668e96a79d9af804a9294a4fcf27fb26f58892e13ad5b5bb7dbc94123972fea",
+      "bytes": 10199
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/extract.py",
+      "sha256": "4e17205d87f763c211d17295c49c0c5a0e300bfd33a096f6c64e88f794ae1798",
+      "bytes": 12898
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/ops_investigation.py",
+      "sha256": "4ccc37d77676a794423aacd154a436a84826760e1e6856d4913c4e4180109165",
+      "bytes": 8566
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/packing_investigation.py",
+      "sha256": "4aa3f22feed71493d146d11e83fcad78d49ce414896972d31b0af4a70a75346f",
+      "bytes": 11846
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/pretraining_data.py",
+      "sha256": "a910721ffa9ad28117b75fa20233dc95f43f14409b640cfebc48bc8077690dd8",
+      "bytes": 15097
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/pretraining_readiness.py",
+      "sha256": "da1b255b982262e83ca6347f73fad632c6fad960f17c40f3e5cbdb5de122d34d",
+      "bytes": 20997
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/proposal_hypothesis.py",
+      "sha256": "a15518fc128680c496b928f968cb1af97ee9db943cd719c66cb648a98a8b9682",
+      "bytes": 7438
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/train_recognition.py",
+      "sha256": "4f7858b69dcd75ecaa151b38ead5a7baebcb5038de886cdc856883a56761b765",
+      "bytes": 31820
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/train_small_anchor_transfer.py",
+      "sha256": "525272d7d19f3919ea35ac038fb870766e7bbed2bbddf1407e58544393801363",
+      "bytes": 22441
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/source-snapshot/verify_external_baselines.py",
+      "sha256": "46093e97afd28c40512d528d1e3600812616916bba77c8df88bc80953e6a1727",
+      "bytes": 18085
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/steps.jsonl",
+      "sha256": "4e22f4739eec3d538b430accb14ad7817be194df04ec72e40358ee430bdf7265",
+      "bytes": 268672
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/summary.json",
+      "sha256": "6bd1e675ee032bf047aa4370191e9353115be8431f3042c5a765e86b61952528",
+      "bytes": 47117
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/training.jsonl",
+      "sha256": "0f07dfee2dab99829117d18380b070e7943def685a0d410e8715d1447e5e82cd",
+      "bytes": 1693578
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2/verification-source-snapshot/verify_small_anchor_run.py",
+      "sha256": "54d5ed26b95cac62dad9487a871adbe53d1cc4f127d04a6c20b6284b2f7773bb",
+      "bytes": 42409
+    },
+    {
+      "path": "artifacts/recognition-diagnosis-v3/small-anchor-design/train320/report.json",
+      "sha256": "7da0d73a0943c20d5af04210fa9c1d49dbdd10f7ffdd394e6529a7782b12521e",
+      "bytes": 3440405
+    },
+    {
+      "path": "artifacts/recognition-diagnosis-v3/small-anchor-design/train320/independent-crosscheck.json",
+      "sha256": "9bdc2cccd5557267be18c9a39d1e54743536d4b12cb36530d4a33f3bc5c3bc9f",
+      "bytes": 2015
+    },
+    {
+      "path": "artifacts/recognition-diagnosis-v3/small-anchor-targets/scales-1-2-4-8-16.json",
+      "sha256": "31287c25f55ac716e2308d4d3145876506459db90ba8f3ea93270aa8340576a8",
+      "bytes": 815896
+    },
+    {
+      "path": "artifacts/recognition-diagnosis-v3/small-anchor-preflight/ready.json",
+      "sha256": "d16bd6506400c2d8c14a3754847f54b32fbc87e111896bbe7e128c2ec773eee8",
+      "bytes": 4321
+    },
+    {
+      "path": "artifacts/recognition-diagnosis-v3/anchor-head-transfer/ready.json",
+      "sha256": "06ae099db1142b89fce63dcca7202ed638c6cbc2c08d75e8ff8356637d8e4d32",
+      "bytes": 5344
+    },
+    {
+      "path": "artifacts/recognition-diagnosis-v3/anchor-head-transfer/synthetic-review.json",
+      "sha256": "3046f69667d78c61ed5e45c76d3ebba279e6b7532c580cc319ec357fb360ef5a",
+      "bytes": 21122
+    },
+    {
+      "path": "artifacts/recognition-diagnosis-v3/anchor-head-transfer/train32/report.json",
+      "sha256": "0ae5d38cce579cc55651e3f038aa98a5156814618ee4cfabd4f3151d8c2e0a4d",
+      "bytes": 231409
+    },
+    {
+      "path": "artifacts/recognition-diagnosis-v3/anchor-head-transfer/runner-review.json",
+      "sha256": "62d75be9c93c61635e0d3f9c49a7dfd815348c9c151334b7fe511f9d53e41e28",
+      "bytes": 3454
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-preflight/data-audit.json",
+      "sha256": "b2051cb4ee0119959c4cca95fe3be08bd622bd6d7de37078d193ee5d1666fc9c",
+      "bytes": 2351
+    },
+    {
+      "path": "artifacts/recognition-diagnosis-v3/small-face-after-v2-train32/report.json",
+      "sha256": "7debfa82037b4ed5652378f9495e2d02f4272d89f3d3bd85ac0d8d790f912281",
+      "bytes": 756078
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2-preview/selection.json",
+      "sha256": "15ddad6316beeeadbc45fcea7bd158ee0ae6e19d0ef1ed9eb2495d6e787a1607",
+      "bytes": 20773
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2-preview/small-face-match-changes.json",
+      "sha256": "51bc44710e0a5fa0b75dec5b9a6d3cdda0e6a42ebaa9d60e05d092e89cf7fbe1",
+      "bytes": 17695
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2-preview-label-fix/selection.json",
+      "sha256": "b798789d0fcdad8bf1e3ff9604ec434d3403a6b6ce8f7a8a88cf5b26719aae92",
+      "bytes": 20780
+    },
+    {
+      "path": "artifacts/recognition-small-anchor-v2-preview-label-fix/label-correction-verification.json",
+      "sha256": "639f5c527de8c1bdcb74b3248765c4672a8e746bc8a0a349ce836c61278ffce2",
+      "bytes": 1186
+    }
+  ],
+  "summarizer_sha256": "d1224730e53cb5a2ffae06f6a7aad13185643510386b1524a8bd1586bafb233a"
+}
